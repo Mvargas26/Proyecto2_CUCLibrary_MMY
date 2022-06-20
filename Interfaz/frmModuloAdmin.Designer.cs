@@ -57,11 +57,11 @@ namespace Interfaz
             this.mnEliminarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.mnVerUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSalasEstudio = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSolicitudCopias = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarSalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarSalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verSalasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSolicitudCopias = new System.Windows.Forms.ToolStripMenuItem();
             this.mAagregarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
             this.mnModificarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
             this.mnEliminarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,6 +116,7 @@ namespace Interfaz
             this.mnagregarLibro.Name = "mnagregarLibro";
             this.mnagregarLibro.Size = new System.Drawing.Size(257, 32);
             this.mnagregarLibro.Text = "Agregar Libro";
+            this.mnagregarLibro.Click += new System.EventHandler(this.mnagregarLibro_Click);
             // 
             // mnModificarLibro
             // 
@@ -286,17 +287,6 @@ namespace Interfaz
             this.mnSalasEstudio.Size = new System.Drawing.Size(162, 32);
             this.mnSalasEstudio.Text = "Salas Estudio";
             // 
-            // mnSolicitudCopias
-            // 
-            this.mnSolicitudCopias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mAagregarSolicitud,
-            this.mnModificarSolicitud,
-            this.mnEliminarSolicitud,
-            this.mnVerSolicitudes});
-            this.mnSolicitudCopias.Name = "mnSolicitudCopias";
-            this.mnSolicitudCopias.Size = new System.Drawing.Size(199, 32);
-            this.mnSolicitudCopias.Text = "Solicitud Copias";
-            // 
             // agregarSalaToolStripMenuItem
             // 
             this.agregarSalaToolStripMenuItem.Name = "agregarSalaToolStripMenuItem";
@@ -320,6 +310,17 @@ namespace Interfaz
             this.verSalasToolStripMenuItem.Name = "verSalasToolStripMenuItem";
             this.verSalasToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.verSalasToolStripMenuItem.Text = "Ver Salas";
+            // 
+            // mnSolicitudCopias
+            // 
+            this.mnSolicitudCopias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mAagregarSolicitud,
+            this.mnModificarSolicitud,
+            this.mnEliminarSolicitud,
+            this.mnVerSolicitudes});
+            this.mnSolicitudCopias.Name = "mnSolicitudCopias";
+            this.mnSolicitudCopias.Size = new System.Drawing.Size(199, 32);
+            this.mnSolicitudCopias.Text = "Solicitud Copias";
             // 
             // mAagregarSolicitud
             // 

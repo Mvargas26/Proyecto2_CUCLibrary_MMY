@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarLibro.Designer.cs">
+      <DependentUpon>frmAgregarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarLibro.resx">
+      <DependentUpon>frmAgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEntrada.resx">
       <DependentUpon>frmEntrada.cs</DependentUpon>
     </EmbeddedResource>

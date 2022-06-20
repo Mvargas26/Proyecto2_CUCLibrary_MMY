@@ -17,6 +17,18 @@ namespace Interfaz
             InitializeComponent();
         }
 
-       
+        private void mnagregarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarLibro pantalla = new frmAgregarLibro();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
