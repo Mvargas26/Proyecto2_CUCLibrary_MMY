@@ -50,5 +50,19 @@ namespace Interfaz
         {
             Application.Exit();
         }//fin boton salir
+
+        private void mnEliminarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarLibro pantalla = new frmEliminarLibro();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fin eliminar libro
     }
 }

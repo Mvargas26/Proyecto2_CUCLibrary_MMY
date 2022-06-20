@@ -31,29 +31,29 @@ namespace Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarLibro));
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.lblAutor = new System.Windows.Forms.Label();
-            this.lblEditorial = new System.Windows.Forms.Label();
-            this.lblCantidadDisponible = new System.Windows.Forms.Label();
-            this.lblFechaPublicacion = new System.Windows.Forms.Label();
-            this.lblUbicacionPasillo = new System.Windows.Forms.Label();
-            this.lblHabitacion = new System.Windows.Forms.Label();
-            this.lblPasillo = new System.Windows.Forms.Label();
-            this.lblEstante = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.lblMensajeAdmin = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
             this.cmbEditorial = new System.Windows.Forms.ComboBox();
             this.cmbAutor = new System.Windows.Forms.ComboBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtCantDisponible = new System.Windows.Forms.TextBox();
             this.txtNombreLibro = new System.Windows.Forms.TextBox();
+            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMensajeAdmin = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblEstante = new System.Windows.Forms.Label();
+            this.lblPasillo = new System.Windows.Forms.Label();
+            this.lblHabitacion = new System.Windows.Forms.Label();
+            this.lblUbicacionPasillo = new System.Windows.Forms.Label();
+            this.lblFechaPublicacion = new System.Windows.Forms.Label();
+            this.lblCantidadDisponible = new System.Windows.Forms.Label();
+            this.lblEditorial = new System.Windows.Forms.Label();
+            this.lblAutor = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,175 +87,15 @@ namespace Interfaz
             this.grpAgregarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAgregarLibro.Location = new System.Drawing.Point(0, 0);
             this.grpAgregarLibro.Name = "grpAgregarLibro";
-            this.grpAgregarLibro.Size = new System.Drawing.Size(824, 684);
+            this.grpAgregarLibro.Size = new System.Drawing.Size(811, 667);
             this.grpAgregarLibro.TabIndex = 0;
             this.grpAgregarLibro.TabStop = false;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(35, 48);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(129, 20);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre Libro:";
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(35, 101);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(96, 20);
-            this.lblCategoria.TabIndex = 1;
-            this.lblCategoria.Text = "Categoria:";
-            // 
-            // lblAutor
-            // 
-            this.lblAutor.AutoSize = true;
-            this.lblAutor.Location = new System.Drawing.Point(38, 159);
-            this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(60, 20);
-            this.lblAutor.TabIndex = 2;
-            this.lblAutor.Text = "Autor:";
-            // 
-            // lblEditorial
-            // 
-            this.lblEditorial.AutoSize = true;
-            this.lblEditorial.Location = new System.Drawing.Point(35, 217);
-            this.lblEditorial.Name = "lblEditorial";
-            this.lblEditorial.Size = new System.Drawing.Size(85, 20);
-            this.lblEditorial.TabIndex = 3;
-            this.lblEditorial.Text = "Editorial:";
-            // 
-            // lblCantidadDisponible
-            // 
-            this.lblCantidadDisponible.AutoSize = true;
-            this.lblCantidadDisponible.Location = new System.Drawing.Point(35, 266);
-            this.lblCantidadDisponible.Name = "lblCantidadDisponible";
-            this.lblCantidadDisponible.Size = new System.Drawing.Size(184, 20);
-            this.lblCantidadDisponible.TabIndex = 4;
-            this.lblCantidadDisponible.Text = "Cantidad Disponible:";
-            // 
-            // lblFechaPublicacion
-            // 
-            this.lblFechaPublicacion.AutoSize = true;
-            this.lblFechaPublicacion.Location = new System.Drawing.Point(35, 331);
-            this.lblFechaPublicacion.Name = "lblFechaPublicacion";
-            this.lblFechaPublicacion.Size = new System.Drawing.Size(169, 20);
-            this.lblFechaPublicacion.TabIndex = 5;
-            this.lblFechaPublicacion.Text = "Fecha Publicacion:";
-            // 
-            // lblUbicacionPasillo
-            // 
-            this.lblUbicacionPasillo.AutoSize = true;
-            this.lblUbicacionPasillo.Location = new System.Drawing.Point(35, 402);
-            this.lblUbicacionPasillo.Name = "lblUbicacionPasillo";
-            this.lblUbicacionPasillo.Size = new System.Drawing.Size(156, 20);
-            this.lblUbicacionPasillo.TabIndex = 6;
-            this.lblUbicacionPasillo.Text = "Ubicacion Pasilo:";
-            // 
-            // lblHabitacion
-            // 
-            this.lblHabitacion.AutoSize = true;
-            this.lblHabitacion.Location = new System.Drawing.Point(37, 460);
-            this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(105, 20);
-            this.lblHabitacion.TabIndex = 7;
-            this.lblHabitacion.Text = "Habitación:";
-            // 
-            // lblPasillo
-            // 
-            this.lblPasillo.AutoSize = true;
-            this.lblPasillo.Location = new System.Drawing.Point(185, 460);
-            this.lblPasillo.Name = "lblPasillo";
-            this.lblPasillo.Size = new System.Drawing.Size(72, 20);
-            this.lblPasillo.TabIndex = 8;
-            this.lblPasillo.Text = "Pasillo:";
-            // 
-            // lblEstante
-            // 
-            this.lblEstante.AutoSize = true;
-            this.lblEstante.Location = new System.Drawing.Point(321, 460);
-            this.lblEstante.Name = "lblEstante";
-            this.lblEstante.Size = new System.Drawing.Size(79, 20);
-            this.lblEstante.TabIndex = 9;
-            this.lblEstante.Text = "Estante:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(27, 514);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(106, 27);
-            this.textBox5.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(160, 514);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(106, 27);
-            this.textBox6.TabIndex = 17;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(305, 514);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 27);
-            this.textBox7.TabIndex = 18;
-            // 
-            // lblMensajeAdmin
-            // 
-            this.lblMensajeAdmin.AutoSize = true;
-            this.lblMensajeAdmin.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblMensajeAdmin.Location = new System.Drawing.Point(451, 51);
-            this.lblMensajeAdmin.Name = "lblMensajeAdmin";
-            this.lblMensajeAdmin.Size = new System.Drawing.Size(352, 100);
-            this.lblMensajeAdmin.TabIndex = 19;
-            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor y Editorial\r\nEstan vacías, a" +
-    "greguelas primero en sus\r\n pantallas respectivas.\r\n\r\n";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(501, 217);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(143, 611);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
-            this.btnAgregar.TabIndex = 21;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCancelar.Location = new System.Drawing.Point(325, 611);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(123, 48);
-            this.btnCancelar.TabIndex = 22;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // dtpFechaPublicacion
-            // 
-            this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaPublicacion.Location = new System.Drawing.Point(244, 331);
-            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
-            this.dtpFechaPublicacion.Size = new System.Drawing.Size(156, 27);
-            this.dtpFechaPublicacion.TabIndex = 26;
             // 
             // cmbEditorial
             // 
             this.cmbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditorial.FormattingEnabled = true;
-            this.cmbEditorial.Location = new System.Drawing.Point(244, 217);
+            this.cmbEditorial.Location = new System.Drawing.Point(233, 201);
             this.cmbEditorial.Name = "cmbEditorial";
             this.cmbEditorial.Size = new System.Drawing.Size(156, 28);
             this.cmbEditorial.TabIndex = 31;
@@ -264,37 +104,197 @@ namespace Interfaz
             // 
             this.cmbAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutor.FormattingEnabled = true;
-            this.cmbAutor.Location = new System.Drawing.Point(244, 159);
+            this.cmbAutor.Location = new System.Drawing.Point(233, 143);
             this.cmbAutor.Name = "cmbAutor";
             this.cmbAutor.Size = new System.Drawing.Size(156, 28);
             this.cmbAutor.TabIndex = 30;
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(244, 112);
+            this.txtCategoria.Location = new System.Drawing.Point(233, 96);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(156, 27);
             this.txtCategoria.TabIndex = 29;
             // 
             // txtCantDisponible
             // 
-            this.txtCantDisponible.Location = new System.Drawing.Point(244, 266);
+            this.txtCantDisponible.Location = new System.Drawing.Point(233, 250);
             this.txtCantDisponible.Name = "txtCantDisponible";
             this.txtCantDisponible.Size = new System.Drawing.Size(156, 27);
             this.txtCantDisponible.TabIndex = 28;
             // 
             // txtNombreLibro
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(244, 48);
+            this.txtNombreLibro.Location = new System.Drawing.Point(233, 32);
             this.txtNombreLibro.Name = "txtNombreLibro";
             this.txtNombreLibro.Size = new System.Drawing.Size(156, 27);
             this.txtNombreLibro.TabIndex = 27;
+            // 
+            // dtpFechaPublicacion
+            // 
+            this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaPublicacion.Location = new System.Drawing.Point(233, 315);
+            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
+            this.dtpFechaPublicacion.Size = new System.Drawing.Size(156, 27);
+            this.dtpFechaPublicacion.TabIndex = 26;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCancelar.Location = new System.Drawing.Point(314, 567);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(123, 48);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnAgregar.Location = new System.Drawing.Point(132, 567);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
+            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(443, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblMensajeAdmin
+            // 
+            this.lblMensajeAdmin.AutoSize = true;
+            this.lblMensajeAdmin.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblMensajeAdmin.Location = new System.Drawing.Point(419, 35);
+            this.lblMensajeAdmin.Name = "lblMensajeAdmin";
+            this.lblMensajeAdmin.Size = new System.Drawing.Size(352, 100);
+            this.lblMensajeAdmin.TabIndex = 19;
+            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor y Editorial\r\nEstan vacías, a" +
+    "greguelas primero en sus\r\n pantallas respectivas.\r\n\r\n";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(294, 498);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(106, 27);
+            this.textBox7.TabIndex = 18;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(149, 498);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(106, 27);
+            this.textBox6.TabIndex = 17;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(16, 498);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(106, 27);
+            this.textBox5.TabIndex = 16;
+            // 
+            // lblEstante
+            // 
+            this.lblEstante.AutoSize = true;
+            this.lblEstante.Location = new System.Drawing.Point(310, 444);
+            this.lblEstante.Name = "lblEstante";
+            this.lblEstante.Size = new System.Drawing.Size(79, 20);
+            this.lblEstante.TabIndex = 9;
+            this.lblEstante.Text = "Estante:";
+            // 
+            // lblPasillo
+            // 
+            this.lblPasillo.AutoSize = true;
+            this.lblPasillo.Location = new System.Drawing.Point(174, 444);
+            this.lblPasillo.Name = "lblPasillo";
+            this.lblPasillo.Size = new System.Drawing.Size(72, 20);
+            this.lblPasillo.TabIndex = 8;
+            this.lblPasillo.Text = "Pasillo:";
+            // 
+            // lblHabitacion
+            // 
+            this.lblHabitacion.AutoSize = true;
+            this.lblHabitacion.Location = new System.Drawing.Point(26, 444);
+            this.lblHabitacion.Name = "lblHabitacion";
+            this.lblHabitacion.Size = new System.Drawing.Size(105, 20);
+            this.lblHabitacion.TabIndex = 7;
+            this.lblHabitacion.Text = "Habitación:";
+            // 
+            // lblUbicacionPasillo
+            // 
+            this.lblUbicacionPasillo.AutoSize = true;
+            this.lblUbicacionPasillo.Location = new System.Drawing.Point(24, 386);
+            this.lblUbicacionPasillo.Name = "lblUbicacionPasillo";
+            this.lblUbicacionPasillo.Size = new System.Drawing.Size(156, 20);
+            this.lblUbicacionPasillo.TabIndex = 6;
+            this.lblUbicacionPasillo.Text = "Ubicacion Pasilo:";
+            // 
+            // lblFechaPublicacion
+            // 
+            this.lblFechaPublicacion.AutoSize = true;
+            this.lblFechaPublicacion.Location = new System.Drawing.Point(24, 315);
+            this.lblFechaPublicacion.Name = "lblFechaPublicacion";
+            this.lblFechaPublicacion.Size = new System.Drawing.Size(169, 20);
+            this.lblFechaPublicacion.TabIndex = 5;
+            this.lblFechaPublicacion.Text = "Fecha Publicacion:";
+            // 
+            // lblCantidadDisponible
+            // 
+            this.lblCantidadDisponible.AutoSize = true;
+            this.lblCantidadDisponible.Location = new System.Drawing.Point(24, 250);
+            this.lblCantidadDisponible.Name = "lblCantidadDisponible";
+            this.lblCantidadDisponible.Size = new System.Drawing.Size(184, 20);
+            this.lblCantidadDisponible.TabIndex = 4;
+            this.lblCantidadDisponible.Text = "Cantidad Disponible:";
+            // 
+            // lblEditorial
+            // 
+            this.lblEditorial.AutoSize = true;
+            this.lblEditorial.Location = new System.Drawing.Point(24, 201);
+            this.lblEditorial.Name = "lblEditorial";
+            this.lblEditorial.Size = new System.Drawing.Size(85, 20);
+            this.lblEditorial.TabIndex = 3;
+            this.lblEditorial.Text = "Editorial:";
+            // 
+            // lblAutor
+            // 
+            this.lblAutor.AutoSize = true;
+            this.lblAutor.Location = new System.Drawing.Point(27, 143);
+            this.lblAutor.Name = "lblAutor";
+            this.lblAutor.Size = new System.Drawing.Size(60, 20);
+            this.lblAutor.TabIndex = 2;
+            this.lblAutor.Text = "Autor:";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(24, 85);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(96, 20);
+            this.lblCategoria.TabIndex = 1;
+            this.lblCategoria.Text = "Categoria:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(24, 32);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(129, 20);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre Libro:";
             // 
             // frmAgregarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 684);
+            this.ClientSize = new System.Drawing.Size(811, 667);
             this.Controls.Add(this.grpAgregarLibro);
             this.Name = "frmAgregarLibro";
             this.Text = "Agregar Libro";

@@ -118,6 +118,7 @@ namespace Interfaz
             this.mnEliminarLibro.Name = "mnEliminarLibro";
             this.mnEliminarLibro.Size = new System.Drawing.Size(257, 32);
             this.mnEliminarLibro.Text = "Eliminar Libro";
+            this.mnEliminarLibro.Click += new System.EventHandler(this.mnEliminarLibro_Click);
             // 
             // mnVerLibros
             // 

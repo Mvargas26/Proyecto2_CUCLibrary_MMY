@@ -52,6 +52,12 @@
     <Compile Include="frmAgregarLibro.Designer.cs">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarLibro.Designer.cs">
+      <DependentUpon>frmEliminarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <EmbeddedResource Include="frmAgregarLibro.resx">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarLibro.resx">
+      <DependentUpon>frmEliminarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEntrada.resx">
       <DependentUpon>frmEntrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -120,6 +130,9 @@
       <Project>{f7e0c27f-bfde-4366-bec8-a83704437221}</Project>
       <Name>Negocios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\Basurero.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
