@@ -64,6 +64,12 @@
     <Compile Include="frmLoginModAdmin.Designer.cs">
       <DependentUpon>frmLoginModAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarLibro.Designer.cs">
+      <DependentUpon>frmModificarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModuloAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoginModAdmin.resx">
       <DependentUpon>frmLoginModAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarLibro.resx">
+      <DependentUpon>frmModificarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModuloAdmin.resx">
       <DependentUpon>frmModuloAdmin.cs</DependentUpon>

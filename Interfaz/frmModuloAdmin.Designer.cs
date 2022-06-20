@@ -123,6 +123,7 @@ namespace Interfaz
             this.mnModificarLibro.Name = "mnModificarLibro";
             this.mnModificarLibro.Size = new System.Drawing.Size(257, 32);
             this.mnModificarLibro.Text = "Modificar Libro";
+            this.mnModificarLibro.Click += new System.EventHandler(this.mnModificarLibro_Click);
             // 
             // mnEliminarLibro
             // 
@@ -351,6 +352,7 @@ namespace Interfaz
             this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
             this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
             this.sALIRToolStripMenuItem.Text = "SALIR";
+            this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
             // 
             // frmModuloAdmin
             // 
@@ -362,6 +364,7 @@ namespace Interfaz
             this.MainMenuStrip = this.mnModuloAdmin;
             this.Name = "frmModuloAdmin";
             this.Text = "Módulo Administrativo";
+            this.Load += new System.EventHandler(this.frmModuloAdmin_Load);
             this.grpModuloAdmin.ResumeLayout(false);
             this.grpModuloAdmin.PerformLayout();
             this.mnModuloAdmin.ResumeLayout(false);

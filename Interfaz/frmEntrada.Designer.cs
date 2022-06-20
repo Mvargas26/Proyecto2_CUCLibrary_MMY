@@ -31,10 +31,10 @@ namespace Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEntrada));
             this.grpVentanaEntrada = new System.Windows.Forms.GroupBox();
-            this.lblSeleccione = new System.Windows.Forms.Label();
-            this.btnModuloAdmin = new System.Windows.Forms.Button();
-            this.btnModuloUsuario = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnModuloUsuario = new System.Windows.Forms.Button();
+            this.btnModuloAdmin = new System.Windows.Forms.Button();
+            this.lblSeleccione = new System.Windows.Forms.Label();
             this.grpVentanaEntrada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,27 +53,15 @@ namespace Interfaz
             this.grpVentanaEntrada.TabIndex = 0;
             this.grpVentanaEntrada.TabStop = false;
             // 
-            // lblSeleccione
+            // pictureBox1
             // 
-            this.lblSeleccione.AutoSize = true;
-            this.lblSeleccione.Font = new System.Drawing.Font("Bauhaus 93", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeleccione.Location = new System.Drawing.Point(23, 37);
-            this.lblSeleccione.Name = "lblSeleccione";
-            this.lblSeleccione.Size = new System.Drawing.Size(313, 28);
-            this.lblSeleccione.TabIndex = 0;
-            this.lblSeleccione.Text = "Seleccione el Módulo de Uso";
-            // 
-            // btnModuloAdmin
-            // 
-            this.btnModuloAdmin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnModuloAdmin.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnModuloAdmin.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModuloAdmin.Location = new System.Drawing.Point(45, 99);
-            this.btnModuloAdmin.Name = "btnModuloAdmin";
-            this.btnModuloAdmin.Size = new System.Drawing.Size(251, 52);
-            this.btnModuloAdmin.TabIndex = 1;
-            this.btnModuloAdmin.Text = "Módulo Administrativo";
-            this.btnModuloAdmin.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(76, 314);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btnModuloUsuario
             // 
@@ -87,15 +75,28 @@ namespace Interfaz
             this.btnModuloUsuario.Text = "Módulo Usuario";
             this.btnModuloUsuario.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnModuloAdmin
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 314);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.btnModuloAdmin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnModuloAdmin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnModuloAdmin.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnModuloAdmin.Location = new System.Drawing.Point(45, 104);
+            this.btnModuloAdmin.Name = "btnModuloAdmin";
+            this.btnModuloAdmin.Size = new System.Drawing.Size(251, 52);
+            this.btnModuloAdmin.TabIndex = 1;
+            this.btnModuloAdmin.Text = "Módulo Administrativo";
+            this.btnModuloAdmin.UseVisualStyleBackColor = false;
+            this.btnModuloAdmin.Click += new System.EventHandler(this.btnModuloAdmin_Click);
+            // 
+            // lblSeleccione
+            // 
+            this.lblSeleccione.AutoSize = true;
+            this.lblSeleccione.Font = new System.Drawing.Font("Bauhaus 93", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccione.Location = new System.Drawing.Point(23, 37);
+            this.lblSeleccione.Name = "lblSeleccione";
+            this.lblSeleccione.Size = new System.Drawing.Size(313, 28);
+            this.lblSeleccione.TabIndex = 0;
+            this.lblSeleccione.Text = "Seleccione el Módulo de Uso";
             // 
             // frmEntrada
             // 

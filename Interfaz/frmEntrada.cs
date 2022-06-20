@@ -16,5 +16,23 @@ namespace Interfaz
         {
             InitializeComponent();
         }
+
+        private void btnModuloAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                frmModuloAdmin pantalla = new frmModuloAdmin();
+
+                pantalla.Show();
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
     }
 }
