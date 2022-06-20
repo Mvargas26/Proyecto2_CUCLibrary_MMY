@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interfaz
 {
-    public partial class frmModuloAdmin : Form
+    public partial class frmModAdmin : Form
     {
-        public frmModuloAdmin()
+        public frmModAdmin()
         {
             InitializeComponent();
         }
@@ -21,15 +21,16 @@ namespace Interfaz
         {
             try
             {
+               
                 frmAgregarLibro pantalla = new frmAgregarLibro();
                 pantalla.MdiParent = this;
                 pantalla.Show();
             }
-            catch (Exception ex)
+            catch (Exception Error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(Error.Message);
             }
-        }//fin agregar libro
+        }//fin agregaR libro
 
         private void mnModificarLibro_Click(object sender, EventArgs e)
         {
@@ -39,21 +40,15 @@ namespace Interfaz
                 pantalla.MdiParent = this;
                 pantalla.Show();
             }
-            catch (Exception ex)
+            catch (Exception Error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(Error.Message);
             }
-        }//fn modificarlibro
-
-        private void frmModuloAdmin_Load(object sender, EventArgs e)
-        {
-
-        }//fin del Load
+        }//fn modificar  libro
 
         private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-    }//fin class
-}//fin space
-
+        }//fin boton salir
+    }
+}

@@ -22,7 +22,7 @@ namespace Interfaz
             try
             {
 
-                frmModuloAdmin pantalla = new frmModuloAdmin();
+                frmModAdmin pantalla = new frmModAdmin();
 
                 pantalla.Show();
 

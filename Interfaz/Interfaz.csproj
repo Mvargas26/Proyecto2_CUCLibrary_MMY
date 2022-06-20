@@ -64,17 +64,17 @@
     <Compile Include="frmLoginModAdmin.Designer.cs">
       <DependentUpon>frmLoginModAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModAdmin.Designer.cs">
+      <DependentUpon>frmModAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModificarLibro.Designer.cs">
       <DependentUpon>frmModificarLibro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmModuloAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmModuloAdmin.Designer.cs">
-      <DependentUpon>frmModuloAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,11 +87,11 @@
     <EmbeddedResource Include="frmLoginModAdmin.resx">
       <DependentUpon>frmLoginModAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModAdmin.resx">
+      <DependentUpon>frmModAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModificarLibro.resx">
       <DependentUpon>frmModificarLibro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmModuloAdmin.resx">
-      <DependentUpon>frmModuloAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

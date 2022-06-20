@@ -1,7 +1,7 @@
 ﻿
 namespace Interfaz
 {
-    partial class frmModuloAdmin
+    partial class frmModAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Interfaz
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpModuloAdmin = new System.Windows.Forms.GroupBox();
             this.mnModuloAdmin = new System.Windows.Forms.MenuStrip();
             this.mnLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.mnagregarLibro = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,19 +66,8 @@ namespace Interfaz
             this.mnEliminarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
             this.mnVerSolicitudes = new System.Windows.Forms.ToolStripMenuItem();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grpModuloAdmin.SuspendLayout();
             this.mnModuloAdmin.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpModuloAdmin
-            // 
-            this.grpModuloAdmin.Controls.Add(this.mnModuloAdmin);
-            this.grpModuloAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpModuloAdmin.Location = new System.Drawing.Point(0, 0);
-            this.grpModuloAdmin.Name = "grpModuloAdmin";
-            this.grpModuloAdmin.Size = new System.Drawing.Size(1266, 718);
-            this.grpModuloAdmin.TabIndex = 1;
-            this.grpModuloAdmin.TabStop = false;
             // 
             // mnModuloAdmin
             // 
@@ -94,10 +82,10 @@ namespace Interfaz
             this.mnSalasEstudio,
             this.mnSolicitudCopias,
             this.sALIRToolStripMenuItem});
-            this.mnModuloAdmin.Location = new System.Drawing.Point(3, 18);
+            this.mnModuloAdmin.Location = new System.Drawing.Point(0, 0);
             this.mnModuloAdmin.Name = "mnModuloAdmin";
-            this.mnModuloAdmin.Size = new System.Drawing.Size(1260, 36);
-            this.mnModuloAdmin.TabIndex = 0;
+            this.mnModuloAdmin.Size = new System.Drawing.Size(1212, 36);
+            this.mnModuloAdmin.TabIndex = 1;
             this.mnModuloAdmin.Text = "menuStrip1";
             // 
             // mnLibros
@@ -354,28 +342,25 @@ namespace Interfaz
             this.sALIRToolStripMenuItem.Text = "SALIR";
             this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
             // 
-            // frmModuloAdmin
+            // frmModAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 718);
-            this.Controls.Add(this.grpModuloAdmin);
+            this.ClientSize = new System.Drawing.Size(1212, 725);
+            this.Controls.Add(this.mnModuloAdmin);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.mnModuloAdmin;
-            this.Name = "frmModuloAdmin";
-            this.Text = "Módulo Administrativo";
-            this.Load += new System.EventHandler(this.frmModuloAdmin_Load);
-            this.grpModuloAdmin.ResumeLayout(false);
-            this.grpModuloAdmin.PerformLayout();
+            this.Name = "frmModAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modulo Administrador";
             this.mnModuloAdmin.ResumeLayout(false);
             this.mnModuloAdmin.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpModuloAdmin;
         private System.Windows.Forms.MenuStrip mnModuloAdmin;
         private System.Windows.Forms.ToolStripMenuItem mnLibros;
         private System.Windows.Forms.ToolStripMenuItem mnagregarLibro;
@@ -403,11 +388,11 @@ namespace Interfaz
         private System.Windows.Forms.ToolStripMenuItem mnEliminarUsuario;
         private System.Windows.Forms.ToolStripMenuItem mnVerUsuarios;
         private System.Windows.Forms.ToolStripMenuItem mnSalasEstudio;
-        private System.Windows.Forms.ToolStripMenuItem mnSolicitudCopias;
         private System.Windows.Forms.ToolStripMenuItem agregarSalaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarSalaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarSalaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verSalasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnSolicitudCopias;
         private System.Windows.Forms.ToolStripMenuItem mAagregarSolicitud;
         private System.Windows.Forms.ToolStripMenuItem mnModificarSolicitud;
         private System.Windows.Forms.ToolStripMenuItem mnEliminarSolicitud;
