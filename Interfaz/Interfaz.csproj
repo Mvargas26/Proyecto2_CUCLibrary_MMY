@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAgregarLibro.cs">
+    <Compile Include="PantallasLIbros\frmAgregarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAgregarLibro.Designer.cs">
+    <Compile Include="PantallasLIbros\frmAgregarLibro.Designer.cs">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEliminarLibro.cs">
+    <Compile Include="PantallasLIbros\frmEliminarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEliminarLibro.Designer.cs">
+    <Compile Include="PantallasLIbros\frmEliminarLibro.Designer.cs">
       <DependentUpon>frmEliminarLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEntrada.cs">
@@ -76,18 +76,24 @@
     <Compile Include="frmModAdmin.Designer.cs">
       <DependentUpon>frmModAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModificarLibro.cs">
+    <Compile Include="PantallasLIbros\frmModificarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificarLibro.Designer.cs">
+    <Compile Include="PantallasLIbros\frmModificarLibro.Designer.cs">
       <DependentUpon>frmModificarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasLIbros\frmVerLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasLIbros\frmVerLibros.Designer.cs">
+      <DependentUpon>frmVerLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAgregarLibro.resx">
+    <EmbeddedResource Include="PantallasLIbros\frmAgregarLibro.resx">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEliminarLibro.resx">
+    <EmbeddedResource Include="PantallasLIbros\frmEliminarLibro.resx">
       <DependentUpon>frmEliminarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntrada.resx">
@@ -99,8 +105,11 @@
     <EmbeddedResource Include="frmModAdmin.resx">
       <DependentUpon>frmModAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModificarLibro.resx">
+    <EmbeddedResource Include="PantallasLIbros\frmModificarLibro.resx">
       <DependentUpon>frmModificarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasLIbros\frmVerLibros.resx">
+      <DependentUpon>frmVerLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,5 +143,6 @@
   <ItemGroup>
     <None Include="ImagenesUsadas\Basurero.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
