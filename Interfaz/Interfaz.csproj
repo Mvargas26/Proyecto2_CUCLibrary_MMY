@@ -52,11 +52,23 @@
     <Compile Include="PantallasAutores\frmAgregarAutor.Designer.cs">
       <DependentUpon>frmAgregarAutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasAutores\frmEliminarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasAutores\frmEliminarAutor.Designer.cs">
+      <DependentUpon>frmEliminarAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasAutores\frmModificarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PantallasAutores\frmModificarAutor.Designer.cs">
       <DependentUpon>frmModificarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasAutores\frmVerAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasAutores\frmVerAutores.Designer.cs">
+      <DependentUpon>frmVerAutores.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasLIbros\frmAgregarLibro.cs">
       <SubType>Form</SubType>
@@ -105,8 +117,14 @@
     <EmbeddedResource Include="PantallasAutores\frmAgregarAutor.resx">
       <DependentUpon>frmAgregarAutor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallasAutores\frmEliminarAutor.resx">
+      <DependentUpon>frmEliminarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasAutores\frmModificarAutor.resx">
       <DependentUpon>frmModificarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasAutores\frmVerAutores.resx">
+      <DependentUpon>frmVerAutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasLIbros\frmAgregarLibro.resx">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>

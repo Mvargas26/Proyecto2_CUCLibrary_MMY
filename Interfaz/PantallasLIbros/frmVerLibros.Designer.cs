@@ -30,12 +30,12 @@ namespace Interfaz.PantallasLIbros
         private void InitializeComponent()
         {
             this.grpVerlibro = new System.Windows.Forms.GroupBox();
-            this.brnLimpiarCampos = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblLibroBuscarNombre = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLibroNombre = new System.Windows.Forms.TextBox();
             this.lblLibroBuscarID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLibroID = new System.Windows.Forms.TextBox();
             this.dgvVerLibros = new System.Windows.Forms.DataGridView();
             this.grpVerlibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerLibros)).BeginInit();
@@ -43,12 +43,12 @@ namespace Interfaz.PantallasLIbros
             // 
             // grpVerlibro
             // 
-            this.grpVerlibro.Controls.Add(this.brnLimpiarCampos);
+            this.grpVerlibro.Controls.Add(this.btnLimpiarCampos);
             this.grpVerlibro.Controls.Add(this.btnBuscar);
             this.grpVerlibro.Controls.Add(this.lblLibroBuscarNombre);
-            this.grpVerlibro.Controls.Add(this.textBox2);
+            this.grpVerlibro.Controls.Add(this.txtLibroNombre);
             this.grpVerlibro.Controls.Add(this.lblLibroBuscarID);
-            this.grpVerlibro.Controls.Add(this.textBox1);
+            this.grpVerlibro.Controls.Add(this.txtLibroID);
             this.grpVerlibro.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpVerlibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpVerlibro.Location = new System.Drawing.Point(0, 0);
@@ -58,15 +58,15 @@ namespace Interfaz.PantallasLIbros
             this.grpVerlibro.TabStop = false;
             this.grpVerlibro.Text = "Buscar Libro";
             // 
-            // brnLimpiarCampos
+            // btnLimpiarCampos
             // 
-            this.brnLimpiarCampos.ForeColor = System.Drawing.Color.Navy;
-            this.brnLimpiarCampos.Location = new System.Drawing.Point(743, 51);
-            this.brnLimpiarCampos.Name = "brnLimpiarCampos";
-            this.brnLimpiarCampos.Size = new System.Drawing.Size(121, 63);
-            this.brnLimpiarCampos.TabIndex = 5;
-            this.brnLimpiarCampos.Text = "Limpiar Campos";
-            this.brnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Navy;
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(743, 51);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(121, 63);
+            this.btnLimpiarCampos.TabIndex = 5;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -87,12 +87,12 @@ namespace Interfaz.PantallasLIbros
             this.lblLibroBuscarNombre.TabIndex = 3;
             this.lblLibroBuscarNombre.Text = "Buscar Libro por Nombre:";
             // 
-            // textBox2
+            // txtLibroNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(346, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 27);
-            this.textBox2.TabIndex = 2;
+            this.txtLibroNombre.Location = new System.Drawing.Point(346, 84);
+            this.txtLibroNombre.Name = "txtLibroNombre";
+            this.txtLibroNombre.Size = new System.Drawing.Size(189, 27);
+            this.txtLibroNombre.TabIndex = 2;
             // 
             // lblLibroBuscarID
             // 
@@ -103,12 +103,12 @@ namespace Interfaz.PantallasLIbros
             this.lblLibroBuscarID.TabIndex = 1;
             this.lblLibroBuscarID.Text = "Buscar Libro por ID:";
             // 
-            // textBox1
+            // txtLibroID
             // 
-            this.textBox1.Location = new System.Drawing.Point(346, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtLibroID.Location = new System.Drawing.Point(346, 35);
+            this.txtLibroID.Name = "txtLibroID";
+            this.txtLibroID.Size = new System.Drawing.Size(189, 27);
+            this.txtLibroID.TabIndex = 0;
             // 
             // dgvVerLibros
             // 
@@ -141,12 +141,12 @@ namespace Interfaz.PantallasLIbros
         #endregion
 
         private System.Windows.Forms.GroupBox grpVerlibro;
-        private System.Windows.Forms.Button brnLimpiarCampos;
+        private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblLibroBuscarNombre;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLibroNombre;
         private System.Windows.Forms.Label lblLibroBuscarID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLibroID;
         private System.Windows.Forms.DataGridView dgvVerLibros;
     }
 }

@@ -111,10 +111,35 @@ namespace Interfaz
             }
         }//fn modificarAutor
 
+        private void mnEliminarAutor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarAutor pantalla = new frmEliminarAutor();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
 
+        }//fn elim autor
 
+        private void mnVerAutores_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerAutores pantalla = new frmVerAutores();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
 
-
+        }//fn ver autor
 
 
 

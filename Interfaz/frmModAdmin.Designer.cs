@@ -157,12 +157,14 @@ namespace Interfaz
             this.mnEliminarAutor.Name = "mnEliminarAutor";
             this.mnEliminarAutor.Size = new System.Drawing.Size(263, 32);
             this.mnEliminarAutor.Text = "Eliminar Autor";
+            this.mnEliminarAutor.Click += new System.EventHandler(this.mnEliminarAutor_Click);
             // 
             // mnVerAutores
             // 
             this.mnVerAutores.Name = "mnVerAutores";
             this.mnVerAutores.Size = new System.Drawing.Size(263, 32);
             this.mnVerAutores.Text = "Ver Autores";
+            this.mnVerAutores.Click += new System.EventHandler(this.mnVerAutores_Click);
             // 
             // mnEditoriales
             // 
