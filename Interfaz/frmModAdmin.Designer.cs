@@ -84,7 +84,7 @@ namespace Interfaz
             this.sALIRToolStripMenuItem});
             this.mnModuloAdmin.Location = new System.Drawing.Point(0, 0);
             this.mnModuloAdmin.Name = "mnModuloAdmin";
-            this.mnModuloAdmin.Size = new System.Drawing.Size(1212, 36);
+            this.mnModuloAdmin.Size = new System.Drawing.Size(1225, 36);
             this.mnModuloAdmin.TabIndex = 1;
             this.mnModuloAdmin.Text = "menuStrip1";
             // 
@@ -340,6 +340,7 @@ namespace Interfaz
             // 
             // sALIRToolStripMenuItem
             // 
+            this.sALIRToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
             this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
             this.sALIRToolStripMenuItem.Text = "SALIR";
@@ -349,7 +350,7 @@ namespace Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 725);
+            this.ClientSize = new System.Drawing.Size(1225, 790);
             this.Controls.Add(this.mnModuloAdmin);
             this.IsMdiContainer = true;
             this.Name = "frmModAdmin";
