@@ -30,12 +30,12 @@ namespace Interfaz.PantallasLIbros
         private void InitializeComponent()
         {
             this.grpVerlibro = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblLibroBuscarID = new System.Windows.Forms.Label();
+            this.brnLimpiarCampos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.lblLibroBuscarNombre = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.brnLimpiarCampos = new System.Windows.Forms.Button();
+            this.lblLibroBuscarID = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvVerLibros = new System.Windows.Forms.DataGridView();
             this.grpVerlibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerLibros)).BeginInit();
@@ -53,26 +53,30 @@ namespace Interfaz.PantallasLIbros
             this.grpVerlibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpVerlibro.Location = new System.Drawing.Point(0, 0);
             this.grpVerlibro.Name = "grpVerlibro";
-            this.grpVerlibro.Size = new System.Drawing.Size(861, 163);
+            this.grpVerlibro.Size = new System.Drawing.Size(928, 163);
             this.grpVerlibro.TabIndex = 0;
             this.grpVerlibro.TabStop = false;
             this.grpVerlibro.Text = "Buscar Libro";
             // 
-            // textBox1
+            // brnLimpiarCampos
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 27);
-            this.textBox1.TabIndex = 0;
+            this.brnLimpiarCampos.ForeColor = System.Drawing.Color.Navy;
+            this.brnLimpiarCampos.Location = new System.Drawing.Point(743, 51);
+            this.brnLimpiarCampos.Name = "brnLimpiarCampos";
+            this.brnLimpiarCampos.Size = new System.Drawing.Size(121, 63);
+            this.brnLimpiarCampos.TabIndex = 5;
+            this.brnLimpiarCampos.Text = "Limpiar Campos";
+            this.brnLimpiarCampos.UseVisualStyleBackColor = true;
             // 
-            // lblLibroBuscarID
+            // btnBuscar
             // 
-            this.lblLibroBuscarID.AutoSize = true;
-            this.lblLibroBuscarID.Location = new System.Drawing.Point(47, 39);
-            this.lblLibroBuscarID.Name = "lblLibroBuscarID";
-            this.lblLibroBuscarID.Size = new System.Drawing.Size(182, 20);
-            this.lblLibroBuscarID.TabIndex = 1;
-            this.lblLibroBuscarID.Text = "Buscar Libro por ID:";
+            this.btnBuscar.ForeColor = System.Drawing.Color.Navy;
+            this.btnBuscar.Location = new System.Drawing.Point(590, 51);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(121, 63);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // lblLibroBuscarNombre
             // 
@@ -85,30 +89,26 @@ namespace Interfaz.PantallasLIbros
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(287, 84);
+            this.textBox2.Location = new System.Drawing.Point(346, 84);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 27);
+            this.textBox2.Size = new System.Drawing.Size(189, 27);
             this.textBox2.TabIndex = 2;
             // 
-            // btnBuscar
+            // lblLibroBuscarID
             // 
-            this.btnBuscar.ForeColor = System.Drawing.Color.Navy;
-            this.btnBuscar.Location = new System.Drawing.Point(531, 51);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(110, 63);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.lblLibroBuscarID.AutoSize = true;
+            this.lblLibroBuscarID.Location = new System.Drawing.Point(47, 39);
+            this.lblLibroBuscarID.Name = "lblLibroBuscarID";
+            this.lblLibroBuscarID.Size = new System.Drawing.Size(182, 20);
+            this.lblLibroBuscarID.TabIndex = 1;
+            this.lblLibroBuscarID.Text = "Buscar Libro por ID:";
             // 
-            // brnLimpiarCampos
+            // textBox1
             // 
-            this.brnLimpiarCampos.ForeColor = System.Drawing.Color.Navy;
-            this.brnLimpiarCampos.Location = new System.Drawing.Point(684, 51);
-            this.brnLimpiarCampos.Name = "brnLimpiarCampos";
-            this.brnLimpiarCampos.Size = new System.Drawing.Size(110, 63);
-            this.brnLimpiarCampos.TabIndex = 5;
-            this.brnLimpiarCampos.Text = "Limpiar Campos";
-            this.brnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(346, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 27);
+            this.textBox1.TabIndex = 0;
             // 
             // dgvVerLibros
             // 
@@ -119,14 +119,14 @@ namespace Interfaz.PantallasLIbros
             this.dgvVerLibros.ReadOnly = true;
             this.dgvVerLibros.RowHeadersWidth = 51;
             this.dgvVerLibros.RowTemplate.Height = 24;
-            this.dgvVerLibros.Size = new System.Drawing.Size(861, 287);
+            this.dgvVerLibros.Size = new System.Drawing.Size(928, 287);
             this.dgvVerLibros.TabIndex = 1;
             // 
             // frmVerLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 450);
+            this.ClientSize = new System.Drawing.Size(928, 450);
             this.Controls.Add(this.dgvVerLibros);
             this.Controls.Add(this.grpVerlibro);
             this.Name = "frmVerLibros";

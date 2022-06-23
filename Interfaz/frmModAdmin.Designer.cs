@@ -125,6 +125,7 @@ namespace Interfaz
             this.mnVerLibros.Name = "mnVerLibros";
             this.mnVerLibros.Size = new System.Drawing.Size(257, 32);
             this.mnVerLibros.Text = "Ver Libros";
+            this.mnVerLibros.Click += new System.EventHandler(this.mnVerLibros_Click);
             // 
             // mnAutores
             // 
@@ -142,6 +143,7 @@ namespace Interfaz
             this.agregarAutorToolStripMenuItem.Name = "agregarAutorToolStripMenuItem";
             this.agregarAutorToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
             this.agregarAutorToolStripMenuItem.Text = "Agregar Autor";
+            this.agregarAutorToolStripMenuItem.Click += new System.EventHandler(this.agregarAutorToolStripMenuItem_Click);
             // 
             // mnModificarAutor
             // 

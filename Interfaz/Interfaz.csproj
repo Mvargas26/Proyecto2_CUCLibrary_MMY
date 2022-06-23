@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallasAutores\frmAgregarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasAutores\frmAgregarAutor.Designer.cs">
+      <DependentUpon>frmAgregarAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasLIbros\frmAgregarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasAutores\frmAgregarAutor.resx">
+      <DependentUpon>frmAgregarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasLIbros\frmAgregarLibro.resx">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +152,8 @@
   <ItemGroup>
     <None Include="ImagenesUsadas\Basurero.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ImagenesUsadas\writer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

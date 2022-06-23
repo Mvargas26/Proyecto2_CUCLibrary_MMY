@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Interfaz.PantallasAutores;
+using Interfaz.PantallasLIbros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,5 +66,41 @@ namespace Interfaz
                 MessageBox.Show(Error.Message);
             }
         }//fin eliminar libro
-    }
-}
+
+        private void mnVerLibros_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerLibros pantalla = new frmVerLibros();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fin ver libro
+
+        private void agregarAutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarAutor pantalla = new frmAgregarAutor();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+
+
+        }//fin agregar autor
+
+
+
+
+
+
+    }//fin class
+}//fin space
