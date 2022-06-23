@@ -1,4 +1,5 @@
 ﻿using Interfaz.PantallasAutores;
+using Interfaz.PantallasEditoriales;
 using Interfaz.PantallasLIbros;
 using System;
 using System.Collections.Generic;
@@ -140,6 +141,22 @@ namespace Interfaz
             }
 
         }//fn ver autor
+
+        private void mnAgregarEditorial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarEditorial pantalla = new frmAgregarEditorial();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fin agregarEditorial
+
+
 
 
 

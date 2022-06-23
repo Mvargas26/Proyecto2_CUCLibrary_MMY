@@ -182,6 +182,7 @@ namespace Interfaz
             this.mnAgregarEditorial.Name = "mnAgregarEditorial";
             this.mnAgregarEditorial.Size = new System.Drawing.Size(297, 32);
             this.mnAgregarEditorial.Text = "Agregar Editorial";
+            this.mnAgregarEditorial.Click += new System.EventHandler(this.mnAgregarEditorial_Click);
             // 
             // mnModificarEditorial
             // 

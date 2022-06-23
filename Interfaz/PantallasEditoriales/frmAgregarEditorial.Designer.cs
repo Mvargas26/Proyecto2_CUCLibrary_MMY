@@ -1,7 +1,7 @@
 ﻿
-namespace Interfaz.PantallasAutores
+namespace Interfaz.PantallasEditoriales
 {
-    partial class frmAgregarAutor
+    partial class frmAgregarEditorial
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,40 @@ namespace Interfaz.PantallasAutores
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpAutor = new System.Windows.Forms.GroupBox();
+            this.grpEditorial = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtLugarOrigen = new System.Windows.Forms.TextBox();
             this.lblLugarOrigen = new System.Windows.Forms.Label();
-            this.txtNombreAutor = new System.Windows.Forms.TextBox();
-            this.lblNombreAutor = new System.Windows.Forms.Label();
-            this.grpAutor.SuspendLayout();
+            this.txtNombreEditorial = new System.Windows.Forms.TextBox();
+            this.lblNombreEditorial = new System.Windows.Forms.Label();
+            this.grpEditorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpAutor
+            // grpEditorial
             // 
-            this.grpAutor.Controls.Add(this.pictureBox1);
-            this.grpAutor.Controls.Add(this.btnCancelar);
-            this.grpAutor.Controls.Add(this.btnAgregar);
-            this.grpAutor.Controls.Add(this.txtLugarOrigen);
-            this.grpAutor.Controls.Add(this.lblLugarOrigen);
-            this.grpAutor.Controls.Add(this.txtNombreAutor);
-            this.grpAutor.Controls.Add(this.lblNombreAutor);
-            this.grpAutor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAutor.Location = new System.Drawing.Point(0, 0);
-            this.grpAutor.Name = "grpAutor";
-            this.grpAutor.Size = new System.Drawing.Size(691, 355);
-            this.grpAutor.TabIndex = 0;
-            this.grpAutor.TabStop = false;
-            this.grpAutor.Text = "Nuevo Autor";
+            this.grpEditorial.Controls.Add(this.pictureBox1);
+            this.grpEditorial.Controls.Add(this.btnCancelar);
+            this.grpEditorial.Controls.Add(this.btnAgregar);
+            this.grpEditorial.Controls.Add(this.txtLugarOrigen);
+            this.grpEditorial.Controls.Add(this.lblLugarOrigen);
+            this.grpEditorial.Controls.Add(this.txtNombreEditorial);
+            this.grpEditorial.Controls.Add(this.lblNombreEditorial);
+            this.grpEditorial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpEditorial.Location = new System.Drawing.Point(0, 0);
+            this.grpEditorial.Name = "grpEditorial";
+            this.grpEditorial.Size = new System.Drawing.Size(717, 373);
+            this.grpEditorial.TabIndex = 1;
+            this.grpEditorial.TabStop = false;
+            this.grpEditorial.Text = "Nueva Editorial";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Interfaz.Properties.Resources.writer;
-            this.pictureBox1.Location = new System.Drawing.Point(495, 68);
+            this.pictureBox1.Image = global::Interfaz.Properties.Resources.Editorial;
+            this.pictureBox1.Location = new System.Drawing.Point(526, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@ namespace Interfaz.PantallasAutores
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCancelar.Location = new System.Drawing.Point(260, 276);
+            this.btnCancelar.Location = new System.Drawing.Point(356, 280);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 48);
             this.btnCancelar.TabIndex = 24;
@@ -82,7 +82,7 @@ namespace Interfaz.PantallasAutores
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(78, 276);
+            this.btnAgregar.Location = new System.Drawing.Point(174, 280);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(123, 48);
             this.btnAgregar.TabIndex = 23;
@@ -91,7 +91,7 @@ namespace Interfaz.PantallasAutores
             // 
             // txtLugarOrigen
             // 
-            this.txtLugarOrigen.Location = new System.Drawing.Point(260, 172);
+            this.txtLugarOrigen.Location = new System.Drawing.Point(290, 167);
             this.txtLugarOrigen.Name = "txtLugarOrigen";
             this.txtLugarOrigen.Size = new System.Drawing.Size(176, 28);
             this.txtLugarOrigen.TabIndex = 3;
@@ -105,32 +105,32 @@ namespace Interfaz.PantallasAutores
             this.lblLugarOrigen.TabIndex = 2;
             this.lblLugarOrigen.Text = "Lugar de Origen:";
             // 
-            // txtNombreAutor
+            // txtNombreEditorial
             // 
-            this.txtNombreAutor.Location = new System.Drawing.Point(260, 68);
-            this.txtNombreAutor.Name = "txtNombreAutor";
-            this.txtNombreAutor.Size = new System.Drawing.Size(176, 28);
-            this.txtNombreAutor.TabIndex = 1;
+            this.txtNombreEditorial.Location = new System.Drawing.Point(290, 68);
+            this.txtNombreEditorial.Name = "txtNombreEditorial";
+            this.txtNombreEditorial.Size = new System.Drawing.Size(176, 28);
+            this.txtNombreEditorial.TabIndex = 1;
             // 
-            // lblNombreAutor
+            // lblNombreEditorial
             // 
-            this.lblNombreAutor.AutoSize = true;
-            this.lblNombreAutor.Location = new System.Drawing.Point(32, 67);
-            this.lblNombreAutor.Name = "lblNombreAutor";
-            this.lblNombreAutor.Size = new System.Drawing.Size(182, 24);
-            this.lblNombreAutor.TabIndex = 0;
-            this.lblNombreAutor.Text = "Nombre del Autor:";
+            this.lblNombreEditorial.AutoSize = true;
+            this.lblNombreEditorial.Location = new System.Drawing.Point(32, 67);
+            this.lblNombreEditorial.Name = "lblNombreEditorial";
+            this.lblNombreEditorial.Size = new System.Drawing.Size(225, 24);
+            this.lblNombreEditorial.TabIndex = 0;
+            this.lblNombreEditorial.Text = "Nombre de la Editorial:";
             // 
-            // frmAgregarAutor
+            // frmAgregarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 355);
-            this.Controls.Add(this.grpAutor);
-            this.Name = "frmAgregarAutor";
-            this.Text = "Agregar Autor";
-            this.grpAutor.ResumeLayout(false);
-            this.grpAutor.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(717, 373);
+            this.Controls.Add(this.grpEditorial);
+            this.Name = "frmAgregarEditorial";
+            this.Text = "Agregar Editorial";
+            this.grpEditorial.ResumeLayout(false);
+            this.grpEditorial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,13 +138,13 @@ namespace Interfaz.PantallasAutores
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpAutor;
-        private System.Windows.Forms.TextBox txtLugarOrigen;
-        private System.Windows.Forms.Label lblLugarOrigen;
-        private System.Windows.Forms.TextBox txtNombreAutor;
-        private System.Windows.Forms.Label lblNombreAutor;
+        private System.Windows.Forms.GroupBox grpEditorial;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtLugarOrigen;
+        private System.Windows.Forms.Label lblLugarOrigen;
+        private System.Windows.Forms.TextBox txtNombreEditorial;
+        private System.Windows.Forms.Label lblNombreEditorial;
     }
 }

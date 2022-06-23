@@ -70,6 +70,12 @@
     <Compile Include="PantallasAutores\frmVerAutores.Designer.cs">
       <DependentUpon>frmVerAutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasEditoriales\frmAgregarEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasEditoriales\frmAgregarEditorial.Designer.cs">
+      <DependentUpon>frmAgregarEditorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasLIbros\frmAgregarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasAutores\frmVerAutores.resx">
       <DependentUpon>frmVerAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasEditoriales\frmAgregarEditorial.resx">
+      <DependentUpon>frmAgregarEditorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasLIbros\frmAgregarLibro.resx">
       <DependentUpon>frmAgregarLibro.cs</DependentUpon>
@@ -184,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ImagenesUsadas\writerEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\Editorial.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

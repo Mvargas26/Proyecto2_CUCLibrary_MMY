@@ -29,7 +29,7 @@ namespace Interfaz.PantallasAutores
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvVerLibros = new System.Windows.Forms.DataGridView();
+            this.dgvVerAutores = new System.Windows.Forms.DataGridView();
             this.grpVerAutor = new System.Windows.Forms.GroupBox();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -37,21 +37,21 @@ namespace Interfaz.PantallasAutores
             this.txtAutorNombre = new System.Windows.Forms.TextBox();
             this.lblAutorBuscarID = new System.Windows.Forms.Label();
             this.txtAutorID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerAutores)).BeginInit();
             this.grpVerAutor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvVerLibros
+            // dgvVerAutores
             // 
-            this.dgvVerLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerLibros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvVerLibros.Location = new System.Drawing.Point(0, 163);
-            this.dgvVerLibros.Name = "dgvVerLibros";
-            this.dgvVerLibros.ReadOnly = true;
-            this.dgvVerLibros.RowHeadersWidth = 51;
-            this.dgvVerLibros.RowTemplate.Height = 24;
-            this.dgvVerLibros.Size = new System.Drawing.Size(919, 287);
-            this.dgvVerLibros.TabIndex = 3;
+            this.dgvVerAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerAutores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVerAutores.Location = new System.Drawing.Point(0, 163);
+            this.dgvVerAutores.Name = "dgvVerAutores";
+            this.dgvVerAutores.ReadOnly = true;
+            this.dgvVerAutores.RowHeadersWidth = 51;
+            this.dgvVerAutores.RowTemplate.Height = 24;
+            this.dgvVerAutores.Size = new System.Drawing.Size(919, 287);
+            this.dgvVerAutores.TabIndex = 3;
             // 
             // grpVerAutor
             // 
@@ -127,11 +127,11 @@ namespace Interfaz.PantallasAutores
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 450);
-            this.Controls.Add(this.dgvVerLibros);
+            this.Controls.Add(this.dgvVerAutores);
             this.Controls.Add(this.grpVerAutor);
             this.Name = "frmVerAutores";
             this.Text = "Ver Autores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerAutores)).EndInit();
             this.grpVerAutor.ResumeLayout(false);
             this.grpVerAutor.PerformLayout();
             this.ResumeLayout(false);
@@ -140,7 +140,7 @@ namespace Interfaz.PantallasAutores
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvVerLibros;
+        private System.Windows.Forms.DataGridView dgvVerAutores;
         private System.Windows.Forms.GroupBox grpVerAutor;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Button btnBuscar;
