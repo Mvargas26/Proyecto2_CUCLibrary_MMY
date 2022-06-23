@@ -97,6 +97,24 @@ namespace Interfaz
 
         }//fin agregar autor
 
+        private void mnModificarAutor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmModificarAutor pantalla = new frmModificarAutor();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn modificarAutor
+
+
+
+
+
 
 
 

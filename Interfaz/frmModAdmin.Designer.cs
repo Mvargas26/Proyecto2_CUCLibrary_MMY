@@ -150,6 +150,7 @@ namespace Interfaz
             this.mnModificarAutor.Name = "mnModificarAutor";
             this.mnModificarAutor.Size = new System.Drawing.Size(263, 32);
             this.mnModificarAutor.Text = "Modificar Autor";
+            this.mnModificarAutor.Click += new System.EventHandler(this.mnModificarAutor_Click);
             // 
             // mnEliminarAutor
             // 
