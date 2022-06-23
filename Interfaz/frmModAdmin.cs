@@ -171,6 +171,21 @@ namespace Interfaz
 
         }//fn modif editori
 
+        private void mnEliminarEditorial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarEditorial pantalla = new frmEliminarEditorial();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn elim editori
+
+
 
 
     }//fin class
