@@ -203,6 +203,7 @@ namespace Interfaz
             this.mnVerEditoriales.Name = "mnVerEditoriales";
             this.mnVerEditoriales.Size = new System.Drawing.Size(297, 32);
             this.mnVerEditoriales.Text = "Ver Editoriales";
+            this.mnVerEditoriales.Click += new System.EventHandler(this.mnVerEditoriales_Click);
             // 
             // mReservas
             // 

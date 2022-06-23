@@ -185,8 +185,18 @@ namespace Interfaz
             }
         }//fn elim editori
 
-
-
-
+        private void mnVerEditoriales_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerEditoriales pantalla = new frmVerEditoriales();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
     }//fin class
 }//fin space
