@@ -189,6 +189,7 @@ namespace Interfaz
             this.mnModificarEditorial.Name = "mnModificarEditorial";
             this.mnModificarEditorial.Size = new System.Drawing.Size(297, 32);
             this.mnModificarEditorial.Text = "modificar Editorial";
+            this.mnModificarEditorial.Click += new System.EventHandler(this.mnModificarEditorial_Click);
             // 
             // mnEliminarEditorial
             // 

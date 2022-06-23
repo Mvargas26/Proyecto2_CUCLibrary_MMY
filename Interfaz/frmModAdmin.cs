@@ -156,9 +156,20 @@ namespace Interfaz
             }
         }//fin agregarEditorial
 
+        private void mnModificarEditorial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmModificarEditorial pantalla = new frmModificarEditorial();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
 
-
-
+        }//fn modif editori
 
 
 
