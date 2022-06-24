@@ -1,6 +1,7 @@
 ﻿using Interfaz.PantallasAutores;
 using Interfaz.PantallasEditoriales;
 using Interfaz.PantallasLIbros;
+using Interfaz.PantallasReservas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -190,6 +191,20 @@ namespace Interfaz
             try
             {
                 frmVerEditoriales pantalla = new frmVerEditoriales();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
+
+        private void mnAgregarReserva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarReserva pantalla = new frmAgregarReserva();
                 pantalla.MdiParent = this;
                 pantalla.Show();
             }

@@ -31,6 +31,10 @@ namespace Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarLibro));
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
+            this.lblMensajeAdmin = new System.Windows.Forms.Label();
+            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
+            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
+            this.lblIdLibro = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.pboxImagen = new System.Windows.Forms.PictureBox();
@@ -52,12 +56,12 @@ namespace Interfaz
             this.lblAutor = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
-            this.lblIdLibro = new System.Windows.Forms.Label();
-            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
-            this.lblMensajeAdmin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpAgregarLibro
@@ -66,7 +70,10 @@ namespace Interfaz
             this.grpAgregarLibro.Controls.Add(this.dtpFechaPublicacion);
             this.grpAgregarLibro.Controls.Add(this.cmbIdLibro);
             this.grpAgregarLibro.Controls.Add(this.lblIdLibro);
+            this.grpAgregarLibro.Controls.Add(this.button2);
             this.grpAgregarLibro.Controls.Add(this.btnCancelar);
+            this.grpAgregarLibro.Controls.Add(this.button1);
+            this.grpAgregarLibro.Controls.Add(this.pictureBox1);
             this.grpAgregarLibro.Controls.Add(this.btnModificar);
             this.grpAgregarLibro.Controls.Add(this.pboxImagen);
             this.grpAgregarLibro.Controls.Add(this.txtEstante);
@@ -94,6 +101,43 @@ namespace Interfaz
             this.grpAgregarLibro.Size = new System.Drawing.Size(835, 748);
             this.grpAgregarLibro.TabIndex = 1;
             this.grpAgregarLibro.TabStop = false;
+            // 
+            // lblMensajeAdmin
+            // 
+            this.lblMensajeAdmin.AutoSize = true;
+            this.lblMensajeAdmin.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblMensajeAdmin.Location = new System.Drawing.Point(448, 67);
+            this.lblMensajeAdmin.Name = "lblMensajeAdmin";
+            this.lblMensajeAdmin.Size = new System.Drawing.Size(352, 100);
+            this.lblMensajeAdmin.TabIndex = 26;
+            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor y Editorial\r\nEstan vacías, a" +
+    "greguelas primero en sus\r\n pantallas respectivas.\r\n\r\n";
+            // 
+            // dtpFechaPublicacion
+            // 
+            this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaPublicacion.Location = new System.Drawing.Point(250, 395);
+            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
+            this.dtpFechaPublicacion.Size = new System.Drawing.Size(156, 27);
+            this.dtpFechaPublicacion.TabIndex = 25;
+            // 
+            // cmbIdLibro
+            // 
+            this.cmbIdLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdLibro.FormattingEnabled = true;
+            this.cmbIdLibro.Location = new System.Drawing.Point(253, 35);
+            this.cmbIdLibro.Name = "cmbIdLibro";
+            this.cmbIdLibro.Size = new System.Drawing.Size(156, 28);
+            this.cmbIdLibro.TabIndex = 24;
+            // 
+            // lblIdLibro
+            // 
+            this.lblIdLibro.AutoSize = true;
+            this.lblIdLibro.Location = new System.Drawing.Point(44, 35);
+            this.lblIdLibro.Name = "lblIdLibro";
+            this.lblIdLibro.Size = new System.Drawing.Size(83, 20);
+            this.lblIdLibro.TabIndex = 23;
+            this.lblIdLibro.Text = "ID Libro:";
             // 
             // btnCancelar
             // 
@@ -275,42 +319,35 @@ namespace Interfaz
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre Libro:";
             // 
-            // cmbIdLibro
+            // pictureBox1
             // 
-            this.cmbIdLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdLibro.FormattingEnabled = true;
-            this.cmbIdLibro.Location = new System.Drawing.Point(253, 35);
-            this.cmbIdLibro.Name = "cmbIdLibro";
-            this.cmbIdLibro.Size = new System.Drawing.Size(156, 28);
-            this.cmbIdLibro.TabIndex = 24;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(485, 247);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
-            // lblIdLibro
+            // button1
             // 
-            this.lblIdLibro.AutoSize = true;
-            this.lblIdLibro.Location = new System.Drawing.Point(44, 35);
-            this.lblIdLibro.Name = "lblIdLibro";
-            this.lblIdLibro.Size = new System.Drawing.Size(83, 20);
-            this.lblIdLibro.TabIndex = 23;
-            this.lblIdLibro.Text = "ID Libro:";
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Location = new System.Drawing.Point(149, 675);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 48);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dtpFechaPublicacion
+            // button2
             // 
-            this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaPublicacion.Location = new System.Drawing.Point(250, 395);
-            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
-            this.dtpFechaPublicacion.Size = new System.Drawing.Size(156, 27);
-            this.dtpFechaPublicacion.TabIndex = 25;
-            // 
-            // lblMensajeAdmin
-            // 
-            this.lblMensajeAdmin.AutoSize = true;
-            this.lblMensajeAdmin.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblMensajeAdmin.Location = new System.Drawing.Point(448, 67);
-            this.lblMensajeAdmin.Name = "lblMensajeAdmin";
-            this.lblMensajeAdmin.Size = new System.Drawing.Size(352, 100);
-            this.lblMensajeAdmin.TabIndex = 26;
-            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor y Editorial\r\nEstan vacías, a" +
-    "greguelas primero en sus\r\n pantallas respectivas.\r\n\r\n";
+            this.button2.ForeColor = System.Drawing.Color.Navy;
+            this.button2.Location = new System.Drawing.Point(331, 675);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 48);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmModificarLibro
             // 
@@ -323,6 +360,7 @@ namespace Interfaz
             this.grpAgregarLibro.ResumeLayout(false);
             this.grpAgregarLibro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +393,8 @@ namespace Interfaz
         private System.Windows.Forms.Label lblIdLibro;
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacion;
         private System.Windows.Forms.Label lblMensajeAdmin;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

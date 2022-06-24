@@ -221,6 +221,7 @@ namespace Interfaz
             this.mnAgregarReserva.Name = "mnAgregarReserva";
             this.mnAgregarReserva.Size = new System.Drawing.Size(287, 32);
             this.mnAgregarReserva.Text = "Agregar Reserva";
+            this.mnAgregarReserva.Click += new System.EventHandler(this.mnAgregarReserva_Click);
             // 
             // mnModificarReserva
             // 
