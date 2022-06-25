@@ -271,8 +271,18 @@ namespace Interfaz
             }
         }//fn agregar user biblio
 
-
-
-
+        private void mnModificarUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmModificarUserBiblioteca pantalla = new frmModificarUserBiblioteca();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
     }//fin class
 }//fin space

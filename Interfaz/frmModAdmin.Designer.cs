@@ -267,6 +267,7 @@ namespace Interfaz
             this.mnModificarUsuario.Name = "mnModificarUsuario";
             this.mnModificarUsuario.Size = new System.Drawing.Size(285, 32);
             this.mnModificarUsuario.Text = "Modificar Usuario";
+            this.mnModificarUsuario.Click += new System.EventHandler(this.mnModificarUsuario_Click);
             // 
             // mnEliminarUsuario
             // 

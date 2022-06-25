@@ -1,7 +1,7 @@
 ﻿
 namespace Interfaz.PantallasUserBiblioteca
 {
-    partial class frmAgregarUsuarioBiblioteca
+    partial class frmModificarUserBiblioteca
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,9 @@ namespace Interfaz.PantallasUserBiblioteca
         private void InitializeComponent()
         {
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -41,9 +44,8 @@ namespace Interfaz.PantallasUserBiblioteca
             this.lblUser = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblIdUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +53,8 @@ namespace Interfaz.PantallasUserBiblioteca
             // 
             // grpAgregarLibro
             // 
+            this.grpAgregarLibro.Controls.Add(this.comboBox1);
+            this.grpAgregarLibro.Controls.Add(this.lblIdUsuario);
             this.grpAgregarLibro.Controls.Add(this.cmbEstado);
             this.grpAgregarLibro.Controls.Add(this.txtPassword);
             this.grpAgregarLibro.Controls.Add(this.txtUser);
@@ -70,27 +74,53 @@ namespace Interfaz.PantallasUserBiblioteca
             this.grpAgregarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAgregarLibro.Location = new System.Drawing.Point(0, 0);
             this.grpAgregarLibro.Name = "grpAgregarLibro";
-            this.grpAgregarLibro.Size = new System.Drawing.Size(781, 504);
-            this.grpAgregarLibro.TabIndex = 1;
+            this.grpAgregarLibro.Size = new System.Drawing.Size(784, 559);
+            this.grpAgregarLibro.TabIndex = 2;
             this.grpAgregarLibro.TabStop = false;
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(250, 382);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(156, 28);
+            this.cmbEstado.TabIndex = 23;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(250, 268);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(156, 27);
+            this.txtPassword.TabIndex = 22;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(250, 210);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(156, 27);
+            this.txtUser.TabIndex = 21;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(233, 96);
+            this.txtApellidos.Location = new System.Drawing.Point(250, 163);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(156, 27);
             this.txtApellidos.TabIndex = 2;
             // 
             // txtEdad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(328, 250);
+            this.txtEdad.Location = new System.Drawing.Point(345, 317);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(61, 27);
             this.txtEdad.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(233, 32);
+            this.txtNombre.Location = new System.Drawing.Point(250, 99);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(156, 27);
             this.txtNombre.TabIndex = 1;
@@ -98,7 +128,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCancelar.Location = new System.Drawing.Point(401, 418);
+            this.btnCancelar.Location = new System.Drawing.Point(418, 485);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 48);
             this.btnCancelar.TabIndex = 11;
@@ -108,7 +138,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(219, 418);
+            this.btnAgregar.Location = new System.Drawing.Point(236, 485);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(123, 48);
             this.btnAgregar.TabIndex = 10;
@@ -118,7 +148,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(24, 315);
+            this.lblEstado.Location = new System.Drawing.Point(41, 382);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(73, 20);
             this.lblEstado.TabIndex = 5;
@@ -127,7 +157,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(24, 250);
+            this.lblEdad.Location = new System.Drawing.Point(41, 317);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(154, 20);
             this.lblEdad.TabIndex = 4;
@@ -136,7 +166,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(24, 201);
+            this.lblPassword.Location = new System.Drawing.Point(41, 268);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(97, 20);
             this.lblPassword.TabIndex = 3;
@@ -145,7 +175,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(27, 143);
+            this.lblUser.Location = new System.Drawing.Point(44, 210);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(55, 20);
             this.lblUser.TabIndex = 2;
@@ -154,7 +184,7 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(24, 85);
+            this.lblApellidos.Location = new System.Drawing.Point(41, 152);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(92, 20);
             this.lblApellidos.TabIndex = 1;
@@ -163,56 +193,48 @@ namespace Interfaz.PantallasUserBiblioteca
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(24, 32);
+            this.lblNombre.Location = new System.Drawing.Point(41, 99);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(80, 20);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtUser
+            // comboBox1
             // 
-            this.txtUser.Location = new System.Drawing.Point(233, 143);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(156, 27);
-            this.txtUser.TabIndex = 21;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(250, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(156, 28);
+            this.comboBox1.TabIndex = 25;
             // 
-            // txtPassword
+            // lblIdUsuario
             // 
-            this.txtPassword.Location = new System.Drawing.Point(233, 201);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(156, 27);
-            this.txtPassword.TabIndex = 22;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(233, 315);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(156, 28);
-            this.cmbEstado.TabIndex = 23;
+            this.lblIdUsuario.AutoSize = true;
+            this.lblIdUsuario.Location = new System.Drawing.Point(53, 43);
+            this.lblIdUsuario.Name = "lblIdUsuario";
+            this.lblIdUsuario.Size = new System.Drawing.Size(105, 20);
+            this.lblIdUsuario.TabIndex = 24;
+            this.lblIdUsuario.Text = "ID Usuario:";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Interfaz.Properties.Resources.library;
-            this.pictureBox1.Location = new System.Drawing.Point(443, 41);
+            this.pictureBox1.Image = global::Interfaz.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(460, 108);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(295, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // frmAgregarUsuarioBiblioteca
+            // frmModificarUserBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 504);
+            this.ClientSize = new System.Drawing.Size(784, 559);
             this.Controls.Add(this.grpAgregarLibro);
-            this.Name = "frmAgregarUsuarioBiblioteca";
-            this.Text = "Agregar Usuario Biblioteca";
+            this.Name = "frmModificarUserBiblioteca";
+            this.Text = "Modificar User Biblioteca";
             this.grpAgregarLibro.ResumeLayout(false);
             this.grpAgregarLibro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -223,6 +245,9 @@ namespace Interfaz.PantallasUserBiblioteca
         #endregion
 
         private System.Windows.Forms.GroupBox grpAgregarLibro;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtNombre;
@@ -235,8 +260,7 @@ namespace Interfaz.PantallasUserBiblioteca
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblIdUsuario;
     }
 }

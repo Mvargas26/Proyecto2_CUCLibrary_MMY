@@ -166,6 +166,12 @@
     <Compile Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.Designer.cs">
       <DependentUpon>frmAgregarUsuarioBiblioteca.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUserBiblioteca\frmModificarUserBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUserBiblioteca\frmModificarUserBiblioteca.Designer.cs">
+      <DependentUpon>frmModificarUserBiblioteca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PantallasAutores\frmAgregarAutor.resx">
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.resx">
       <DependentUpon>frmAgregarUsuarioBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUserBiblioteca\frmModificarUserBiblioteca.resx">
+      <DependentUpon>frmModificarUserBiblioteca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -283,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ImagenesUsadas\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
