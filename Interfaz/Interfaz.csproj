@@ -154,6 +154,12 @@
     <Compile Include="PantallasReservas\frmModificarReserva.Designer.cs">
       <DependentUpon>frmModificarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasReservas\frmVerReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasReservas\frmVerReservas.Designer.cs">
+      <DependentUpon>frmVerReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PantallasAutores\frmAgregarAutor.resx">
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasReservas\frmModificarReserva.resx">
       <DependentUpon>frmModificarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasReservas\frmVerReservas.resx">
+      <DependentUpon>frmVerReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -242,6 +242,7 @@ namespace Interfaz
             this.mnVerReservas.Name = "mnVerReservas";
             this.mnVerReservas.Size = new System.Drawing.Size(287, 32);
             this.mnVerReservas.Text = "Ver Reservas";
+            this.mnVerReservas.Click += new System.EventHandler(this.mnVerReservas_Click);
             // 
             // mnUsuariosBiblioteca
             // 

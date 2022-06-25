@@ -241,5 +241,19 @@ namespace Interfaz
                 MessageBox.Show(Error.Message);
             }
         }
+
+        private void mnVerReservas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerReservas pantalla = new frmVerReservas();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
     }//fin class
 }//fin space
