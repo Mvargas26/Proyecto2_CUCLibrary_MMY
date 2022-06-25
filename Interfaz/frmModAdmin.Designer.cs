@@ -299,24 +299,28 @@ namespace Interfaz
             this.agregarSalaToolStripMenuItem.Name = "agregarSalaToolStripMenuItem";
             this.agregarSalaToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.agregarSalaToolStripMenuItem.Text = "Agregar Sala ";
+            this.agregarSalaToolStripMenuItem.Click += new System.EventHandler(this.agregarSalaToolStripMenuItem_Click);
             // 
             // modificarSalaToolStripMenuItem
             // 
             this.modificarSalaToolStripMenuItem.Name = "modificarSalaToolStripMenuItem";
             this.modificarSalaToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.modificarSalaToolStripMenuItem.Text = "Modificar Sala";
+            this.modificarSalaToolStripMenuItem.Click += new System.EventHandler(this.modificarSalaToolStripMenuItem_Click);
             // 
             // eliminarSalaToolStripMenuItem
             // 
             this.eliminarSalaToolStripMenuItem.Name = "eliminarSalaToolStripMenuItem";
             this.eliminarSalaToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.eliminarSalaToolStripMenuItem.Text = "Eliminar Sala";
+            this.eliminarSalaToolStripMenuItem.Click += new System.EventHandler(this.eliminarSalaToolStripMenuItem_Click);
             // 
             // verSalasToolStripMenuItem
             // 
             this.verSalasToolStripMenuItem.Name = "verSalasToolStripMenuItem";
             this.verSalasToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.verSalasToolStripMenuItem.Text = "Ver Salas";
+            this.verSalasToolStripMenuItem.Click += new System.EventHandler(this.verSalasToolStripMenuItem_Click);
             // 
             // mnSolicitudCopias
             // 

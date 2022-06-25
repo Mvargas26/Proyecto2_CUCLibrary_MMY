@@ -2,6 +2,7 @@
 using Interfaz.PantallasEditoriales;
 using Interfaz.PantallasLIbros;
 using Interfaz.PantallasReservas;
+using Interfaz.PantallasSalasEstudio;
 using Interfaz.PantallasUserBiblioteca;
 using System;
 using System.Collections.Generic;
@@ -313,6 +314,62 @@ namespace Interfaz
             }
         }//fn ver user biblio
 
+        private void agregarSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarSala pantalla = new frmAgregarSala();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn agregar sala
+
+
+        private void modificarSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmModificarSala pantalla = new frmModificarSala();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn modificar sala
+
+        private void eliminarSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarSala pantalla = new frmEliminarSala();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn eliminarSala
+
+        private void verSalasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerSala pantalla = new frmVerSala();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn ver sala
 
 
 

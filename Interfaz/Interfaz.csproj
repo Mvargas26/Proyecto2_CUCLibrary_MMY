@@ -160,6 +160,30 @@
     <Compile Include="PantallasReservas\frmVerReservas.Designer.cs">
       <DependentUpon>frmVerReservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasSalasEstudio\frmAgregarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmAgregarSala.Designer.cs">
+      <DependentUpon>frmAgregarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmEliminarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmEliminarSala.Designer.cs">
+      <DependentUpon>frmEliminarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmModificarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmModificarSala.Designer.cs">
+      <DependentUpon>frmModificarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmVerSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSalasEstudio\frmVerSala.Designer.cs">
+      <DependentUpon>frmVerSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +267,18 @@
     <EmbeddedResource Include="PantallasReservas\frmVerReservas.resx">
       <DependentUpon>frmVerReservas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSalasEstudio\frmAgregarSala.resx">
+      <DependentUpon>frmAgregarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSalasEstudio\frmEliminarSala.resx">
+      <DependentUpon>frmEliminarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSalasEstudio\frmModificarSala.resx">
+      <DependentUpon>frmModificarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSalasEstudio\frmVerSala.resx">
+      <DependentUpon>frmVerSala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.resx">
       <DependentUpon>frmAgregarUsuarioBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +349,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ImagenesUsadas\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\sala2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
