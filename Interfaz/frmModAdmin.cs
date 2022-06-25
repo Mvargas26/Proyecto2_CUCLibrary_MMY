@@ -3,6 +3,7 @@ using Interfaz.PantallasEditoriales;
 using Interfaz.PantallasLIbros;
 using Interfaz.PantallasReservas;
 using Interfaz.PantallasSalasEstudio;
+using Interfaz.PantallasSolicitudCopias;
 using Interfaz.PantallasUserBiblioteca;
 using System;
 using System.Collections.Generic;
@@ -371,7 +372,60 @@ namespace Interfaz
             }
         }//fn ver sala
 
+        private void mAagregarSolicitud_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarSolicitudCopias pantalla = new frmAgregarSolicitudCopias();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
 
+        private void mnModificarSolicitud_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmModificarSolicitudCopias pantalla = new frmModificarSolicitudCopias();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
 
+        private void mnEliminarSolicitud_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarSolicitudCopias pantalla = new frmEliminarSolicitudCopias();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
+
+        private void mnVerSolicitudes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerSolicitudesCopias pantalla = new frmVerSolicitudesCopias();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
     }//fin class
 }//fin space

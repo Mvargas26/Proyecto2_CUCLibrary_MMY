@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallasSolicitudCopias\frmAgregarSolicitudCopias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmAgregarSolicitudCopias.Designer.cs">
+      <DependentUpon>frmAgregarSolicitudCopias.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasAutores\frmAgregarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,24 @@
     <Compile Include="PantallasSalasEstudio\frmVerSala.Designer.cs">
       <DependentUpon>frmVerSala.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmEliminarSolicitudCopias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmEliminarSolicitudCopias.Designer.cs">
+      <DependentUpon>frmEliminarSolicitudCopias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmModificarSolicitudCopias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmModificarSolicitudCopias.Designer.cs">
+      <DependentUpon>frmModificarSolicitudCopias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmVerSolicitudesCopias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasSolicitudCopias\frmVerSolicitudesCopias.Designer.cs">
+      <DependentUpon>frmVerSolicitudesCopias.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +234,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasSolicitudCopias\frmAgregarSolicitudCopias.resx">
+      <DependentUpon>frmAgregarSolicitudCopias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasAutores\frmAgregarAutor.resx">
       <DependentUpon>frmAgregarAutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +305,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasSalasEstudio\frmVerSala.resx">
       <DependentUpon>frmVerSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSolicitudCopias\frmEliminarSolicitudCopias.resx">
+      <DependentUpon>frmEliminarSolicitudCopias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSolicitudCopias\frmModificarSolicitudCopias.resx">
+      <DependentUpon>frmModificarSolicitudCopias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasSolicitudCopias\frmVerSolicitudesCopias.resx">
+      <DependentUpon>frmVerSolicitudesCopias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUserBiblioteca\frmAgregarUsuarioBiblioteca.resx">
       <DependentUpon>frmAgregarUsuarioBiblioteca.cs</DependentUpon>
@@ -355,6 +391,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ImagenesUsadas\sala2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\photocopier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImagenesUsadas\photocopier2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

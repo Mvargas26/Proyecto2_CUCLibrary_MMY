@@ -338,24 +338,28 @@ namespace Interfaz
             this.mAagregarSolicitud.Name = "mAagregarSolicitud";
             this.mAagregarSolicitud.Size = new System.Drawing.Size(299, 32);
             this.mAagregarSolicitud.Text = "Agregar Solicitud";
+            this.mAagregarSolicitud.Click += new System.EventHandler(this.mAagregarSolicitud_Click);
             // 
             // mnModificarSolicitud
             // 
             this.mnModificarSolicitud.Name = "mnModificarSolicitud";
             this.mnModificarSolicitud.Size = new System.Drawing.Size(299, 32);
             this.mnModificarSolicitud.Text = "Modificar Solicitud";
+            this.mnModificarSolicitud.Click += new System.EventHandler(this.mnModificarSolicitud_Click);
             // 
             // mnEliminarSolicitud
             // 
             this.mnEliminarSolicitud.Name = "mnEliminarSolicitud";
             this.mnEliminarSolicitud.Size = new System.Drawing.Size(299, 32);
             this.mnEliminarSolicitud.Text = "Eliminar Solicitud";
+            this.mnEliminarSolicitud.Click += new System.EventHandler(this.mnEliminarSolicitud_Click);
             // 
             // mnVerSolicitudes
             // 
             this.mnVerSolicitudes.Name = "mnVerSolicitudes";
             this.mnVerSolicitudes.Size = new System.Drawing.Size(299, 32);
             this.mnVerSolicitudes.Text = "Ver solicitudes";
+            this.mnVerSolicitudes.Click += new System.EventHandler(this.mnVerSolicitudes_Click);
             // 
             // sALIRToolStripMenuItem
             // 
