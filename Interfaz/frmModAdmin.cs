@@ -283,6 +283,38 @@ namespace Interfaz
             {
                 MessageBox.Show(Error.Message);
             }
-        }
+        }//fin moficiar user biblio
+
+        private void mnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarUsuarioBiblioteca pantalla = new frmEliminarUsuarioBiblioteca();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn elim user biblio
+
+        private void mnVerUsuarios_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVerUserBiblioteca pantalla = new frmVerUserBiblioteca();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn ver user biblio
+
+
+
+
     }//fin class
 }//fin space

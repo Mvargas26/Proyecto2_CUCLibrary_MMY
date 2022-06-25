@@ -274,12 +274,14 @@ namespace Interfaz
             this.mnEliminarUsuario.Name = "mnEliminarUsuario";
             this.mnEliminarUsuario.Size = new System.Drawing.Size(285, 32);
             this.mnEliminarUsuario.Text = "Eliminar Usuario";
+            this.mnEliminarUsuario.Click += new System.EventHandler(this.mnEliminarUsuario_Click);
             // 
             // mnVerUsuarios
             // 
             this.mnVerUsuarios.Name = "mnVerUsuarios";
             this.mnVerUsuarios.Size = new System.Drawing.Size(285, 32);
             this.mnVerUsuarios.Text = "Ver Usuarios";
+            this.mnVerUsuarios.Click += new System.EventHandler(this.mnVerUsuarios_Click);
             // 
             // mnSalasEstudio
             // 
