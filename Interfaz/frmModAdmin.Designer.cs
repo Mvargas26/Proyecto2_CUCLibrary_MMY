@@ -260,6 +260,7 @@ namespace Interfaz
             this.mnAgregarUsuario.Name = "mnAgregarUsuario";
             this.mnAgregarUsuario.Size = new System.Drawing.Size(285, 32);
             this.mnAgregarUsuario.Text = "Agregar Usuario";
+            this.mnAgregarUsuario.Click += new System.EventHandler(this.mnAgregarUsuario_Click);
             // 
             // mnModificarUsuario
             // 

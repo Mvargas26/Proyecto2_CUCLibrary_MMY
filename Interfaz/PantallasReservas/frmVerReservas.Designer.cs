@@ -130,6 +130,7 @@ namespace Interfaz.PantallasReservas
             this.Controls.Add(this.dgvVerReservas);
             this.Controls.Add(this.grpVerReservas);
             this.Name = "frmVerReservas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver Reservas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerReservas)).EndInit();
             this.grpVerReservas.ResumeLayout(false);

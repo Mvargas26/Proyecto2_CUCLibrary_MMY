@@ -2,6 +2,7 @@
 using Interfaz.PantallasEditoriales;
 using Interfaz.PantallasLIbros;
 using Interfaz.PantallasReservas;
+using Interfaz.PantallasUserBiblioteca;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -255,5 +256,23 @@ namespace Interfaz
                 MessageBox.Show(Error.Message);
             }
         }
+
+        private void mnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAgregarUsuarioBiblioteca pantalla = new frmAgregarUsuarioBiblioteca();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }//fn agregar user biblio
+
+
+
+
     }//fin class
 }//fin space

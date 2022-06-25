@@ -32,21 +32,21 @@ namespace Interfaz.PantallasReservas
             this.grpEliminarReserva = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.cmbLibroReserva = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbUsuarioReserva = new System.Windows.Forms.ComboBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblIDReserva = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNombreUser = new System.Windows.Forms.TextBox();
             this.grpEliminarReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpEliminarReserva
             // 
+            this.grpEliminarReserva.Controls.Add(this.txtNombreUser);
             this.grpEliminarReserva.Controls.Add(this.button2);
             this.grpEliminarReserva.Controls.Add(this.btnEliminar);
             this.grpEliminarReserva.Controls.Add(this.pictureBox1);
-            this.grpEliminarReserva.Controls.Add(this.cmbLibroReserva);
             this.grpEliminarReserva.Controls.Add(this.cmbUsuarioReserva);
             this.grpEliminarReserva.Controls.Add(this.lblNombreUsuario);
             this.grpEliminarReserva.Controls.Add(this.lblIDReserva);
@@ -79,14 +79,15 @@ namespace Interfaz.PantallasReservas
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // cmbLibroReserva
+            // pictureBox1
             // 
-            this.cmbLibroReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLibroReserva.FormattingEnabled = true;
-            this.cmbLibroReserva.Location = new System.Drawing.Point(203, 108);
-            this.cmbLibroReserva.Name = "cmbLibroReserva";
-            this.cmbLibroReserva.Size = new System.Drawing.Size(203, 28);
-            this.cmbLibroReserva.TabIndex = 6;
+            this.pictureBox1.Image = global::Interfaz.Properties.Resources.basurero2;
+            this.pictureBox1.Location = new System.Drawing.Point(456, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // cmbUsuarioReserva
             // 
@@ -115,15 +116,13 @@ namespace Interfaz.PantallasReservas
             this.lblIDReserva.TabIndex = 0;
             this.lblIDReserva.Text = "ID Reserva:";
             // 
-            // pictureBox1
+            // txtNombreUser
             // 
-            this.pictureBox1.Image = global::Interfaz.Properties.Resources.basurero2;
-            this.pictureBox1.Location = new System.Drawing.Point(456, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.txtNombreUser.Location = new System.Drawing.Point(203, 108);
+            this.txtNombreUser.Name = "txtNombreUser";
+            this.txtNombreUser.ReadOnly = true;
+            this.txtNombreUser.Size = new System.Drawing.Size(203, 27);
+            this.txtNombreUser.TabIndex = 26;
             // 
             // frmEliminarReserva
             // 
@@ -146,9 +145,9 @@ namespace Interfaz.PantallasReservas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbLibroReserva;
         private System.Windows.Forms.ComboBox cmbUsuarioReserva;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblIDReserva;
+        private System.Windows.Forms.TextBox txtNombreUser;
     }
 }
