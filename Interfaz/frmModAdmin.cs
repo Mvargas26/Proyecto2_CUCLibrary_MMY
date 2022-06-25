@@ -227,5 +227,19 @@ namespace Interfaz
                 MessageBox.Show(Error.Message);
             }
         }
+
+        private void mnEliminarReserva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEliminarReserva pantalla = new frmEliminarReserva();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
     }//fin class
 }//fin space

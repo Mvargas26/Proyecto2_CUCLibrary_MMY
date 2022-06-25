@@ -235,6 +235,7 @@ namespace Interfaz
             this.mnEliminarReserva.Name = "mnEliminarReserva";
             this.mnEliminarReserva.Size = new System.Drawing.Size(287, 32);
             this.mnEliminarReserva.Text = "Eliminar Reserva";
+            this.mnEliminarReserva.Click += new System.EventHandler(this.mnEliminarReserva_Click);
             // 
             // mnVerReservas
             // 
