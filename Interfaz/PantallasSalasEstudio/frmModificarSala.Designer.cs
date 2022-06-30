@@ -30,15 +30,15 @@ namespace Interfaz.PantallasSalasEstudio
         private void InitializeComponent()
         {
             this.grpModificarSala = new System.Windows.Forms.GroupBox();
+            this.cmbIDSala = new System.Windows.Forms.ComboBox();
+            this.lblIDSala = new System.Windows.Forms.Label();
             this.cmEstado = new System.Windows.Forms.ComboBox();
+            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtTipoSala = new System.Windows.Forms.TextBox();
             this.lblTipoSala = new System.Windows.Forms.Label();
-            this.lblIDSala = new System.Windows.Forms.Label();
-            this.cmbIDSala = new System.Windows.Forms.ComboBox();
-            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.grpModificarSala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenDecorativa)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,24 @@ namespace Interfaz.PantallasSalasEstudio
             this.grpModificarSala.TabStop = false;
             this.grpModificarSala.Text = "Modificar Sala";
             // 
+            // cmbIDSala
+            // 
+            this.cmbIDSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDSala.FormattingEnabled = true;
+            this.cmbIDSala.Location = new System.Drawing.Point(290, 57);
+            this.cmbIDSala.Name = "cmbIDSala";
+            this.cmbIDSala.Size = new System.Drawing.Size(176, 30);
+            this.cmbIDSala.TabIndex = 28;
+            // 
+            // lblIDSala
+            // 
+            this.lblIDSala.AutoSize = true;
+            this.lblIDSala.Location = new System.Drawing.Point(32, 57);
+            this.lblIDSala.Name = "lblIDSala";
+            this.lblIDSala.Size = new System.Drawing.Size(133, 24);
+            this.lblIDSala.TabIndex = 27;
+            this.lblIDSala.Text = "ID de la Sala:";
+            // 
             // cmEstado
             // 
             this.cmEstado.FormattingEnabled = true;
@@ -74,6 +92,17 @@ namespace Interfaz.PantallasSalasEstudio
             this.cmEstado.Size = new System.Drawing.Size(176, 30);
             this.cmEstado.TabIndex = 26;
             // 
+            // picImagenDecorativa
+            // 
+            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.sala2;
+            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
+            this.picImagenDecorativa.Location = new System.Drawing.Point(526, 57);
+            this.picImagenDecorativa.Name = "picImagenDecorativa";
+            this.picImagenDecorativa.Size = new System.Drawing.Size(162, 180);
+            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenDecorativa.TabIndex = 25;
+            this.picImagenDecorativa.TabStop = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -83,6 +112,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -118,35 +148,6 @@ namespace Interfaz.PantallasSalasEstudio
             this.lblTipoSala.Size = new System.Drawing.Size(134, 24);
             this.lblTipoSala.TabIndex = 0;
             this.lblTipoSala.Text = "Tipo de Sala:";
-            // 
-            // lblIDSala
-            // 
-            this.lblIDSala.AutoSize = true;
-            this.lblIDSala.Location = new System.Drawing.Point(32, 57);
-            this.lblIDSala.Name = "lblIDSala";
-            this.lblIDSala.Size = new System.Drawing.Size(133, 24);
-            this.lblIDSala.TabIndex = 27;
-            this.lblIDSala.Text = "ID de la Sala:";
-            // 
-            // cmbIDSala
-            // 
-            this.cmbIDSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIDSala.FormattingEnabled = true;
-            this.cmbIDSala.Location = new System.Drawing.Point(290, 57);
-            this.cmbIDSala.Name = "cmbIDSala";
-            this.cmbIDSala.Size = new System.Drawing.Size(176, 30);
-            this.cmbIDSala.TabIndex = 28;
-            // 
-            // picImagenDecorativa
-            // 
-            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.sala2;
-            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
-            this.picImagenDecorativa.Location = new System.Drawing.Point(526, 57);
-            this.picImagenDecorativa.Name = "picImagenDecorativa";
-            this.picImagenDecorativa.Size = new System.Drawing.Size(162, 180);
-            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImagenDecorativa.TabIndex = 25;
-            this.picImagenDecorativa.TabStop = false;
             // 
             // frmModificarSala
             // 

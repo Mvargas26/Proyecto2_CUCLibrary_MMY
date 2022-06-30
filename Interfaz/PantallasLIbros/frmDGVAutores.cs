@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Interfaz.PantallasAutores
+namespace Interfaz.PantallasLIbros
 {
-    public partial class frmAgregarAutor : Form
+    public partial class frmDGVAutores : Form
     {
-        public frmAgregarAutor()
+        public frmDGVAutores()
         {
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnFinalizar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -30,6 +30,8 @@ namespace Interfaz.PantallasAutores
         private void InitializeComponent()
         {
             this.grpAutor = new System.Windows.Forms.GroupBox();
+            this.cmbIDAutor = new System.Windows.Forms.ComboBox();
+            this.lblIDAutor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -37,8 +39,6 @@ namespace Interfaz.PantallasAutores
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtNombreAutor = new System.Windows.Forms.TextBox();
             this.lblNombreAutor = new System.Windows.Forms.Label();
-            this.lblIDAutor = new System.Windows.Forms.Label();
-            this.cmbIDAutor = new System.Windows.Forms.ComboBox();
             this.grpAutor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,24 @@ namespace Interfaz.PantallasAutores
             this.grpAutor.TabStop = false;
             this.grpAutor.Text = "Nuevo Autor";
             // 
+            // cmbIDAutor
+            // 
+            this.cmbIDAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDAutor.FormattingEnabled = true;
+            this.cmbIDAutor.Location = new System.Drawing.Point(260, 46);
+            this.cmbIDAutor.Name = "cmbIDAutor";
+            this.cmbIDAutor.Size = new System.Drawing.Size(176, 30);
+            this.cmbIDAutor.TabIndex = 27;
+            // 
+            // lblIDAutor
+            // 
+            this.lblIDAutor.AutoSize = true;
+            this.lblIDAutor.Location = new System.Drawing.Point(32, 48);
+            this.lblIDAutor.Name = "lblIDAutor";
+            this.lblIDAutor.Size = new System.Drawing.Size(126, 24);
+            this.lblIDAutor.TabIndex = 26;
+            this.lblIDAutor.Text = "ID del Autor:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Interfaz.Properties.Resources.writerEdit;
@@ -82,6 +100,7 @@ namespace Interfaz.PantallasAutores
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -124,24 +143,6 @@ namespace Interfaz.PantallasAutores
             this.lblNombreAutor.Size = new System.Drawing.Size(182, 24);
             this.lblNombreAutor.TabIndex = 0;
             this.lblNombreAutor.Text = "Nombre del Autor:";
-            // 
-            // lblIDAutor
-            // 
-            this.lblIDAutor.AutoSize = true;
-            this.lblIDAutor.Location = new System.Drawing.Point(32, 48);
-            this.lblIDAutor.Name = "lblIDAutor";
-            this.lblIDAutor.Size = new System.Drawing.Size(126, 24);
-            this.lblIDAutor.TabIndex = 26;
-            this.lblIDAutor.Text = "ID del Autor:";
-            // 
-            // cmbIDAutor
-            // 
-            this.cmbIDAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIDAutor.FormattingEnabled = true;
-            this.cmbIDAutor.Location = new System.Drawing.Point(260, 46);
-            this.cmbIDAutor.Name = "cmbIDAutor";
-            this.cmbIDAutor.Size = new System.Drawing.Size(176, 30);
-            this.cmbIDAutor.TabIndex = 27;
             // 
             // frmModificarAutor
             // 

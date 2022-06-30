@@ -30,13 +30,13 @@ namespace Interfaz
         private void InitializeComponent()
         {
             this.grpEliminarLIbro = new System.Windows.Forms.GroupBox();
-            this.lblIdLibro = new System.Windows.Forms.Label();
-            this.lblNombreLibro = new System.Windows.Forms.Label();
-            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
-            this.txtNombreLibro = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.pboxImagen = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtNombreLibro = new System.Windows.Forms.TextBox();
+            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
+            this.lblNombreLibro = new System.Windows.Forms.Label();
+            this.lblIdLibro = new System.Windows.Forms.Label();
             this.grpEliminarLIbro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).BeginInit();
             this.SuspendLayout();
@@ -59,39 +59,25 @@ namespace Interfaz
             this.grpEliminarLIbro.TabStop = false;
             this.grpEliminarLIbro.Text = "Eliminar Libro";
             // 
-            // lblIdLibro
+            // pboxImagen
             // 
-            this.lblIdLibro.AutoSize = true;
-            this.lblIdLibro.Location = new System.Drawing.Point(59, 68);
-            this.lblIdLibro.Name = "lblIdLibro";
-            this.lblIdLibro.Size = new System.Drawing.Size(79, 20);
-            this.lblIdLibro.TabIndex = 0;
-            this.lblIdLibro.Text = "Id Libro:";
+            this.pboxImagen.Image = global::Interfaz.Properties.Resources.Basurero;
+            this.pboxImagen.Location = new System.Drawing.Point(430, 54);
+            this.pboxImagen.Name = "pboxImagen";
+            this.pboxImagen.Size = new System.Drawing.Size(151, 151);
+            this.pboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxImagen.TabIndex = 21;
+            this.pboxImagen.TabStop = false;
             // 
-            // lblNombreLibro
+            // btnCancelar
             // 
-            this.lblNombreLibro.AutoSize = true;
-            this.lblNombreLibro.Location = new System.Drawing.Point(59, 127);
-            this.lblNombreLibro.Name = "lblNombreLibro";
-            this.lblNombreLibro.Size = new System.Drawing.Size(129, 20);
-            this.lblNombreLibro.TabIndex = 1;
-            this.lblNombreLibro.Text = "Nombre Libro:";
-            // 
-            // cmbIdLibro
-            // 
-            this.cmbIdLibro.FormattingEnabled = true;
-            this.cmbIdLibro.Location = new System.Drawing.Point(250, 68);
-            this.cmbIdLibro.Name = "cmbIdLibro";
-            this.cmbIdLibro.Size = new System.Drawing.Size(121, 28);
-            this.cmbIdLibro.TabIndex = 2;
-            // 
-            // txtNombreLibro
-            // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(250, 124);
-            this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.ReadOnly = true;
-            this.txtNombreLibro.Size = new System.Drawing.Size(121, 27);
-            this.txtNombreLibro.TabIndex = 3;
+            this.btnCancelar.Location = new System.Drawing.Point(272, 221);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(117, 55);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -102,24 +88,39 @@ namespace Interfaz
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // txtNombreLibro
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(272, 221);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(117, 55);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.txtNombreLibro.Location = new System.Drawing.Point(250, 124);
+            this.txtNombreLibro.Name = "txtNombreLibro";
+            this.txtNombreLibro.ReadOnly = true;
+            this.txtNombreLibro.Size = new System.Drawing.Size(121, 27);
+            this.txtNombreLibro.TabIndex = 3;
             // 
-            // pboxImagen
+            // cmbIdLibro
             // 
-            this.pboxImagen.Image = global::Interfaz.Properties.Resources.Basurero;
-            this.pboxImagen.Location = new System.Drawing.Point(430, 54);
-            this.pboxImagen.Name = "pboxImagen";
-            this.pboxImagen.Size = new System.Drawing.Size(151, 151);
-            this.pboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxImagen.TabIndex = 21;
-            this.pboxImagen.TabStop = false;
+            this.cmbIdLibro.FormattingEnabled = true;
+            this.cmbIdLibro.Location = new System.Drawing.Point(250, 68);
+            this.cmbIdLibro.Name = "cmbIdLibro";
+            this.cmbIdLibro.Size = new System.Drawing.Size(121, 28);
+            this.cmbIdLibro.TabIndex = 2;
+            // 
+            // lblNombreLibro
+            // 
+            this.lblNombreLibro.AutoSize = true;
+            this.lblNombreLibro.Location = new System.Drawing.Point(59, 127);
+            this.lblNombreLibro.Name = "lblNombreLibro";
+            this.lblNombreLibro.Size = new System.Drawing.Size(129, 20);
+            this.lblNombreLibro.TabIndex = 1;
+            this.lblNombreLibro.Text = "Nombre Libro:";
+            // 
+            // lblIdLibro
+            // 
+            this.lblIdLibro.AutoSize = true;
+            this.lblIdLibro.Location = new System.Drawing.Point(59, 68);
+            this.lblIdLibro.Name = "lblIdLibro";
+            this.lblIdLibro.Size = new System.Drawing.Size(79, 20);
+            this.lblIdLibro.TabIndex = 0;
+            this.lblIdLibro.Text = "Id Libro:";
             // 
             // frmEliminarLibro
             // 

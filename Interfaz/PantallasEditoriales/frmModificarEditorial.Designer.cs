@@ -30,6 +30,8 @@ namespace Interfaz.PantallasEditoriales
         private void InitializeComponent()
         {
             this.grpModificarEditorial = new System.Windows.Forms.GroupBox();
+            this.cmbEditorialID = new System.Windows.Forms.ComboBox();
+            this.lblEditorialID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -37,8 +39,6 @@ namespace Interfaz.PantallasEditoriales
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtNombreEditorial = new System.Windows.Forms.TextBox();
             this.lblNombreEditorial = new System.Windows.Forms.Label();
-            this.lblEditorialID = new System.Windows.Forms.Label();
-            this.cmbEditorialID = new System.Windows.Forms.ComboBox();
             this.grpModificarEditorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,24 @@ namespace Interfaz.PantallasEditoriales
             this.grpModificarEditorial.TabStop = false;
             this.grpModificarEditorial.Text = "Modificar Editorial";
             // 
+            // cmbEditorialID
+            // 
+            this.cmbEditorialID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditorialID.FormattingEnabled = true;
+            this.cmbEditorialID.Location = new System.Drawing.Point(298, 59);
+            this.cmbEditorialID.Name = "cmbEditorialID";
+            this.cmbEditorialID.Size = new System.Drawing.Size(176, 30);
+            this.cmbEditorialID.TabIndex = 27;
+            // 
+            // lblEditorialID
+            // 
+            this.lblEditorialID.AutoSize = true;
+            this.lblEditorialID.Location = new System.Drawing.Point(40, 59);
+            this.lblEditorialID.Name = "lblEditorialID";
+            this.lblEditorialID.Size = new System.Drawing.Size(117, 24);
+            this.lblEditorialID.TabIndex = 26;
+            this.lblEditorialID.Text = "ID Editorial:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Interfaz.Properties.Resources.modfEditorial;
@@ -82,6 +100,7 @@ namespace Interfaz.PantallasEditoriales
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -124,24 +143,6 @@ namespace Interfaz.PantallasEditoriales
             this.lblNombreEditorial.Size = new System.Drawing.Size(225, 24);
             this.lblNombreEditorial.TabIndex = 0;
             this.lblNombreEditorial.Text = "Nombre de la Editorial:";
-            // 
-            // lblEditorialID
-            // 
-            this.lblEditorialID.AutoSize = true;
-            this.lblEditorialID.Location = new System.Drawing.Point(40, 59);
-            this.lblEditorialID.Name = "lblEditorialID";
-            this.lblEditorialID.Size = new System.Drawing.Size(117, 24);
-            this.lblEditorialID.TabIndex = 26;
-            this.lblEditorialID.Text = "ID Editorial:";
-            // 
-            // cmbEditorialID
-            // 
-            this.cmbEditorialID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditorialID.FormattingEnabled = true;
-            this.cmbEditorialID.Location = new System.Drawing.Point(298, 59);
-            this.cmbEditorialID.Name = "cmbEditorialID";
-            this.cmbEditorialID.Size = new System.Drawing.Size(176, 30);
-            this.cmbEditorialID.TabIndex = 27;
             // 
             // frmModificarEditorial
             // 

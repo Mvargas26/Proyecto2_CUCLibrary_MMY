@@ -34,9 +34,9 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblIDSolicitud = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.picIlustrativa = new System.Windows.Forms.PictureBox();
             this.txtUsuarioSolicia = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.picIlustrativa = new System.Windows.Forms.PictureBox();
             this.grpEliminarSolicitudCopias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIlustrativa)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -96,6 +97,16 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // picIlustrativa
+            // 
+            this.picIlustrativa.Image = global::Interfaz.Properties.Resources.basurero2;
+            this.picIlustrativa.Location = new System.Drawing.Point(180, 155);
+            this.picIlustrativa.Name = "picIlustrativa";
+            this.picIlustrativa.Size = new System.Drawing.Size(146, 126);
+            this.picIlustrativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picIlustrativa.TabIndex = 8;
+            this.picIlustrativa.TabStop = false;
             // 
             // txtUsuarioSolicia
             // 
@@ -113,16 +124,6 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblUsuario.Size = new System.Drawing.Size(183, 20);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario que solicita:";
-            // 
-            // picIlustrativa
-            // 
-            this.picIlustrativa.Image = global::Interfaz.Properties.Resources.basurero2;
-            this.picIlustrativa.Location = new System.Drawing.Point(180, 155);
-            this.picIlustrativa.Name = "picIlustrativa";
-            this.picIlustrativa.Size = new System.Drawing.Size(146, 126);
-            this.picIlustrativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picIlustrativa.TabIndex = 8;
-            this.picIlustrativa.TabStop = false;
             // 
             // frmEliminarSolicitudCopias
             // 

@@ -30,13 +30,13 @@ namespace Interfaz.PantallasReservas
         private void InitializeComponent()
         {
             this.grpEliminarReserva = new System.Windows.Forms.GroupBox();
+            this.txtNombreUser = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbUsuarioReserva = new System.Windows.Forms.ComboBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblIDReserva = new System.Windows.Forms.Label();
-            this.txtNombreUser = new System.Windows.Forms.TextBox();
             this.grpEliminarReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,14 @@ namespace Interfaz.PantallasReservas
             this.grpEliminarReserva.TabStop = false;
             this.grpEliminarReserva.Text = "Eliminar";
             // 
+            // txtNombreUser
+            // 
+            this.txtNombreUser.Location = new System.Drawing.Point(203, 108);
+            this.txtNombreUser.Name = "txtNombreUser";
+            this.txtNombreUser.ReadOnly = true;
+            this.txtNombreUser.Size = new System.Drawing.Size(203, 27);
+            this.txtNombreUser.TabIndex = 26;
+            // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Navy;
@@ -68,6 +76,7 @@ namespace Interfaz.PantallasReservas
             this.button2.TabIndex = 25;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEliminar
             // 
@@ -115,14 +124,6 @@ namespace Interfaz.PantallasReservas
             this.lblIDReserva.Size = new System.Drawing.Size(109, 20);
             this.lblIDReserva.TabIndex = 0;
             this.lblIDReserva.Text = "ID Reserva:";
-            // 
-            // txtNombreUser
-            // 
-            this.txtNombreUser.Location = new System.Drawing.Point(203, 108);
-            this.txtNombreUser.Name = "txtNombreUser";
-            this.txtNombreUser.ReadOnly = true;
-            this.txtNombreUser.Size = new System.Drawing.Size(203, 27);
-            this.txtNombreUser.TabIndex = 26;
             // 
             // frmEliminarReserva
             // 

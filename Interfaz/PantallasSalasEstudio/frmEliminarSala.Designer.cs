@@ -32,11 +32,11 @@ namespace Interfaz.PantallasSalasEstudio
             this.grpEliminarSala = new System.Windows.Forms.GroupBox();
             this.cmbIDSala = new System.Windows.Forms.ComboBox();
             this.lblIDSala = new System.Windows.Forms.Label();
+            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTipoSala = new System.Windows.Forms.TextBox();
             this.lblTipoSala = new System.Windows.Forms.Label();
-            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.grpEliminarSala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenDecorativa)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,17 @@ namespace Interfaz.PantallasSalasEstudio
             this.lblIDSala.TabIndex = 27;
             this.lblIDSala.Text = "ID de la Sala:";
             // 
+            // picImagenDecorativa
+            // 
+            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.Basurero;
+            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
+            this.picImagenDecorativa.Location = new System.Drawing.Point(516, 37);
+            this.picImagenDecorativa.Name = "picImagenDecorativa";
+            this.picImagenDecorativa.Size = new System.Drawing.Size(191, 142);
+            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenDecorativa.TabIndex = 25;
+            this.picImagenDecorativa.TabStop = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -86,6 +97,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -113,17 +125,6 @@ namespace Interfaz.PantallasSalasEstudio
             this.lblTipoSala.Size = new System.Drawing.Size(134, 24);
             this.lblTipoSala.TabIndex = 0;
             this.lblTipoSala.Text = "Tipo de Sala:";
-            // 
-            // picImagenDecorativa
-            // 
-            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.Basurero;
-            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
-            this.picImagenDecorativa.Location = new System.Drawing.Point(516, 37);
-            this.picImagenDecorativa.Name = "picImagenDecorativa";
-            this.picImagenDecorativa.Size = new System.Drawing.Size(191, 142);
-            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImagenDecorativa.TabIndex = 25;
-            this.picImagenDecorativa.TabStop = false;
             // 
             // frmEliminarSala
             // 
