@@ -31,16 +31,17 @@ namespace Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarLibro));
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
+            this.btnAgregarAutores = new System.Windows.Forms.Button();
             this.cmbEstante = new System.Windows.Forms.ComboBox();
             this.cmbPasillo = new System.Windows.Forms.ComboBox();
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
             this.cmbEditorial = new System.Windows.Forms.ComboBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtCantDisponible = new System.Windows.Forms.TextBox();
             this.txtNombreLibro = new System.Windows.Forms.TextBox();
             this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMensajeAdmin = new System.Windows.Forms.Label();
             this.lblEstante = new System.Windows.Forms.Label();
             this.lblPasillo = new System.Windows.Forms.Label();
@@ -52,20 +53,19 @@ namespace Interfaz
             this.lblAutor = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnAgregarAutores = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpAgregarLibro
             // 
+            this.grpAgregarLibro.Controls.Add(this.cmbCategoria);
             this.grpAgregarLibro.Controls.Add(this.btnAgregarAutores);
             this.grpAgregarLibro.Controls.Add(this.cmbEstante);
             this.grpAgregarLibro.Controls.Add(this.cmbPasillo);
             this.grpAgregarLibro.Controls.Add(this.cmbHabitacion);
             this.grpAgregarLibro.Controls.Add(this.cmbEditorial);
-            this.grpAgregarLibro.Controls.Add(this.txtCategoria);
             this.grpAgregarLibro.Controls.Add(this.txtCantDisponible);
             this.grpAgregarLibro.Controls.Add(this.txtNombreLibro);
             this.grpAgregarLibro.Controls.Add(this.dtpFechaPublicacion);
@@ -90,6 +90,17 @@ namespace Interfaz
             this.grpAgregarLibro.Size = new System.Drawing.Size(811, 658);
             this.grpAgregarLibro.TabIndex = 0;
             this.grpAgregarLibro.TabStop = false;
+            // 
+            // btnAgregarAutores
+            // 
+            this.btnAgregarAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarAutores.Location = new System.Drawing.Point(217, 143);
+            this.btnAgregarAutores.Name = "btnAgregarAutores";
+            this.btnAgregarAutores.Size = new System.Drawing.Size(172, 35);
+            this.btnAgregarAutores.TabIndex = 21;
+            this.btnAgregarAutores.Text = "Selecionar Autores\r\n";
+            this.btnAgregarAutores.UseVisualStyleBackColor = true;
+            this.btnAgregarAutores.Click += new System.EventHandler(this.btnAgregarAutores_Click);
             // 
             // cmbEstante
             // 
@@ -126,13 +137,6 @@ namespace Interfaz
             this.cmbEditorial.Name = "cmbEditorial";
             this.cmbEditorial.Size = new System.Drawing.Size(156, 28);
             this.cmbEditorial.TabIndex = 4;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(233, 96);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(156, 27);
-            this.txtCategoria.TabIndex = 2;
             // 
             // txtCantDisponible
             // 
@@ -176,6 +180,16 @@ namespace Interfaz
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(443, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(316, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // lblMensajeAdmin
             // 
@@ -279,26 +293,15 @@ namespace Interfaz
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre Libro:";
             // 
-            // btnAgregarAutores
+            // cmbCategoria
             // 
-            this.btnAgregarAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAutores.Location = new System.Drawing.Point(217, 143);
-            this.btnAgregarAutores.Name = "btnAgregarAutores";
-            this.btnAgregarAutores.Size = new System.Drawing.Size(172, 35);
-            this.btnAgregarAutores.TabIndex = 21;
-            this.btnAgregarAutores.Text = "Selecionar Autores:\r\n";
-            this.btnAgregarAutores.UseVisualStyleBackColor = true;
-            this.btnAgregarAutores.Click += new System.EventHandler(this.btnAgregarAutores_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(443, 178);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(233, 85);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(156, 28);
+            this.cmbCategoria.TabIndex = 22;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // frmAgregarLibro
             // 
@@ -334,12 +337,12 @@ namespace Interfaz
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacion;
         private System.Windows.Forms.ComboBox cmbEditorial;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtCantDisponible;
         private System.Windows.Forms.TextBox txtNombreLibro;
         private System.Windows.Forms.ComboBox cmbEstante;
         private System.Windows.Forms.ComboBox cmbPasillo;
         private System.Windows.Forms.ComboBox cmbHabitacion;
         private System.Windows.Forms.Button btnAgregarAutores;
+        private System.Windows.Forms.ComboBox cmbCategoria;
     }
 }

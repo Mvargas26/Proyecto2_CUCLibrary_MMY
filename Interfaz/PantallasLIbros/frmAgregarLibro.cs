@@ -34,5 +34,10 @@ namespace Interfaz
         {
             this.Close();
         }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }//fn class
 }//fin space

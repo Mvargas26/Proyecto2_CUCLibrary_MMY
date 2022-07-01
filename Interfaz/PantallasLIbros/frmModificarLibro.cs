@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interfaz.PantallasLIbros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,19 @@ namespace Interfaz
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAgregarAutores_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmDGVAutores pantalla = new frmDGVAutores();
+                pantalla.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
