@@ -10,38 +10,25 @@ namespace Datos
 {
   public class SQL_Server
     {
-        public static SqlConnection conexionSQLServer()
+        /// <summary>
+        /// Funcion que realiza la consulta a una tabla especifica
+        /// </summary>
+        /// <param name="QueryDelUsuario"> Trae la consulta en un String desde interfaz</param>
+        /// <returns>
+        /// Devuelve un Data Table
+        /// </returns>
+         public DataTable QuerySQL_Server_DT(String QueryDelUsuario)
         {
-            try
-            {
+            StringBuilder StringConexionArmado = new StringBuilder();
 
+            StringConexionArmado.Append("Data Source=");
+            StringConexionArmado.Append("DESKTOP-MVARGAS\\SQLEXPRESS");
+            StringConexionArmado.Append(";Database=");
+            StringConexionArmado.Append("CUC_Library");
+            StringConexionArmado.Append(";Integrated Security=True;");
 
-                StringBuilder StringConexionArmado = new StringBuilder();
+            SqlConnection sqlConector = new SqlConnection(StringConexionArmado.ToString());
 
-                StringConexionArmado.Append("Data Source=");
-                StringConexionArmado.Append("(local)");
-                StringConexionArmado.Append(";Database=");
-                StringConexionArmado.Append("CUC_Library");
-                StringConexionArmado.Append(";Integrated Security=True;");
-                //StringConexionArmado.Append(";User=");
-                //StringConexionArmado.Append("mvargas");
-                //StringConexionArmado.Append(";Password=");
-                //StringConexionArmado.Append("1234;");
-
-
-                SqlConnection sqlConector = new SqlConnection(StringConexionArmado.ToString());
-
-                return sqlConector;
-            }
-            catch (Exception Error)
-            {
-                throw new Exception(Error.Message);
-            }
-        }//fin conexionSQLServer
-
-        public DataTable QuerySQL_Server(String QueryDelUsuario)
-        {
-            SqlConnection sqlConector = conexionSQLServer();
             try
             {
                 SqlCommand cmd = sqlConector.CreateCommand();
@@ -66,5 +53,54 @@ namespace Datos
             }
 
         }//fin querySQL_Server
+
+
+        /// <summary>
+        /// Funcion que realiza la consulta a Toda la base de Datos
+        /// </summary>
+        /// <param name="QueryDelUsuario"> Trae la consulta en un String desde interfaz</param>
+        /// <returns>
+        /// Devuelve un DataSet
+        /// </returns>
+        public DataSet QuerySQL_Server_DS(String QueryDelUsuario)
+        {
+            StringBuilder StringConexionArmado = new StringBuilder();
+
+            StringConexionArmado.Append("Data Source=");
+            StringConexionArmado.Append("DESKTOP-MVARGAS\\SQLEXPRESS");
+            StringConexionArmado.Append(";Database=");
+            StringConexionArmado.Append("CUC_Library");
+            StringConexionArmado.Append(";Integrated Security=True;");
+
+            SqlConnection sqlConector = new SqlConnection(StringConexionArmado.ToString());
+
+            try
+            {
+                SqlCommand cmd = sqlConector.CreateCommand();
+                cmd.CommandText = QueryDelUsuario;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                DataSet dsDatos = new DataSet();
+
+                sqlConector.Open();
+
+                adapter.Fill(dsDatos);
+
+                return dsDatos;
+            }
+            catch (Exception Error)
+            {
+                throw new Exception(Error.Message);
+            }
+            finally
+            {
+                sqlConector.Close();
+            }
+
+        }//fin QuerySQL_ServerDataSet
+
+
+
+
     }//fin class
 }//fin namespace

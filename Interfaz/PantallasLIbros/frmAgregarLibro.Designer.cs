@@ -31,6 +31,7 @@ namespace Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarLibro));
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnAgregarAutores = new System.Windows.Forms.Button();
             this.cmbEstante = new System.Windows.Forms.ComboBox();
             this.cmbPasillo = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@ namespace Interfaz
             this.lblAutor = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,16 @@ namespace Interfaz
             this.grpAgregarLibro.Size = new System.Drawing.Size(811, 658);
             this.grpAgregarLibro.TabIndex = 0;
             this.grpAgregarLibro.TabStop = false;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(233, 85);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(156, 28);
+            this.cmbCategoria.TabIndex = 22;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // btnAgregarAutores
             // 
@@ -293,16 +303,6 @@ namespace Interfaz
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre Libro:";
             // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(233, 85);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(156, 28);
-            this.cmbCategoria.TabIndex = 22;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
-            // 
             // frmAgregarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,6 +311,7 @@ namespace Interfaz
             this.Controls.Add(this.grpAgregarLibro);
             this.Name = "frmAgregarLibro";
             this.Text = "Agregar Libro";
+            this.Load += new System.EventHandler(this.frmAgregarLibro_Load);
             this.grpAgregarLibro.ResumeLayout(false);
             this.grpAgregarLibro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
