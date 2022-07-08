@@ -10,6 +10,27 @@ namespace Datos
 {
   public class SQL_Server
     {
+        SqlConnection sqlConector = new SqlConnection();
+        public SQL_Server()
+        {
+            try
+            {
+                StringBuilder StringConexionArmado = new StringBuilder();
+
+                StringConexionArmado.Append("Data Source=");
+                StringConexionArmado.Append("DESKTOP-MVARGAS\\SQLEXPRESS");
+                StringConexionArmado.Append(";Database=");
+                StringConexionArmado.Append("CUC_Library");
+                StringConexionArmado.Append(";Integrated Security=True;");
+
+              this.sqlConector = new SqlConnection(StringConexionArmado.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }//fin constructor
+
         /// <summary>
         /// Funcion que realiza la consulta a una tabla especifica
         /// </summary>
@@ -17,19 +38,9 @@ namespace Datos
         /// <returns>
         /// Devuelve un Data Table
         /// </returns>
-         public DataTable QuerySQL_Server_DT(String QueryDelUsuario)
+        public DataTable QuerySQL_Server_DT(String QueryDelUsuario)
         {
-            StringBuilder StringConexionArmado = new StringBuilder();
-
-            StringConexionArmado.Append("Data Source=");
-            StringConexionArmado.Append("DESKTOP-MVARGAS\\SQLEXPRESS");
-            StringConexionArmado.Append(";Database=");
-            StringConexionArmado.Append("CUC_Library");
-            StringConexionArmado.Append(";Integrated Security=True;");
-
-            SqlConnection sqlConector = new SqlConnection(StringConexionArmado.ToString());
-
-            try
+             try
             {
                 SqlCommand cmd = sqlConector.CreateCommand();
                 cmd.CommandText = QueryDelUsuario;
@@ -64,17 +75,7 @@ namespace Datos
         /// </returns>
         public DataSet QuerySQL_Server_DS(String QueryDelUsuario)
         {
-            StringBuilder StringConexionArmado = new StringBuilder();
-
-            StringConexionArmado.Append("Data Source=");
-            StringConexionArmado.Append("DESKTOP-MVARGAS\\SQLEXPRESS");
-            StringConexionArmado.Append(";Database=");
-            StringConexionArmado.Append("CUC_Library");
-            StringConexionArmado.Append(";Integrated Security=True;");
-
-            SqlConnection sqlConector = new SqlConnection(StringConexionArmado.ToString());
-
-            try
+           try
             {
                 SqlCommand cmd = sqlConector.CreateCommand();
                 cmd.CommandText = QueryDelUsuario;
@@ -100,7 +101,37 @@ namespace Datos
         }//fin QuerySQL_ServerDataSet
 
 
+        public void ExecuteSP(String SPNombre, List<SqlParameter> listParametros)
+        {
+           try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = SPNombre;
+                cmd.Connection = sqlConector;
 
+
+                foreach(SqlParameter Param in listParametros)
+                {
+                    cmd.Parameters.Add(Param);
+                }
+
+                sqlConector.Open();
+
+                cmd.ExecuteNonQuery();
+
+                sqlConector.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                sqlConector.Close();
+            }
+        }//fin ExecuteSP
 
     }//fin class
 }//fin namespace
