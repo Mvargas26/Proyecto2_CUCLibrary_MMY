@@ -30,15 +30,19 @@ namespace Interfaz.PantallasLIbros
         private void InitializeComponent()
         {
             this.grpAutores = new System.Windows.Forms.GroupBox();
-            this.grpAutoresEscogidos = new System.Windows.Forms.GroupBox();
-            this.lsvAutoresEscogidos = new System.Windows.Forms.ListView();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvAutoresRegistrados = new System.Windows.Forms.DataGridView();
+            this.grpAutoresEscogidos = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.dgvAutoresYaSelec = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpAutores.SuspendLayout();
-            this.grpAutoresEscogidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutoresRegistrados)).BeginInit();
+            this.grpAutoresEscogidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutoresYaSelec)).BeginInit();
             this.SuspendLayout();
             // 
             // grpAutores
@@ -52,37 +56,6 @@ namespace Interfaz.PantallasLIbros
             this.grpAutores.TabStop = false;
             this.grpAutores.Text = "Autores Registrados";
             // 
-            // grpAutoresEscogidos
-            // 
-            this.grpAutoresEscogidos.Controls.Add(this.lsvAutoresEscogidos);
-            this.grpAutoresEscogidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAutoresEscogidos.Location = new System.Drawing.Point(13, 279);
-            this.grpAutoresEscogidos.Name = "grpAutoresEscogidos";
-            this.grpAutoresEscogidos.Size = new System.Drawing.Size(776, 218);
-            this.grpAutoresEscogidos.TabIndex = 1;
-            this.grpAutoresEscogidos.TabStop = false;
-            this.grpAutoresEscogidos.Text = "Autores que Seleciono";
-            // 
-            // lsvAutoresEscogidos
-            // 
-            this.lsvAutoresEscogidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvAutoresEscogidos.HideSelection = false;
-            this.lsvAutoresEscogidos.Location = new System.Drawing.Point(3, 23);
-            this.lsvAutoresEscogidos.Name = "lsvAutoresEscogidos";
-            this.lsvAutoresEscogidos.Size = new System.Drawing.Size(770, 192);
-            this.lsvAutoresEscogidos.TabIndex = 0;
-            this.lsvAutoresEscogidos.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(317, 220);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(161, 40);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar Autor";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
             // dgvAutoresRegistrados
             // 
             this.dgvAutoresRegistrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -94,6 +67,28 @@ namespace Interfaz.PantallasLIbros
             this.dgvAutoresRegistrados.Size = new System.Drawing.Size(767, 176);
             this.dgvAutoresRegistrados.TabIndex = 0;
             // 
+            // grpAutoresEscogidos
+            // 
+            this.grpAutoresEscogidos.Controls.Add(this.dgvAutoresYaSelec);
+            this.grpAutoresEscogidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpAutoresEscogidos.Location = new System.Drawing.Point(13, 279);
+            this.grpAutoresEscogidos.Name = "grpAutoresEscogidos";
+            this.grpAutoresEscogidos.Size = new System.Drawing.Size(776, 218);
+            this.grpAutoresEscogidos.TabIndex = 1;
+            this.grpAutoresEscogidos.TabStop = false;
+            this.grpAutoresEscogidos.Text = "Autores que Seleciono";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(317, 220);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(161, 40);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar Autor";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +98,7 @@ namespace Interfaz.PantallasLIbros
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar Autor";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnFinalizar
             // 
@@ -116,6 +112,45 @@ namespace Interfaz.PantallasLIbros
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
+            // dgvAutoresYaSelec
+            // 
+            this.dgvAutoresYaSelec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAutoresYaSelec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colID,
+            this.colNombre,
+            this.colOrigen});
+            this.dgvAutoresYaSelec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAutoresYaSelec.Location = new System.Drawing.Point(3, 23);
+            this.dgvAutoresYaSelec.Name = "dgvAutoresYaSelec";
+            this.dgvAutoresYaSelec.RowHeadersWidth = 51;
+            this.dgvAutoresYaSelec.RowTemplate.Height = 24;
+            this.dgvAutoresYaSelec.Size = new System.Drawing.Size(770, 192);
+            this.dgvAutoresYaSelec.TabIndex = 1;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 125;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 125;
+            // 
+            // colOrigen
+            // 
+            this.colOrigen.HeaderText = "Origen";
+            this.colOrigen.MinimumWidth = 6;
+            this.colOrigen.Name = "colOrigen";
+            this.colOrigen.ReadOnly = true;
+            this.colOrigen.Width = 125;
+            // 
             // frmDGVAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,9 +163,11 @@ namespace Interfaz.PantallasLIbros
             this.Controls.Add(this.grpAutores);
             this.Name = "frmDGVAutores";
             this.Text = "frmDGVAutores";
+            this.Load += new System.EventHandler(this.frmDGVAutores_Load);
             this.grpAutores.ResumeLayout(false);
-            this.grpAutoresEscogidos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutoresRegistrados)).EndInit();
+            this.grpAutoresEscogidos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutoresYaSelec)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,9 +177,12 @@ namespace Interfaz.PantallasLIbros
         private System.Windows.Forms.GroupBox grpAutores;
         private System.Windows.Forms.DataGridView dgvAutoresRegistrados;
         private System.Windows.Forms.GroupBox grpAutoresEscogidos;
-        private System.Windows.Forms.ListView lsvAutoresEscogidos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.DataGridView dgvAutoresYaSelec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOrigen;
     }
 }

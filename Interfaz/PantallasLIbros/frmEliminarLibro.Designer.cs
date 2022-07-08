@@ -90,19 +90,22 @@ namespace Interfaz
             // 
             // txtNombreLibro
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(250, 124);
+            this.txtNombreLibro.Location = new System.Drawing.Point(218, 124);
+            this.txtNombreLibro.Multiline = true;
             this.txtNombreLibro.Name = "txtNombreLibro";
             this.txtNombreLibro.ReadOnly = true;
-            this.txtNombreLibro.Size = new System.Drawing.Size(121, 27);
+            this.txtNombreLibro.Size = new System.Drawing.Size(153, 64);
             this.txtNombreLibro.TabIndex = 3;
             // 
             // cmbIdLibro
             // 
+            this.cmbIdLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdLibro.FormattingEnabled = true;
-            this.cmbIdLibro.Location = new System.Drawing.Point(250, 68);
+            this.cmbIdLibro.Location = new System.Drawing.Point(295, 68);
             this.cmbIdLibro.Name = "cmbIdLibro";
-            this.cmbIdLibro.Size = new System.Drawing.Size(121, 28);
+            this.cmbIdLibro.Size = new System.Drawing.Size(76, 28);
             this.cmbIdLibro.TabIndex = 2;
+            this.cmbIdLibro.SelectedIndexChanged += new System.EventHandler(this.cmbIdLibro_SelectedIndexChanged);
             // 
             // lblNombreLibro
             // 
@@ -131,6 +134,7 @@ namespace Interfaz
             this.Name = "frmEliminarLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Libro";
+            this.Load += new System.EventHandler(this.frmEliminarLibro_Load);
             this.grpEliminarLIbro.ResumeLayout(false);
             this.grpEliminarLIbro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();

@@ -95,11 +95,10 @@ namespace Interfaz
             // 
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(233, 85);
+            this.cmbCategoria.Location = new System.Drawing.Point(217, 85);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(156, 28);
+            this.cmbCategoria.Size = new System.Drawing.Size(172, 28);
             this.cmbCategoria.TabIndex = 22;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // btnAgregarAutores
             // 
@@ -129,6 +128,7 @@ namespace Interfaz
             this.cmbPasillo.Name = "cmbPasillo";
             this.cmbPasillo.Size = new System.Drawing.Size(156, 28);
             this.cmbPasillo.TabIndex = 8;
+            this.cmbPasillo.SelectedIndexChanged += new System.EventHandler(this.cmbPasillo_SelectedIndexChanged);
             // 
             // cmbHabitacion
             // 
@@ -138,36 +138,37 @@ namespace Interfaz
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(156, 28);
             this.cmbHabitacion.TabIndex = 7;
+            this.cmbHabitacion.SelectedIndexChanged += new System.EventHandler(this.cmbHabitacion_SelectedIndexChanged);
             // 
             // cmbEditorial
             // 
             this.cmbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditorial.FormattingEnabled = true;
-            this.cmbEditorial.Location = new System.Drawing.Point(233, 201);
+            this.cmbEditorial.Location = new System.Drawing.Point(217, 201);
             this.cmbEditorial.Name = "cmbEditorial";
-            this.cmbEditorial.Size = new System.Drawing.Size(156, 28);
+            this.cmbEditorial.Size = new System.Drawing.Size(172, 28);
             this.cmbEditorial.TabIndex = 4;
             // 
             // txtCantDisponible
             // 
-            this.txtCantDisponible.Location = new System.Drawing.Point(233, 250);
+            this.txtCantDisponible.Location = new System.Drawing.Point(217, 250);
             this.txtCantDisponible.Name = "txtCantDisponible";
-            this.txtCantDisponible.Size = new System.Drawing.Size(156, 27);
+            this.txtCantDisponible.Size = new System.Drawing.Size(172, 27);
             this.txtCantDisponible.TabIndex = 5;
             // 
             // txtNombreLibro
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(233, 32);
+            this.txtNombreLibro.Location = new System.Drawing.Point(217, 32);
             this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.Size = new System.Drawing.Size(156, 27);
+            this.txtNombreLibro.Size = new System.Drawing.Size(172, 27);
             this.txtNombreLibro.TabIndex = 1;
             // 
             // dtpFechaPublicacion
             // 
             this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaPublicacion.Location = new System.Drawing.Point(233, 315);
+            this.dtpFechaPublicacion.Location = new System.Drawing.Point(217, 315);
             this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
-            this.dtpFechaPublicacion.Size = new System.Drawing.Size(156, 27);
+            this.dtpFechaPublicacion.Size = new System.Drawing.Size(172, 27);
             this.dtpFechaPublicacion.TabIndex = 6;
             // 
             // btnCancelar
