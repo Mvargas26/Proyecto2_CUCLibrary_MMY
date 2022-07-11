@@ -100,7 +100,11 @@ namespace Datos
 
         }//fin QuerySQL_ServerDataSet
 
-
+        /// <summary>
+        /// Funcion que ejecuta los SP usando lista de parametros
+        /// </summary>
+        /// <param name="SPNombre">Variable que lleva el nombre del SP</param>
+        /// <param name="listParametros">Lista que contiene los paramentros para ejecutar</param>
         public void ExecuteSP(String SPNombre, List<SqlParameter> listParametros)
         {
            try
