@@ -56,6 +56,7 @@ namespace Interfaz
             try
             {
                 foreach (DataRow lineaLeida in dtDatos.Rows)
+                    //recorremos la tabla de libros, donde id coincida tomamos el nombre
                 {
                     if (cmbIdLibro.Text == lineaLeida["LibroID"].ToString())
                     {
@@ -99,42 +100,35 @@ namespace Interfaz
                         obj_clLibro.pasilloID = Convert.ToInt16(lineaLeida["PasilloID"].ToString());
                         obj_clLibro.estanteID = Convert.ToInt16(lineaLeida["EstanteID"].ToString());
 
-                        break;
-                    }
-                }
 
-                //Vamos a verificar antes de borrar el libro si existe en la tabla Libro_Autor para borrarlo
-                 DataTable tb_LIbro_Autor = new DataTable();
-                tb_LIbro_Autor = obj_Procesos.QueryGeneralNegocios_DT("SELECT * FROM Libro_Autor");
+                        //Vamos a verificar antes de borrar el libro si existe en la tabla Libro_Autor para borrarlo
+                        DataTable tb_LIbro_Autor = new DataTable();
+                        tb_LIbro_Autor = obj_Procesos.QueryGeneralNegocios_DT("SELECT * FROM Libro_Autor");
+
+                        foreach (DataRow lineaLibroAutor in tb_LIbro_Autor.Rows)
+                        {
+                            if (lineaLibroAutor["LibroID"].ToString() == obj_clLibro.libroID.ToString())
+                            {
+                                //Si el ID del libro coincidio en la tabla Libro_Autor, guardamos el ID de ese registro en esta variable
+                                short save_LA_ID = Convert.ToInt16(lineaLibroAutor["LA_ID"].ToString());
+
+                                //objeto de tipo Libro_Autor necesario para mandarlo como parametro
+                                clLIbro_Autor newLibroAutor = new clLIbro_Autor();
+                                newLibroAutor.Libro_Autor = save_LA_ID;
+                                newLibroAutor.LibroID = obj_clLibro.libroID;
+                                newLibroAutor.AutorID = 0; // aqui enviamos un 0, ya que este atributo para borrar (SP opc 3) no es necesario
+
+                                //Objeto que permite lllamar el SP_Libro_Autor
+                                Libro_Autor_Procesos ob_Libro_Autor_Procesos = new Libro_Autor_Procesos();
+                                ob_Libro_Autor_Procesos.GrabarLibro_Autor(3, newLibroAutor);
+
+                            }
               
-                foreach (DataRow lineaLibroAutor in tb_LIbro_Autor.Rows)
-                {
-                    if (lineaLibroAutor["LibroID"].ToString() == obj_clLibro.libroID.ToString())
-                    {
-                        //Si el ID del libro coincidio en la tabla Libro_Autor, guardamos el ID de ese registro en esta variable
-                        short save_LA_ID = Convert.ToInt16(lineaLibroAutor["LA_ID"].ToString());
-
-                        //objeto de tipo Libro_Autor necesario para mandarlo como parametro
-                        clLIbro_Autor newLibroAutor = new clLIbro_Autor();
-                        newLibroAutor.Libro_Autor = save_LA_ID;
-                        newLibroAutor.LibroID = obj_clLibro.libroID;
-                        newLibroAutor.AutorID = 0; // aqui enviamos un 0, ya que este atributo para borrar (SP opc 3) no es necesario
-
-                        //Objeto que permite lllamar el SP_Libro_Autor
-                        Libro_Autor_Procesos ob_Libro_Autor_Procesos = new Libro_Autor_Procesos();
-                        ob_Libro_Autor_Procesos.GrabarLibro_Autor(3, newLibroAutor);
-
-
-                        //si ya borramos en la tabla LIbro_Autor Borramos el Libro
-                        obj_libro_Procesos.GrabarLibro(3, obj_clLibro);
-                        MessageBox.Show("Se elimino el Libro Correctamente");
-                        this.Close();
-                        
-
+                        }
                     }
                  }
 
-                //en caso de que ese id libro no este en la tabla Libro_Autor lo borramos directamente
+                //ya borrrado en TB_LibroAutor podemos borrar en TB_Libro
                 obj_libro_Procesos.GrabarLibro(3, obj_clLibro);
                 MessageBox.Show("Se elimino el Libro Correctamente");
                 this.Close();

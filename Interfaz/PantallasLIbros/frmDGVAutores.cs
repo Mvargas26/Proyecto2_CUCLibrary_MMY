@@ -29,7 +29,7 @@ namespace Interfaz.PantallasLIbros
                 foreach(DataGridViewRow fila in dgvAutoresYaSelec.Rows)
                 {
                     string id = fila.Cells["colID"].Value.ToString();
-                    cl_estatic_list_Autores.cadenaAutores += ";" + id;
+                    cl_estatic_list_Autores.cadenaAutores += id+";";
 
                 }
       
@@ -48,6 +48,8 @@ namespace Interfaz.PantallasLIbros
         {
             try
             {
+                cl_estatic_list_Autores.cadenaAutores = "";
+
                 //primero limpiamos el data grid
                 dgvAutoresRegistrados.DataSource = null;
                 dgvAutoresRegistrados.Columns.Clear();
@@ -81,10 +83,7 @@ namespace Interfaz.PantallasLIbros
                 dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
                 dgvAutoresYaSelec.Update();
 
-                //frmAgregarLibro obj_frmAgregarLibro = new frmAgregarLibro();
-                //obj_frmAgregarLibro.dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                //obj_frmAgregarLibro.dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
-                //obj_frmAgregarLibro.dgvAutoresYaSelec.Update();
+                
 
             }
             catch (Exception ex)

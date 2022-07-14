@@ -30,6 +30,7 @@ namespace Interfaz
         private void InitializeComponent()
         {
             this.grpAgregarLibro = new System.Windows.Forms.GroupBox();
+            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnAgregarAutores = new System.Windows.Forms.Button();
             this.cmbEstante = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,6 @@ namespace Interfaz
             this.lblAutor = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.grpAgregarLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenDecorativa)).BeginInit();
             this.SuspendLayout();
@@ -86,9 +86,20 @@ namespace Interfaz
             this.grpAgregarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAgregarLibro.Location = new System.Drawing.Point(0, 0);
             this.grpAgregarLibro.Name = "grpAgregarLibro";
-            this.grpAgregarLibro.Size = new System.Drawing.Size(836, 728);
+            this.grpAgregarLibro.Size = new System.Drawing.Size(848, 667);
             this.grpAgregarLibro.TabIndex = 0;
             this.grpAgregarLibro.TabStop = false;
+            // 
+            // picImagenDecorativa
+            // 
+            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.book;
+            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
+            this.picImagenDecorativa.Location = new System.Drawing.Point(494, 158);
+            this.picImagenDecorativa.Name = "picImagenDecorativa";
+            this.picImagenDecorativa.Size = new System.Drawing.Size(213, 219);
+            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenDecorativa.TabIndex = 26;
+            this.picImagenDecorativa.TabStop = false;
             // 
             // cmbCategoria
             // 
@@ -97,7 +108,8 @@ namespace Interfaz
             this.cmbCategoria.Location = new System.Drawing.Point(217, 85);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(191, 28);
-            this.cmbCategoria.TabIndex = 22;
+            this.cmbCategoria.TabIndex = 2;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // btnAgregarAutores
             // 
@@ -105,7 +117,7 @@ namespace Interfaz
             this.btnAgregarAutores.Location = new System.Drawing.Point(217, 143);
             this.btnAgregarAutores.Name = "btnAgregarAutores";
             this.btnAgregarAutores.Size = new System.Drawing.Size(191, 35);
-            this.btnAgregarAutores.TabIndex = 21;
+            this.btnAgregarAutores.TabIndex = 3;
             this.btnAgregarAutores.Text = "Selecionar Autores\r\n";
             this.btnAgregarAutores.UseVisualStyleBackColor = true;
             this.btnAgregarAutores.Click += new System.EventHandler(this.btnAgregarAutores_Click);
@@ -114,16 +126,17 @@ namespace Interfaz
             // 
             this.cmbEstante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstante.FormattingEnabled = true;
-            this.cmbEstante.Location = new System.Drawing.Point(531, 554);
+            this.cmbEstante.Location = new System.Drawing.Point(518, 471);
             this.cmbEstante.Name = "cmbEstante";
             this.cmbEstante.Size = new System.Drawing.Size(156, 28);
             this.cmbEstante.TabIndex = 9;
+            this.cmbEstante.SelectedIndexChanged += new System.EventHandler(this.cmbEstante_SelectedIndexChanged);
             // 
             // cmbPasillo
             // 
             this.cmbPasillo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPasillo.FormattingEnabled = true;
-            this.cmbPasillo.Location = new System.Drawing.Point(294, 554);
+            this.cmbPasillo.Location = new System.Drawing.Point(281, 471);
             this.cmbPasillo.Name = "cmbPasillo";
             this.cmbPasillo.Size = new System.Drawing.Size(156, 28);
             this.cmbPasillo.TabIndex = 8;
@@ -133,7 +146,7 @@ namespace Interfaz
             // 
             this.cmbHabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Location = new System.Drawing.Point(63, 554);
+            this.cmbHabitacion.Location = new System.Drawing.Point(50, 471);
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(156, 28);
             this.cmbHabitacion.TabIndex = 7;
@@ -147,6 +160,7 @@ namespace Interfaz
             this.cmbEditorial.Name = "cmbEditorial";
             this.cmbEditorial.Size = new System.Drawing.Size(191, 28);
             this.cmbEditorial.TabIndex = 4;
+            this.cmbEditorial.SelectedIndexChanged += new System.EventHandler(this.cmbEditorial_SelectedIndexChanged);
             // 
             // txtCantDisponible
             // 
@@ -164,16 +178,17 @@ namespace Interfaz
             // 
             // dtpFechaPublicacion
             // 
+            this.dtpFechaPublicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPublicacion.Location = new System.Drawing.Point(217, 315);
             this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
-            this.dtpFechaPublicacion.Size = new System.Drawing.Size(191, 27);
+            this.dtpFechaPublicacion.Size = new System.Drawing.Size(191, 30);
             this.dtpFechaPublicacion.TabIndex = 6;
             // 
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCancelar.Location = new System.Drawing.Point(412, 646);
+            this.btnCancelar.Location = new System.Drawing.Point(399, 563);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 48);
             this.btnCancelar.TabIndex = 11;
@@ -184,7 +199,7 @@ namespace Interfaz
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(230, 646);
+            this.btnAgregar.Location = new System.Drawing.Point(217, 563);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(123, 48);
             this.btnAgregar.TabIndex = 10;
@@ -198,16 +213,15 @@ namespace Interfaz
             this.lblMensajeAdmin.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblMensajeAdmin.Location = new System.Drawing.Point(446, 35);
             this.lblMensajeAdmin.Name = "lblMensajeAdmin";
-            this.lblMensajeAdmin.Size = new System.Drawing.Size(352, 120);
+            this.lblMensajeAdmin.Size = new System.Drawing.Size(350, 100);
             this.lblMensajeAdmin.TabIndex = 19;
-            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor,Editorial,\r\nHabitacion,Pasil" +
-    "lo,Estante\r\nEstan vacías, agreguelas primero en sus\r\n pantallas respectivas.\r\n\r\n" +
-    "";
+            this.lblMensajeAdmin.Text = "Señor(a) Administrador(a):\r\nSi las opciones de Autor y Editorial\r\nestan vacías, a" +
+    "greguelas primero en sus\r\n pantallas respectivas.\r\n\r\n";
             // 
             // lblEstante
             // 
             this.lblEstante.AutoSize = true;
-            this.lblEstante.Location = new System.Drawing.Point(557, 517);
+            this.lblEstante.Location = new System.Drawing.Point(544, 434);
             this.lblEstante.Name = "lblEstante";
             this.lblEstante.Size = new System.Drawing.Size(79, 20);
             this.lblEstante.TabIndex = 9;
@@ -216,7 +230,7 @@ namespace Interfaz
             // lblPasillo
             // 
             this.lblPasillo.AutoSize = true;
-            this.lblPasillo.Location = new System.Drawing.Point(311, 517);
+            this.lblPasillo.Location = new System.Drawing.Point(298, 434);
             this.lblPasillo.Name = "lblPasillo";
             this.lblPasillo.Size = new System.Drawing.Size(72, 20);
             this.lblPasillo.TabIndex = 8;
@@ -225,7 +239,7 @@ namespace Interfaz
             // lblHabitacion
             // 
             this.lblHabitacion.AutoSize = true;
-            this.lblHabitacion.Location = new System.Drawing.Point(78, 517);
+            this.lblHabitacion.Location = new System.Drawing.Point(65, 434);
             this.lblHabitacion.Name = "lblHabitacion";
             this.lblHabitacion.Size = new System.Drawing.Size(105, 20);
             this.lblHabitacion.TabIndex = 7;
@@ -234,11 +248,11 @@ namespace Interfaz
             // lblUbicacionPasillo
             // 
             this.lblUbicacionPasillo.AutoSize = true;
-            this.lblUbicacionPasillo.Location = new System.Drawing.Point(37, 480);
+            this.lblUbicacionPasillo.Location = new System.Drawing.Point(24, 397);
             this.lblUbicacionPasillo.Name = "lblUbicacionPasillo";
-            this.lblUbicacionPasillo.Size = new System.Drawing.Size(156, 20);
+            this.lblUbicacionPasillo.Size = new System.Drawing.Size(161, 20);
             this.lblUbicacionPasillo.TabIndex = 6;
-            this.lblUbicacionPasillo.Text = "Ubicacion Pasilo:";
+            this.lblUbicacionPasillo.Text = "Ubicacion Pasillo:";
             // 
             // lblFechaPublicacion
             // 
@@ -294,22 +308,11 @@ namespace Interfaz
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre Libro:";
             // 
-            // picImagenDecorativa
-            // 
-            this.picImagenDecorativa.Image = global::Interfaz.Properties.Resources.book;
-            this.picImagenDecorativa.InitialImage = global::Interfaz.Properties.Resources.room;
-            this.picImagenDecorativa.Location = new System.Drawing.Point(531, 201);
-            this.picImagenDecorativa.Name = "picImagenDecorativa";
-            this.picImagenDecorativa.Size = new System.Drawing.Size(213, 219);
-            this.picImagenDecorativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImagenDecorativa.TabIndex = 26;
-            this.picImagenDecorativa.TabStop = false;
-            // 
             // frmAgregarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 728);
+            this.ClientSize = new System.Drawing.Size(848, 667);
             this.Controls.Add(this.grpAgregarLibro);
             this.Name = "frmAgregarLibro";
             this.Text = "Agregar Libro";
