@@ -40,9 +40,9 @@ namespace Interfaz
             this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
             this.cmbIdLibro = new System.Windows.Forms.ComboBox();
             this.lblIdLibro = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelarModif = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModificarLibro = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.cmbEditorial = new System.Windows.Forms.ComboBox();
@@ -73,9 +73,9 @@ namespace Interfaz
             this.grpAgregarLibro.Controls.Add(this.dtpFechaPublicacion);
             this.grpAgregarLibro.Controls.Add(this.cmbIdLibro);
             this.grpAgregarLibro.Controls.Add(this.lblIdLibro);
-            this.grpAgregarLibro.Controls.Add(this.button2);
+            this.grpAgregarLibro.Controls.Add(this.btnCancelarModif);
             this.grpAgregarLibro.Controls.Add(this.btnCancelar);
-            this.grpAgregarLibro.Controls.Add(this.button1);
+            this.grpAgregarLibro.Controls.Add(this.btnModificarLibro);
             this.grpAgregarLibro.Controls.Add(this.pictureBox1);
             this.grpAgregarLibro.Controls.Add(this.btnModificar);
             this.grpAgregarLibro.Controls.Add(this.cmbEditorial);
@@ -188,16 +188,16 @@ namespace Interfaz
             this.lblIdLibro.TabIndex = 23;
             this.lblIdLibro.Text = "ID Libro:";
             // 
-            // button2
+            // btnCancelarModif
             // 
-            this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(331, 675);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 48);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelarModif.ForeColor = System.Drawing.Color.Navy;
+            this.btnCancelarModif.Location = new System.Drawing.Point(331, 675);
+            this.btnCancelarModif.Name = "btnCancelarModif";
+            this.btnCancelarModif.Size = new System.Drawing.Size(123, 48);
+            this.btnCancelarModif.TabIndex = 22;
+            this.btnCancelarModif.Text = "Cancelar";
+            this.btnCancelarModif.UseVisualStyleBackColor = true;
+            this.btnCancelarModif.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCancelar
             // 
@@ -209,15 +209,16 @@ namespace Interfaz
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnModificarLibro
             // 
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(149, 675);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 48);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModificarLibro.ForeColor = System.Drawing.Color.Navy;
+            this.btnModificarLibro.Location = new System.Drawing.Point(149, 675);
+            this.btnModificarLibro.Name = "btnModificarLibro";
+            this.btnModificarLibro.Size = new System.Drawing.Size(123, 48);
+            this.btnModificarLibro.TabIndex = 21;
+            this.btnModificarLibro.Text = "Modificar";
+            this.btnModificarLibro.UseVisualStyleBackColor = true;
+            this.btnModificarLibro.Click += new System.EventHandler(this.btnModificarLibro_Click);
             // 
             // pictureBox1
             // 
@@ -391,8 +392,8 @@ namespace Interfaz
         private System.Windows.Forms.Label lblIdLibro;
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacion;
         private System.Windows.Forms.Label lblMensajeAdmin;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelarModif;
+        private System.Windows.Forms.Button btnModificarLibro;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Button btnAgregarAutores;

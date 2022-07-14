@@ -2,6 +2,7 @@
 using Interfaz.PantallasLIbros;
 using Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -289,6 +290,96 @@ namespace Interfaz
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnModificarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //validaciones 
+                if (txtNombreLibro.Text == " ")
+                {
+                    MessageBox.Show("El nombre del Libro es Requerido");
+                    return;
+                }
+                if (cmbCategoria.Text == " ")
+                {
+                    MessageBox.Show("La categoria es Requerida");
+                    return;
+                }
+                if (cmbEditorial.Text == " ")
+                {
+                    MessageBox.Show("La Editorial es Requerida");
+                    return;
+                }
+
+                if (cl_estatic_list_Autores.cadenaAutores == "")
+                {
+                    MessageBox.Show("Aun no Seleciona ningun autor de la Lista Disponible");
+                    return;
+                }
+                if (txtCantDisponible.Text == " ")
+                {
+                    MessageBox.Show("La cantidad de Libros es Requerida");
+                    return;
+                }
+                if (cmbHabitacion.Text == " ")
+                {
+                    MessageBox.Show("La Habitacion es Requerida");
+                    return;
+                }
+                if (cmbPasillo.Text == " ")
+                {
+                    MessageBox.Show("El pasillo es Requerido");
+                    return;
+                }
+                if (cmbEstante.Text == " ")
+                {
+                    MessageBox.Show("El Estante es Requerido");
+                    return;
+                }
+                if (IsNumeric(txtCantDisponible.Text) == false)
+                {
+                    MessageBox.Show("la cantidad debe ser en forma Numerica");
+                    return;
+                }
+                //fin validaciones
+
+                //objeto de negocios para llamar el SP y Modificar el libro ya modificado
+                Libro_Procesos objLibroProcesos = new Libro_Procesos();
+                objLibroProcesos.GrabarLibro(2, newLibro);
+
+                //Separamos el string de los autores en un ArryList
+                ArrayList listAutores = new ArrayList();
+                foreach (string autorID in cl_estatic_list_Autores.cadenaAutores.Trim().Split(';'))
+                {
+                    if (autorID != "")
+                    {
+                        listAutores.Add(autorID);
+                    }
+
+                }
+
+                //vamos agregar un registro por cada autor
+                for (int i = 0; i < listAutores.Count; i++)
+                {
+                    //creamos objeto tipo LibroAutor
+                    clLIbro_Autor newObj_libroAutor = new clLIbro_Autor();
+                    newObj_libroAutor.Libro_Autor = 0;
+                    newObj_libroAutor.LibroID = newLibro.libroID;
+                    newObj_libroAutor.AutorID = Convert.ToInt16(listAutores[i]);
+                    objLibroAutor.GrabarLibro_Autor(2, newObj_libroAutor);
+                }
+
+                MessageBox.Show("Libro Agregado Correctamente");
+                cl_estatic_list_Autores.cadenaAutores = "";//Restablecemos la cadena de autores a vacio
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message);
             }
         }
     }//fin class
