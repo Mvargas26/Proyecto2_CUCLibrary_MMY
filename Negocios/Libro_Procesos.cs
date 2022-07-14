@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 using System.Data.SqlClient;
 using Datos;
+using System.Collections;
 
 namespace Negocios
 {
   public  class Libro_Procesos
     {
+
+        public static ArrayList arry_listaAutoresGuardar;
+
         public void GrabarLibro(short accion, Entidades.clLibro libroGrabar)
         {
             try
@@ -42,5 +46,19 @@ namespace Negocios
             }
 
         }//fin GrabarLibro
+
+
+        // En este metodo guardaremos los autores selecionados para pasarlos de un frame a otro
+        public static ArrayList guardaAutores (ArrayList lista)
+        {
+            ArrayList listaGuardada = new ArrayList();
+
+            foreach (var item in lista)
+            {
+                listaGuardada.Add(item);
+            }
+
+                return listaGuardada;
+        }
     }
 }

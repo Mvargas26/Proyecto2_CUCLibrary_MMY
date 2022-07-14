@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clLibro.cs" />
     <Compile Include="clLIbro_Autor.cs" />
+    <Compile Include="cl_estatic_list_Autores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

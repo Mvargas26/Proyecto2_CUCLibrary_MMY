@@ -1,5 +1,7 @@
-﻿using Negocios;
+﻿using Entidades;
+using Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Interfaz.PantallasLIbros
 {
@@ -19,10 +22,26 @@ namespace Interfaz.PantallasLIbros
         }
         Procesos objNegocios = new Procesos();
         DataTable dtDatos = new DataTable();
-
-        private void btnFinalizar_Click(object sender, EventArgs e)
+       private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                foreach(DataGridViewRow fila in dgvAutoresYaSelec.Rows)
+                {
+                    string id = fila.Cells["colID"].Value.ToString();
+                    cl_estatic_list_Autores.cadenaAutores += ";" + id;
+
+                }
+      
+
+                this.Close();
+
+            }//fn try
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void frmDGVAutores_Load(object sender, EventArgs e)
@@ -60,6 +79,13 @@ namespace Interfaz.PantallasLIbros
 
                 dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
+                dgvAutoresYaSelec.Update();
+
+                //frmAgregarLibro obj_frmAgregarLibro = new frmAgregarLibro();
+                //obj_frmAgregarLibro.dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                //obj_frmAgregarLibro.dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
+                //obj_frmAgregarLibro.dgvAutoresYaSelec.Update();
+
             }
             catch (Exception ex)
             {
@@ -82,4 +108,5 @@ namespace Interfaz.PantallasLIbros
             }
         }
     }//fin class
+
 }//fin space

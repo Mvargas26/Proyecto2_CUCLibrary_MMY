@@ -45,6 +45,8 @@ namespace Interfaz
         {
              try
             {
+
+
                 //aqui llamamos el sp que trae las tablas:
                 //0=CategoriaLibro,1=Autor,2=Libro_Autor,3=Editorial,4=Habitacion,5=Pasillo,6=Estante
                 dsDatos = objNegocios.QueryGeneralNegocios_DS("SP_Dataset_frmAgregarLibro");
@@ -63,6 +65,8 @@ namespace Interfaz
                 {
                     this.cmbHabitacion.Items.Add(fila["HabitacionNombre"].ToString());
                 }
+
+        
 
             }
             catch (Exception ex)
@@ -140,8 +144,11 @@ namespace Interfaz
             }
         }// fn cmbPasillo_SelectedIndexChanged
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
 
+        }
 
-
+      
     }//fn class
 }//fin space

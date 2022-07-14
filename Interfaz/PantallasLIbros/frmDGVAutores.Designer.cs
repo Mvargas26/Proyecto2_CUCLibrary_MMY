@@ -32,13 +32,13 @@ namespace Interfaz.PantallasLIbros
             this.grpAutores = new System.Windows.Forms.GroupBox();
             this.dgvAutoresRegistrados = new System.Windows.Forms.DataGridView();
             this.grpAutoresEscogidos = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.dgvAutoresYaSelec = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.grpAutores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutoresRegistrados)).BeginInit();
             this.grpAutoresEscogidos.SuspendLayout();
@@ -58,6 +58,7 @@ namespace Interfaz.PantallasLIbros
             // 
             // dgvAutoresRegistrados
             // 
+            this.dgvAutoresRegistrados.AllowUserToAddRows = false;
             this.dgvAutoresRegistrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAutoresRegistrados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAutoresRegistrados.Location = new System.Drawing.Point(3, 23);
@@ -78,42 +79,9 @@ namespace Interfaz.PantallasLIbros
             this.grpAutoresEscogidos.TabStop = false;
             this.grpAutoresEscogidos.Text = "Autores que Seleciono";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(317, 220);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(161, 40);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar Autor";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(283, 513);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(195, 40);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar Autor";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.Color.Blue;
-            this.btnFinalizar.Location = new System.Drawing.Point(301, 598);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(177, 69);
-            this.btnFinalizar.TabIndex = 4;
-            this.btnFinalizar.Text = "Finalizar !";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
             // dgvAutoresYaSelec
             // 
+            this.dgvAutoresYaSelec.AllowUserToAddRows = false;
             this.dgvAutoresYaSelec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAutoresYaSelec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -150,6 +118,40 @@ namespace Interfaz.PantallasLIbros
             this.colOrigen.Name = "colOrigen";
             this.colOrigen.ReadOnly = true;
             this.colOrigen.Width = 125;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(317, 220);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(161, 40);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar Autor";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(283, 513);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(195, 40);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar Autor";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.Blue;
+            this.btnFinalizar.Location = new System.Drawing.Point(301, 598);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(177, 69);
+            this.btnFinalizar.TabIndex = 4;
+            this.btnFinalizar.Text = "Finalizar !";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // frmDGVAutores
             // 
