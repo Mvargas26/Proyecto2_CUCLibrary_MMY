@@ -25,6 +25,7 @@ namespace Interfaz
         Procesos objNegocios = new Procesos();
         DataSet dsDatos = new DataSet();
         Libro_Autor_Procesos objLibroAutor = new Libro_Autor_Procesos();
+        short idLibroGlobal;
         short idHabitacionGlobal = 0;
         short idPasilloGlobal = 0;
         short idCategoriaGlobal;
@@ -245,46 +246,18 @@ namespace Interfaz
                 {
                     if (fila["LibroID"].ToString().Equals(cmbIdLibro.Text))
                     {
-                        newLibro.libroID = Convert.ToInt16(fila["LibroID"]);
+                        
                         newLibro.libroNombre = fila["LibroNombre"].ToString();
-                        newLibro.CategoriaID= Convert.ToInt16(fila["CategoriaID"]);
-                        newLibro.EditorialID = Convert.ToInt16(fila["EditorialID"]);
                         newLibro.cantDispo = Convert.ToInt32(fila["CantidadDisponible"]);
-                        newLibro.fechaPubli= Convert.ToDateTime(fila["FechaPublicacion"]);
-                        newLibro.habitacionID= Convert.ToInt16(fila["HabitacionID"]);
-                        newLibro.pasilloID= Convert.ToInt16(fila["PasilloID"]);
-                        newLibro.estanteID= Convert.ToInt16(fila["EstanteID"]);
+                       idLibroGlobal= Convert.ToInt16(fila["LibroID"]);
                     }
 
                 }
 
                 this.txtNombreLibro.Text = newLibro.libroNombre;
-                //Cargamos la categoria con la info del selecionado
-                foreach (DataRow fila in dsDatos.Tables[0].Rows)
-                {
-                    if (fila["CategoriaID"].ToString().Equals(newLibro.CategoriaID.ToString()))
-                    {
-                        this.cmbCategoria.Text=fila["NombreCategoria"].ToString();
-                    }
-                }
-                //Cargamos la Editorial con la info del selecionado
-                foreach (DataRow fila in dsDatos.Tables[3].Rows)
-                {
-                    if (fila["EditorialID"].ToString().Equals(newLibro.EditorialID.ToString()))
-                    {
-                        this.cmbEditorial.Text=fila["EditorialNombre"].ToString();
-                    }
-                }
-
-                foreach (DataRow fila in dsDatos.Tables[4].Rows)
-                {
-                    if (fila["HabitacionID"].ToString().Equals(newLibro.habitacionID.ToString()))
-                    {
-                        this.cmbHabitacion.Text = fila["HabitacionNombre"].ToString();
-                    }
-                }
-
                 this.txtCantDisponible.Text = newLibro.cantDispo.ToString();
+
+               
 
             }
             catch (Exception ex)
@@ -346,10 +319,23 @@ namespace Interfaz
                 }
                 //fin validaciones
 
+                ////cargamos el libro con la nueva info
+                newLibro.libroID = idLibroGlobal;
+                newLibro.libroNombre = txtNombreLibro.Text;
+                newLibro.CategoriaID = idCategoriaGlobal;
+                newLibro.EditorialID = idEditorialGlobal;
+                newLibro.cantDispo = Convert.ToInt32(txtCantDisponible.Text);
+                newLibro.fechaPubli = Convert.ToDateTime(dtpFechaPublicacion.Value);
+                newLibro.habitacionID = Convert.ToInt16(idHabitacionGlobal);
+                newLibro.pasilloID = Convert.ToInt16(idPasilloGlobal);
+                newLibro.estanteID = Convert.ToInt16(idEstanteGlobal);
+
                 //objeto de negocios para llamar el SP y Modificar el libro ya modificado
                 Libro_Procesos objLibroProcesos = new Libro_Procesos();
                 objLibroProcesos.GrabarLibro(2, newLibro);
 
+                #region Guardar en la tabla Libro_Autor
+                
                 //Separamos el string de los autores en un ArryList
                 ArrayList listAutores = new ArrayList();
                 foreach (string autorID in cl_estatic_list_Autores.cadenaAutores.Trim().Split(';'))
@@ -371,8 +357,9 @@ namespace Interfaz
                     newObj_libroAutor.AutorID = Convert.ToInt16(listAutores[i]);
                     objLibroAutor.GrabarLibro_Autor(2, newObj_libroAutor);
                 }
+                #endregion
 
-                MessageBox.Show("Libro Agregado Correctamente");
+                MessageBox.Show("Libro Modificado Correctamente Correctamente");
                 cl_estatic_list_Autores.cadenaAutores = "";//Restablecemos la cadena de autores a vacio
                 this.Close();
 

@@ -67,6 +67,7 @@ namespace Interfaz.PantallasLIbros
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -77,6 +78,7 @@ namespace Interfaz.PantallasLIbros
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblLibroBuscarNombre
             // 
@@ -131,6 +133,7 @@ namespace Interfaz.PantallasLIbros
             this.Controls.Add(this.grpVerlibro);
             this.Name = "frmVerLibros";
             this.Text = "Ver Libros";
+            this.Load += new System.EventHandler(this.frmVerLibros_Load);
             this.grpVerlibro.ResumeLayout(false);
             this.grpVerlibro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerLibros)).EndInit();
