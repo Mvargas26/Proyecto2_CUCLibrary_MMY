@@ -66,5 +66,5 @@ namespace Interfaz.PantallasAutores
                 MessageBox.Show(ex.Message);
             }
         }
-    }
-}
+    }//fin class
+}//fin space

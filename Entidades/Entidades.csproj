@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clAutor.cs" />
+    <Compile Include="clEditorial.cs" />
     <Compile Include="clLibro.cs" />
     <Compile Include="clLIbro_Autor.cs" />
     <Compile Include="cl_estatic_list_Autores.cs" />

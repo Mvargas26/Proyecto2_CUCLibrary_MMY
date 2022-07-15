@@ -62,7 +62,7 @@ namespace Interfaz.PantallasAutores
                 string AutorNombreBuscar = txtAutorNombre.Text;
 
                 //columnas manualmente
-                dgvVerAutores.ColumnCount = 8;
+                dgvVerAutores.ColumnCount = 3;
 
                 dgvVerAutores.Columns[0].Name = "Identificacion del Autor";
                 dgvVerAutores.Columns[1].Name = "Nombre del Autor";

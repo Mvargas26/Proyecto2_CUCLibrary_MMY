@@ -86,6 +86,7 @@ namespace Interfaz.PantallasEditoriales
             this.cmbEditorialID.Name = "cmbEditorialID";
             this.cmbEditorialID.Size = new System.Drawing.Size(176, 30);
             this.cmbEditorialID.TabIndex = 27;
+            this.cmbEditorialID.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialID_SelectedIndexChanged);
             // 
             // grpEliminarEditorial
             // 
@@ -113,6 +114,7 @@ namespace Interfaz.PantallasEditoriales
             this.btnEliminar.TabIndex = 28;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // pictureBox1
             // 
@@ -132,6 +134,7 @@ namespace Interfaz.PantallasEditoriales
             this.Controls.Add(this.grpEliminarEditorial);
             this.Name = "frmEliminarEditorial";
             this.Text = "frmEliminarEditorial";
+            this.Load += new System.EventHandler(this.frmEliminarEditorial_Load);
             this.grpEliminarEditorial.ResumeLayout(false);
             this.grpEliminarEditorial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

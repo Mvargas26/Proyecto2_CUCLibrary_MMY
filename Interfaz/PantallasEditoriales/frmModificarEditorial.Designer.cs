@@ -34,7 +34,7 @@ namespace Interfaz.PantallasEditoriales
             this.lblEditorialID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.txtLugarOrigen = new System.Windows.Forms.TextBox();
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtNombreEditorial = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@ namespace Interfaz.PantallasEditoriales
             this.grpModificarEditorial.Controls.Add(this.lblEditorialID);
             this.grpModificarEditorial.Controls.Add(this.pictureBox1);
             this.grpModificarEditorial.Controls.Add(this.btnCancelar);
-            this.grpModificarEditorial.Controls.Add(this.btnAgregar);
+            this.grpModificarEditorial.Controls.Add(this.btnModificar);
             this.grpModificarEditorial.Controls.Add(this.txtLugarOrigen);
             this.grpModificarEditorial.Controls.Add(this.lblLugarOrigen);
             this.grpModificarEditorial.Controls.Add(this.txtNombreEditorial);
@@ -71,6 +71,7 @@ namespace Interfaz.PantallasEditoriales
             this.cmbEditorialID.Name = "cmbEditorialID";
             this.cmbEditorialID.Size = new System.Drawing.Size(176, 30);
             this.cmbEditorialID.TabIndex = 27;
+            this.cmbEditorialID.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialID_SelectedIndexChanged);
             // 
             // lblEditorialID
             // 
@@ -102,15 +103,16 @@ namespace Interfaz.PantallasEditoriales
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnModificar
             // 
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(156, 287);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
-            this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnModificar.Location = new System.Drawing.Point(156, 287);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(123, 48);
+            this.btnModificar.TabIndex = 23;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtLugarOrigen
             // 
@@ -152,6 +154,7 @@ namespace Interfaz.PantallasEditoriales
             this.Controls.Add(this.grpModificarEditorial);
             this.Name = "frmModificarEditorial";
             this.Text = "frmModificarEditorial";
+            this.Load += new System.EventHandler(this.frmModificarEditorial_Load);
             this.grpModificarEditorial.ResumeLayout(false);
             this.grpModificarEditorial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -164,7 +167,7 @@ namespace Interfaz.PantallasEditoriales
         private System.Windows.Forms.GroupBox grpModificarEditorial;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtLugarOrigen;
         private System.Windows.Forms.Label lblLugarOrigen;
         private System.Windows.Forms.TextBox txtNombreEditorial;
