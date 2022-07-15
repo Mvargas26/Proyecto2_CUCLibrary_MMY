@@ -359,7 +359,7 @@ namespace Interfaz
                 }
                 #endregion
 
-                MessageBox.Show("Libro Modificado Correctamente Correctamente");
+                MessageBox.Show("Libro Modificado  Correctamente");
                 cl_estatic_list_Autores.cadenaAutores = "";//Restablecemos la cadena de autores a vacio
                 this.Close();
 
@@ -368,6 +368,8 @@ namespace Interfaz
             {
                MessageBox.Show(ex.Message);
             }
-        }
+        }//fin btnModificarLibro_Click
+
+
     }//fin class
 }//fin space
