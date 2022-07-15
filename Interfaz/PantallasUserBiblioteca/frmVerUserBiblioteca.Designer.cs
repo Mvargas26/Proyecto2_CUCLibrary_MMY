@@ -36,13 +36,14 @@ namespace Interfaz.PantallasUserBiblioteca
             this.lblUserBuscar = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUserBibliotecaBuscarID = new System.Windows.Forms.Label();
-            this.txtAutorID = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerusuariosBiblioteca)).BeginInit();
             this.grpUsuariosBiblioteca.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvVerusuariosBiblioteca
             // 
+            this.dgvVerusuariosBiblioteca.AllowUserToAddRows = false;
             this.dgvVerusuariosBiblioteca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerusuariosBiblioteca.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerusuariosBiblioteca.Location = new System.Drawing.Point(0, 163);
@@ -60,7 +61,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.grpUsuariosBiblioteca.Controls.Add(this.lblUserBuscar);
             this.grpUsuariosBiblioteca.Controls.Add(this.txtUsuario);
             this.grpUsuariosBiblioteca.Controls.Add(this.lblUserBibliotecaBuscarID);
-            this.grpUsuariosBiblioteca.Controls.Add(this.txtAutorID);
+            this.grpUsuariosBiblioteca.Controls.Add(this.txtUserID);
             this.grpUsuariosBiblioteca.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpUsuariosBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpUsuariosBiblioteca.Location = new System.Drawing.Point(0, 0);
@@ -79,6 +80,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -89,6 +91,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblUserBuscar
             // 
@@ -115,12 +118,12 @@ namespace Interfaz.PantallasUserBiblioteca
             this.lblUserBibliotecaBuscarID.TabIndex = 1;
             this.lblUserBibliotecaBuscarID.Text = "Buscar Usuario por ID:";
             // 
-            // txtAutorID
+            // txtUserID
             // 
-            this.txtAutorID.Location = new System.Drawing.Point(293, 34);
-            this.txtAutorID.Name = "txtAutorID";
-            this.txtAutorID.Size = new System.Drawing.Size(189, 27);
-            this.txtAutorID.TabIndex = 0;
+            this.txtUserID.Location = new System.Drawing.Point(293, 34);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(189, 27);
+            this.txtUserID.TabIndex = 0;
             // 
             // frmVerUserBiblioteca
             // 
@@ -131,6 +134,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.Controls.Add(this.grpUsuariosBiblioteca);
             this.Name = "frmVerUserBiblioteca";
             this.Text = "Ver User Biblioteca";
+            this.Load += new System.EventHandler(this.frmVerUserBiblioteca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerusuariosBiblioteca)).EndInit();
             this.grpUsuariosBiblioteca.ResumeLayout(false);
             this.grpUsuariosBiblioteca.PerformLayout();
@@ -147,6 +151,6 @@ namespace Interfaz.PantallasUserBiblioteca
         private System.Windows.Forms.Label lblUserBuscar;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblUserBibliotecaBuscarID;
-        private System.Windows.Forms.TextBox txtAutorID;
+        private System.Windows.Forms.TextBox txtUserID;
     }
 }

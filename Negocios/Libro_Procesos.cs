@@ -48,19 +48,5 @@ namespace Negocios
         }//fin GrabarLibro
 
 
-        //// En este metodo guardaremos los autores selecionados para pasarlos de un frame a otro
-        //public static ArrayList guardaAutores (ArrayList lista)
-        //{
-        //    ArrayList listaGuardada = new ArrayList();
-
-        //    foreach (var item in lista)
-        //    {
-        //        listaGuardada.Add(item);
-        //    }
-
-        //        return listaGuardada;
-        //}
-
-
     }//fin class
 }//fin space

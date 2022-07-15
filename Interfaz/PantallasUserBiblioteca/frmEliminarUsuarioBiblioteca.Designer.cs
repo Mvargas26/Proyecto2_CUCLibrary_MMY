@@ -34,7 +34,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
+            this.cmbIdUserUB = new System.Windows.Forms.ComboBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblIdUser = new System.Windows.Forms.Label();
             this.grpEliminarUserBiblioteca.SuspendLayout();
@@ -47,7 +47,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.grpEliminarUserBiblioteca.Controls.Add(this.btnCancelar);
             this.grpEliminarUserBiblioteca.Controls.Add(this.btnEliminar);
             this.grpEliminarUserBiblioteca.Controls.Add(this.txtUsuario);
-            this.grpEliminarUserBiblioteca.Controls.Add(this.cmbIdLibro);
+            this.grpEliminarUserBiblioteca.Controls.Add(this.cmbIdUserUB);
             this.grpEliminarUserBiblioteca.Controls.Add(this.lblUsuario);
             this.grpEliminarUserBiblioteca.Controls.Add(this.lblIdUser);
             this.grpEliminarUserBiblioteca.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,6 +77,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -86,6 +87,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtUsuario
             // 
@@ -95,14 +97,15 @@ namespace Interfaz.PantallasUserBiblioteca
             this.txtUsuario.Size = new System.Drawing.Size(121, 27);
             this.txtUsuario.TabIndex = 3;
             // 
-            // cmbIdLibro
+            // cmbIdUserUB
             // 
-            this.cmbIdLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdLibro.FormattingEnabled = true;
-            this.cmbIdLibro.Location = new System.Drawing.Point(250, 68);
-            this.cmbIdLibro.Name = "cmbIdLibro";
-            this.cmbIdLibro.Size = new System.Drawing.Size(121, 28);
-            this.cmbIdLibro.TabIndex = 2;
+            this.cmbIdUserUB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdUserUB.FormattingEnabled = true;
+            this.cmbIdUserUB.Location = new System.Drawing.Point(250, 68);
+            this.cmbIdUserUB.Name = "cmbIdUserUB";
+            this.cmbIdUserUB.Size = new System.Drawing.Size(121, 28);
+            this.cmbIdUserUB.TabIndex = 2;
+            this.cmbIdUserUB.SelectedIndexChanged += new System.EventHandler(this.cmbIdUserUB_SelectedIndexChanged);
             // 
             // lblUsuario
             // 
@@ -130,6 +133,7 @@ namespace Interfaz.PantallasUserBiblioteca
             this.Controls.Add(this.grpEliminarUserBiblioteca);
             this.Name = "frmEliminarUsuarioBiblioteca";
             this.Text = "Eliminar Usuario Biblioteca";
+            this.Load += new System.EventHandler(this.frmEliminarUsuarioBiblioteca_Load);
             this.grpEliminarUserBiblioteca.ResumeLayout(false);
             this.grpEliminarUserBiblioteca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();
@@ -144,7 +148,7 @@ namespace Interfaz.PantallasUserBiblioteca
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.ComboBox cmbIdLibro;
+        private System.Windows.Forms.ComboBox cmbIdUserUB;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblIdUser;
     }
