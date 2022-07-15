@@ -33,8 +33,8 @@ namespace Interfaz.PantallasAutores
             this.pboxImagen = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtNombreLibro = new System.Windows.Forms.TextBox();
-            this.cmbIdLibro = new System.Windows.Forms.ComboBox();
+            this.txtNombreAutor = new System.Windows.Forms.TextBox();
+            this.cmbIdAutor = new System.Windows.Forms.ComboBox();
             this.lblNombreAutor = new System.Windows.Forms.Label();
             this.lblIdAutor = new System.Windows.Forms.Label();
             this.grpEliminarAutor.SuspendLayout();
@@ -46,8 +46,8 @@ namespace Interfaz.PantallasAutores
             this.grpEliminarAutor.Controls.Add(this.pboxImagen);
             this.grpEliminarAutor.Controls.Add(this.btnCancelar);
             this.grpEliminarAutor.Controls.Add(this.btnEliminar);
-            this.grpEliminarAutor.Controls.Add(this.txtNombreLibro);
-            this.grpEliminarAutor.Controls.Add(this.cmbIdLibro);
+            this.grpEliminarAutor.Controls.Add(this.txtNombreAutor);
+            this.grpEliminarAutor.Controls.Add(this.cmbIdAutor);
             this.grpEliminarAutor.Controls.Add(this.lblNombreAutor);
             this.grpEliminarAutor.Controls.Add(this.lblIdAutor);
             this.grpEliminarAutor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,22 +87,25 @@ namespace Interfaz.PantallasAutores
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtNombreLibro
+            // txtNombreAutor
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(250, 124);
-            this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.ReadOnly = true;
-            this.txtNombreLibro.Size = new System.Drawing.Size(121, 27);
-            this.txtNombreLibro.TabIndex = 3;
+            this.txtNombreAutor.Location = new System.Drawing.Point(250, 124);
+            this.txtNombreAutor.Name = "txtNombreAutor";
+            this.txtNombreAutor.ReadOnly = true;
+            this.txtNombreAutor.Size = new System.Drawing.Size(121, 27);
+            this.txtNombreAutor.TabIndex = 3;
             // 
-            // cmbIdLibro
+            // cmbIdAutor
             // 
-            this.cmbIdLibro.FormattingEnabled = true;
-            this.cmbIdLibro.Location = new System.Drawing.Point(250, 68);
-            this.cmbIdLibro.Name = "cmbIdLibro";
-            this.cmbIdLibro.Size = new System.Drawing.Size(121, 28);
-            this.cmbIdLibro.TabIndex = 2;
+            this.cmbIdAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdAutor.FormattingEnabled = true;
+            this.cmbIdAutor.Location = new System.Drawing.Point(250, 68);
+            this.cmbIdAutor.Name = "cmbIdAutor";
+            this.cmbIdAutor.Size = new System.Drawing.Size(121, 28);
+            this.cmbIdAutor.TabIndex = 2;
+            this.cmbIdAutor.SelectedIndexChanged += new System.EventHandler(this.cmbIdAutor_SelectedIndexChanged);
             // 
             // lblNombreAutor
             // 
@@ -130,6 +133,7 @@ namespace Interfaz.PantallasAutores
             this.Controls.Add(this.grpEliminarAutor);
             this.Name = "frmEliminarAutor";
             this.Text = "Eliminar Autor";
+            this.Load += new System.EventHandler(this.frmEliminarAutor_Load);
             this.grpEliminarAutor.ResumeLayout(false);
             this.grpEliminarAutor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();
@@ -143,8 +147,8 @@ namespace Interfaz.PantallasAutores
         private System.Windows.Forms.PictureBox pboxImagen;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtNombreLibro;
-        private System.Windows.Forms.ComboBox cmbIdLibro;
+        private System.Windows.Forms.TextBox txtNombreAutor;
+        private System.Windows.Forms.ComboBox cmbIdAutor;
         private System.Windows.Forms.Label lblNombreAutor;
         private System.Windows.Forms.Label lblIdAutor;
     }

@@ -79,6 +79,7 @@ namespace Interfaz.PantallasAutores
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -89,6 +90,7 @@ namespace Interfaz.PantallasAutores
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblLibroBuscarNombre
             // 
@@ -131,6 +133,7 @@ namespace Interfaz.PantallasAutores
             this.Controls.Add(this.grpVerAutor);
             this.Name = "frmVerAutores";
             this.Text = "Ver Autores";
+            this.Load += new System.EventHandler(this.frmVerAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerAutores)).EndInit();
             this.grpVerAutor.ResumeLayout(false);
             this.grpVerAutor.PerformLayout();

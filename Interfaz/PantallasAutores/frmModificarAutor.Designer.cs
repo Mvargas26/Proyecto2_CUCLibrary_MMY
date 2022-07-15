@@ -34,8 +34,8 @@ namespace Interfaz.PantallasAutores
             this.lblIDAutor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtLugarOrigen = new System.Windows.Forms.TextBox();
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtNombreAutor = new System.Windows.Forms.TextBox();
             this.lblNombreAutor = new System.Windows.Forms.Label();
@@ -49,8 +49,8 @@ namespace Interfaz.PantallasAutores
             this.grpAutor.Controls.Add(this.lblIDAutor);
             this.grpAutor.Controls.Add(this.pictureBox1);
             this.grpAutor.Controls.Add(this.btnCancelar);
-            this.grpAutor.Controls.Add(this.btnAgregar);
-            this.grpAutor.Controls.Add(this.textBox1);
+            this.grpAutor.Controls.Add(this.btnModificar);
+            this.grpAutor.Controls.Add(this.txtLugarOrigen);
             this.grpAutor.Controls.Add(this.lblLugarOrigen);
             this.grpAutor.Controls.Add(this.txtNombreAutor);
             this.grpAutor.Controls.Add(this.lblNombreAutor);
@@ -71,6 +71,7 @@ namespace Interfaz.PantallasAutores
             this.cmbIDAutor.Name = "cmbIDAutor";
             this.cmbIDAutor.Size = new System.Drawing.Size(176, 30);
             this.cmbIDAutor.TabIndex = 27;
+            this.cmbIDAutor.SelectedIndexChanged += new System.EventHandler(this.cmbIDAutor_SelectedIndexChanged);
             // 
             // lblIDAutor
             // 
@@ -102,22 +103,23 @@ namespace Interfaz.PantallasAutores
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnModificar
             // 
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(78, 276);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
-            this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnModificar.Location = new System.Drawing.Point(78, 276);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(123, 48);
+            this.btnModificar.TabIndex = 23;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // textBox1
+            // txtLugarOrigen
             // 
-            this.textBox1.Location = new System.Drawing.Point(260, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 28);
-            this.textBox1.TabIndex = 3;
+            this.txtLugarOrigen.Location = new System.Drawing.Point(260, 172);
+            this.txtLugarOrigen.Name = "txtLugarOrigen";
+            this.txtLugarOrigen.Size = new System.Drawing.Size(176, 28);
+            this.txtLugarOrigen.TabIndex = 3;
             // 
             // lblLugarOrigen
             // 
@@ -152,6 +154,7 @@ namespace Interfaz.PantallasAutores
             this.Controls.Add(this.grpAutor);
             this.Name = "frmModificarAutor";
             this.Text = "Modificar Autor";
+            this.Load += new System.EventHandler(this.frmModificarAutor_Load);
             this.grpAutor.ResumeLayout(false);
             this.grpAutor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -166,8 +169,8 @@ namespace Interfaz.PantallasAutores
         private System.Windows.Forms.Label lblIDAutor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtLugarOrigen;
         private System.Windows.Forms.Label lblLugarOrigen;
         private System.Windows.Forms.TextBox txtNombreAutor;
         private System.Windows.Forms.Label lblNombreAutor;
