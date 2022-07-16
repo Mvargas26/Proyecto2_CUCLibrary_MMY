@@ -35,7 +35,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.cmEstado = new System.Windows.Forms.ComboBox();
             this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.lblLugarOrigen = new System.Windows.Forms.Label();
             this.txtTipoSala = new System.Windows.Forms.TextBox();
             this.lblTipoSala = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.grpModificarSala.Controls.Add(this.cmEstado);
             this.grpModificarSala.Controls.Add(this.picImagenDecorativa);
             this.grpModificarSala.Controls.Add(this.btnCancelar);
-            this.grpModificarSala.Controls.Add(this.btnAgregar);
+            this.grpModificarSala.Controls.Add(this.btnModificar);
             this.grpModificarSala.Controls.Add(this.lblLugarOrigen);
             this.grpModificarSala.Controls.Add(this.txtTipoSala);
             this.grpModificarSala.Controls.Add(this.lblTipoSala);
@@ -71,6 +71,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.cmbIDSala.Name = "cmbIDSala";
             this.cmbIDSala.Size = new System.Drawing.Size(176, 30);
             this.cmbIDSala.TabIndex = 28;
+            this.cmbIDSala.SelectedIndexChanged += new System.EventHandler(this.cmbIDSala_SelectedIndexChanged);
             // 
             // lblIDSala
             // 
@@ -83,10 +84,11 @@ namespace Interfaz.PantallasSalasEstudio
             // 
             // cmEstado
             // 
+            this.cmEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmEstado.FormattingEnabled = true;
             this.cmEstado.Items.AddRange(new object[] {
-            "Ocupada",
-            "Libre"});
+            "Libre",
+            "Ocupada"});
             this.cmEstado.Location = new System.Drawing.Point(290, 165);
             this.cmEstado.Name = "cmEstado";
             this.cmEstado.Size = new System.Drawing.Size(176, 30);
@@ -114,15 +116,16 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnModificar
             // 
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(174, 280);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
-            this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnModificar.Location = new System.Drawing.Point(174, 280);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(123, 48);
+            this.btnModificar.TabIndex = 23;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lblLugarOrigen
             // 
@@ -157,6 +160,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.Controls.Add(this.grpModificarSala);
             this.Name = "frmModificarSala";
             this.Text = "Modificar Sala";
+            this.Load += new System.EventHandler(this.frmModificarSala_Load);
             this.grpModificarSala.ResumeLayout(false);
             this.grpModificarSala.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenDecorativa)).EndInit();
@@ -170,7 +174,7 @@ namespace Interfaz.PantallasSalasEstudio
         private System.Windows.Forms.ComboBox cmEstado;
         private System.Windows.Forms.PictureBox picImagenDecorativa;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblLugarOrigen;
         private System.Windows.Forms.TextBox txtTipoSala;
         private System.Windows.Forms.Label lblTipoSala;

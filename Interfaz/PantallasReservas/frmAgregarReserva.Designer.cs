@@ -43,12 +43,16 @@ namespace Interfaz.PantallasReservas
             this.lblFechaRetiro = new System.Windows.Forms.Label();
             this.lblLibro = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.cmbSalas = new System.Windows.Forms.ComboBox();
+            this.lblSala = new System.Windows.Forms.Label();
             this.grpNuevaReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpNuevaReserva
             // 
+            this.grpNuevaReserva.Controls.Add(this.cmbSalas);
+            this.grpNuevaReserva.Controls.Add(this.lblSala);
             this.grpNuevaReserva.Controls.Add(this.button2);
             this.grpNuevaReserva.Controls.Add(this.btnAgregar);
             this.grpNuevaReserva.Controls.Add(this.pictureBox1);
@@ -66,7 +70,7 @@ namespace Interfaz.PantallasReservas
             this.grpNuevaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpNuevaReserva.Location = new System.Drawing.Point(0, 0);
             this.grpNuevaReserva.Name = "grpNuevaReserva";
-            this.grpNuevaReserva.Size = new System.Drawing.Size(822, 457);
+            this.grpNuevaReserva.Size = new System.Drawing.Size(818, 489);
             this.grpNuevaReserva.TabIndex = 0;
             this.grpNuevaReserva.TabStop = false;
             this.grpNuevaReserva.Text = "Nueva Reserva";
@@ -74,7 +78,7 @@ namespace Interfaz.PantallasReservas
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(411, 380);
+            this.button2.Location = new System.Drawing.Point(411, 401);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 48);
             this.button2.TabIndex = 25;
@@ -85,7 +89,7 @@ namespace Interfaz.PantallasReservas
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Navy;
-            this.btnAgregar.Location = new System.Drawing.Point(229, 380);
+            this.btnAgregar.Location = new System.Drawing.Point(229, 401);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(123, 48);
             this.btnAgregar.TabIndex = 24;
@@ -105,7 +109,7 @@ namespace Interfaz.PantallasReservas
             // dtpFechaRegreso
             // 
             this.dtpFechaRegreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegreso.Location = new System.Drawing.Point(350, 214);
+            this.dtpFechaRegreso.Location = new System.Drawing.Point(350, 280);
             this.dtpFechaRegreso.Name = "dtpFechaRegreso";
             this.dtpFechaRegreso.Size = new System.Drawing.Size(184, 27);
             this.dtpFechaRegreso.TabIndex = 9;
@@ -113,7 +117,7 @@ namespace Interfaz.PantallasReservas
             // dtpFechaRetiro
             // 
             this.dtpFechaRetiro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRetiro.Location = new System.Drawing.Point(350, 171);
+            this.dtpFechaRetiro.Location = new System.Drawing.Point(350, 237);
             this.dtpFechaRetiro.Name = "dtpFechaRetiro";
             this.dtpFechaRetiro.Size = new System.Drawing.Size(184, 27);
             this.dtpFechaRetiro.TabIndex = 8;
@@ -125,7 +129,7 @@ namespace Interfaz.PantallasReservas
             this.cmbEstadoReserva.Items.AddRange(new object[] {
             "Activa",
             "Inactiva"});
-            this.cmbEstadoReserva.Location = new System.Drawing.Point(331, 265);
+            this.cmbEstadoReserva.Location = new System.Drawing.Point(331, 331);
             this.cmbEstadoReserva.Name = "cmbEstadoReserva";
             this.cmbEstadoReserva.Size = new System.Drawing.Size(203, 28);
             this.cmbEstadoReserva.TabIndex = 7;
@@ -151,7 +155,7 @@ namespace Interfaz.PantallasReservas
             // lblEstadoReserva
             // 
             this.lblEstadoReserva.AutoSize = true;
-            this.lblEstadoReserva.Location = new System.Drawing.Point(26, 273);
+            this.lblEstadoReserva.Location = new System.Drawing.Point(26, 339);
             this.lblEstadoReserva.Name = "lblEstadoReserva";
             this.lblEstadoReserva.Size = new System.Drawing.Size(216, 20);
             this.lblEstadoReserva.TabIndex = 4;
@@ -160,7 +164,7 @@ namespace Interfaz.PantallasReservas
             // lblfechaRegreso
             // 
             this.lblfechaRegreso.AutoSize = true;
-            this.lblfechaRegreso.Location = new System.Drawing.Point(26, 214);
+            this.lblfechaRegreso.Location = new System.Drawing.Point(26, 280);
             this.lblfechaRegreso.Name = "lblfechaRegreso";
             this.lblfechaRegreso.Size = new System.Drawing.Size(142, 20);
             this.lblfechaRegreso.TabIndex = 3;
@@ -169,7 +173,7 @@ namespace Interfaz.PantallasReservas
             // lblFechaRetiro
             // 
             this.lblFechaRetiro.AutoSize = true;
-            this.lblFechaRetiro.Location = new System.Drawing.Point(26, 159);
+            this.lblFechaRetiro.Location = new System.Drawing.Point(26, 225);
             this.lblFechaRetiro.Name = "lblFechaRetiro";
             this.lblFechaRetiro.Size = new System.Drawing.Size(123, 20);
             this.lblFechaRetiro.TabIndex = 2;
@@ -193,11 +197,29 @@ namespace Interfaz.PantallasReservas
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             // 
+            // cmbSalas
+            // 
+            this.cmbSalas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSalas.FormattingEnabled = true;
+            this.cmbSalas.Location = new System.Drawing.Point(331, 175);
+            this.cmbSalas.Name = "cmbSalas";
+            this.cmbSalas.Size = new System.Drawing.Size(203, 28);
+            this.cmbSalas.TabIndex = 27;
+            // 
+            // lblSala
+            // 
+            this.lblSala.AutoSize = true;
+            this.lblSala.Location = new System.Drawing.Point(26, 175);
+            this.lblSala.Name = "lblSala";
+            this.lblSala.Size = new System.Drawing.Size(52, 20);
+            this.lblSala.TabIndex = 26;
+            this.lblSala.Text = "Sala:";
+            // 
             // frmAgregarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 457);
+            this.ClientSize = new System.Drawing.Size(818, 489);
             this.Controls.Add(this.grpNuevaReserva);
             this.Name = "frmAgregarReserva";
             this.Text = "Agregar Reserva";
@@ -224,5 +246,7 @@ namespace Interfaz.PantallasReservas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbSalas;
+        private System.Windows.Forms.Label lblSala;
     }
 }

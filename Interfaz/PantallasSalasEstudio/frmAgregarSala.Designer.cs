@@ -63,8 +63,8 @@ namespace Interfaz.PantallasSalasEstudio
             // 
             this.cmEstado.FormattingEnabled = true;
             this.cmEstado.Items.AddRange(new object[] {
-            "Ocupada",
-            "Libre"});
+            "Libre",
+            "Ocupada"});
             this.cmEstado.Location = new System.Drawing.Point(290, 165);
             this.cmEstado.Name = "cmEstado";
             this.cmEstado.Size = new System.Drawing.Size(176, 30);
@@ -101,6 +101,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnAgregar.TabIndex = 23;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblLugarOrigen
             // 

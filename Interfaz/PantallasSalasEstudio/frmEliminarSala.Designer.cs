@@ -34,7 +34,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.lblIDSala = new System.Windows.Forms.Label();
             this.picImagenDecorativa = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.txtTipoSala = new System.Windows.Forms.TextBox();
             this.lblTipoSala = new System.Windows.Forms.Label();
             this.grpEliminarSala.SuspendLayout();
@@ -47,7 +47,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.grpEliminarSala.Controls.Add(this.lblIDSala);
             this.grpEliminarSala.Controls.Add(this.picImagenDecorativa);
             this.grpEliminarSala.Controls.Add(this.btnCancelar);
-            this.grpEliminarSala.Controls.Add(this.btnAgregar);
+            this.grpEliminarSala.Controls.Add(this.btnEliminar);
             this.grpEliminarSala.Controls.Add(this.txtTipoSala);
             this.grpEliminarSala.Controls.Add(this.lblTipoSala);
             this.grpEliminarSala.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -67,6 +67,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.cmbIDSala.Name = "cmbIDSala";
             this.cmbIDSala.Size = new System.Drawing.Size(176, 30);
             this.cmbIDSala.TabIndex = 28;
+            this.cmbIDSala.SelectedIndexChanged += new System.EventHandler(this.cmbIDSala_SelectedIndexChanged);
             // 
             // lblIDSala
             // 
@@ -99,15 +100,16 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnEliminar
             // 
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregar.Location = new System.Drawing.Point(191, 221);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(123, 48);
-            this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnEliminar.Location = new System.Drawing.Point(191, 221);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(123, 48);
+            this.btnEliminar.TabIndex = 23;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtTipoSala
             // 
@@ -134,6 +136,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.Controls.Add(this.grpEliminarSala);
             this.Name = "frmEliminarSala";
             this.Text = "Eliminar Sala";
+            this.Load += new System.EventHandler(this.frmEliminarSala_Load);
             this.grpEliminarSala.ResumeLayout(false);
             this.grpEliminarSala.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenDecorativa)).EndInit();
@@ -148,7 +151,7 @@ namespace Interfaz.PantallasSalasEstudio
         private System.Windows.Forms.Label lblIDSala;
         private System.Windows.Forms.PictureBox picImagenDecorativa;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtTipoSala;
         private System.Windows.Forms.Label lblTipoSala;
     }

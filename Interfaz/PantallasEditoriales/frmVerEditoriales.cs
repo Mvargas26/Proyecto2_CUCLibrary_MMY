@@ -47,7 +47,7 @@ namespace Interfaz.PantallasEditoriales
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }//fn
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {

@@ -34,7 +34,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblSalaBuscarNombre = new System.Windows.Forms.Label();
-            this.txtAutorNombre = new System.Windows.Forms.TextBox();
+            this.txtSalaNombre = new System.Windows.Forms.TextBox();
             this.lblBuscarSalaID = new System.Windows.Forms.Label();
             this.txtSalaID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerSala)).BeginInit();
@@ -58,7 +58,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.grpVerSala.Controls.Add(this.btnLimpiarCampos);
             this.grpVerSala.Controls.Add(this.btnBuscar);
             this.grpVerSala.Controls.Add(this.lblSalaBuscarNombre);
-            this.grpVerSala.Controls.Add(this.txtAutorNombre);
+            this.grpVerSala.Controls.Add(this.txtSalaNombre);
             this.grpVerSala.Controls.Add(this.lblBuscarSalaID);
             this.grpVerSala.Controls.Add(this.txtSalaID);
             this.grpVerSala.Dock = System.Windows.Forms.DockStyle.Top;
@@ -79,6 +79,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -89,6 +90,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblSalaBuscarNombre
             // 
@@ -99,12 +101,12 @@ namespace Interfaz.PantallasSalasEstudio
             this.lblSalaBuscarNombre.TabIndex = 3;
             this.lblSalaBuscarNombre.Text = "Buscar Sala por Nombre:";
             // 
-            // txtAutorNombre
+            // txtSalaNombre
             // 
-            this.txtAutorNombre.Location = new System.Drawing.Point(346, 84);
-            this.txtAutorNombre.Name = "txtAutorNombre";
-            this.txtAutorNombre.Size = new System.Drawing.Size(189, 27);
-            this.txtAutorNombre.TabIndex = 2;
+            this.txtSalaNombre.Location = new System.Drawing.Point(346, 84);
+            this.txtSalaNombre.Name = "txtSalaNombre";
+            this.txtSalaNombre.Size = new System.Drawing.Size(189, 27);
+            this.txtSalaNombre.TabIndex = 2;
             // 
             // lblBuscarSalaID
             // 
@@ -131,6 +133,7 @@ namespace Interfaz.PantallasSalasEstudio
             this.Controls.Add(this.grpVerSala);
             this.Name = "frmVerSala";
             this.Text = "Ver Sala";
+            this.Load += new System.EventHandler(this.frmVerSala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerSala)).EndInit();
             this.grpVerSala.ResumeLayout(false);
             this.grpVerSala.PerformLayout();
@@ -145,7 +148,7 @@ namespace Interfaz.PantallasSalasEstudio
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblSalaBuscarNombre;
-        private System.Windows.Forms.TextBox txtAutorNombre;
+        private System.Windows.Forms.TextBox txtSalaNombre;
         private System.Windows.Forms.Label lblBuscarSalaID;
         private System.Windows.Forms.TextBox txtSalaID;
     }
