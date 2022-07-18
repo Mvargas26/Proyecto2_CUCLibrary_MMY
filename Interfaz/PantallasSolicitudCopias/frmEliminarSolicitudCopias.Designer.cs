@@ -30,7 +30,7 @@ namespace Interfaz.PantallasSolicitudCopias
         private void InitializeComponent()
         {
             this.grpEliminarSolicitudCopias = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbIDsolicitud = new System.Windows.Forms.ComboBox();
             this.lblIDSolicitud = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace Interfaz.PantallasSolicitudCopias
             // 
             // grpEliminarSolicitudCopias
             // 
-            this.grpEliminarSolicitudCopias.Controls.Add(this.comboBox3);
+            this.grpEliminarSolicitudCopias.Controls.Add(this.cmbIDsolicitud);
             this.grpEliminarSolicitudCopias.Controls.Add(this.lblIDSolicitud);
             this.grpEliminarSolicitudCopias.Controls.Add(this.btnCancelar);
             this.grpEliminarSolicitudCopias.Controls.Add(this.btnEliminar);
@@ -59,14 +59,15 @@ namespace Interfaz.PantallasSolicitudCopias
             this.grpEliminarSolicitudCopias.TabStop = false;
             this.grpEliminarSolicitudCopias.Text = "Eliminar Solicitud";
             // 
-            // comboBox3
+            // cmbIDsolicitud
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(261, 40);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 28);
-            this.comboBox3.TabIndex = 28;
+            this.cmbIDsolicitud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDsolicitud.FormattingEnabled = true;
+            this.cmbIDsolicitud.Location = new System.Drawing.Point(261, 40);
+            this.cmbIDsolicitud.Name = "cmbIDsolicitud";
+            this.cmbIDsolicitud.Size = new System.Drawing.Size(169, 28);
+            this.cmbIDsolicitud.TabIndex = 28;
+            this.cmbIDsolicitud.SelectedIndexChanged += new System.EventHandler(this.cmbIDsolicitud_SelectedIndexChanged);
             // 
             // lblIDSolicitud
             // 
@@ -97,6 +98,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // picIlustrativa
             // 
@@ -132,7 +134,8 @@ namespace Interfaz.PantallasSolicitudCopias
             this.ClientSize = new System.Drawing.Size(546, 405);
             this.Controls.Add(this.grpEliminarSolicitudCopias);
             this.Name = "frmEliminarSolicitudCopias";
-            this.Text = "frmEliminarSolicitudCopias";
+            this.Text = "Eliminar Solicitud Copias";
+            this.Load += new System.EventHandler(this.frmEliminarSolicitudCopias_Load);
             this.grpEliminarSolicitudCopias.ResumeLayout(false);
             this.grpEliminarSolicitudCopias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIlustrativa)).EndInit();
@@ -143,7 +146,7 @@ namespace Interfaz.PantallasSolicitudCopias
         #endregion
 
         private System.Windows.Forms.GroupBox grpEliminarSolicitudCopias;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbIDsolicitud;
         private System.Windows.Forms.Label lblIDSolicitud;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;

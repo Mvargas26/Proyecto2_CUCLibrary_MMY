@@ -34,15 +34,16 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblSolicitudBuscarNombre = new System.Windows.Forms.Label();
-            this.txtAutorNombre = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblBuscarSolicitudID = new System.Windows.Forms.Label();
-            this.txtSalaID = new System.Windows.Forms.TextBox();
+            this.txtsolicitudID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerSolicitud)).BeginInit();
             this.grpVerSalagrpVerSolicitudes.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvVerSolicitud
             // 
+            this.dgvVerSolicitud.AllowUserToAddRows = false;
             this.dgvVerSolicitud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerSolicitud.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerSolicitud.Location = new System.Drawing.Point(0, 163);
@@ -58,9 +59,9 @@ namespace Interfaz.PantallasSolicitudCopias
             this.grpVerSalagrpVerSolicitudes.Controls.Add(this.btnLimpiarCampos);
             this.grpVerSalagrpVerSolicitudes.Controls.Add(this.btnBuscar);
             this.grpVerSalagrpVerSolicitudes.Controls.Add(this.lblSolicitudBuscarNombre);
-            this.grpVerSalagrpVerSolicitudes.Controls.Add(this.txtAutorNombre);
+            this.grpVerSalagrpVerSolicitudes.Controls.Add(this.txtUsuario);
             this.grpVerSalagrpVerSolicitudes.Controls.Add(this.lblBuscarSolicitudID);
-            this.grpVerSalagrpVerSolicitudes.Controls.Add(this.txtSalaID);
+            this.grpVerSalagrpVerSolicitudes.Controls.Add(this.txtsolicitudID);
             this.grpVerSalagrpVerSolicitudes.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpVerSalagrpVerSolicitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpVerSalagrpVerSolicitudes.Location = new System.Drawing.Point(0, 0);
@@ -79,6 +80,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -89,6 +91,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblSolicitudBuscarNombre
             // 
@@ -99,12 +102,12 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblSolicitudBuscarNombre.TabIndex = 3;
             this.lblSolicitudBuscarNombre.Text = "Buscar Solicitud por Usuario:";
             // 
-            // txtAutorNombre
+            // txtUsuario
             // 
-            this.txtAutorNombre.Location = new System.Drawing.Point(346, 84);
-            this.txtAutorNombre.Name = "txtAutorNombre";
-            this.txtAutorNombre.Size = new System.Drawing.Size(189, 27);
-            this.txtAutorNombre.TabIndex = 2;
+            this.txtUsuario.Location = new System.Drawing.Point(346, 84);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(189, 27);
+            this.txtUsuario.TabIndex = 2;
             // 
             // lblBuscarSolicitudID
             // 
@@ -115,12 +118,12 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblBuscarSolicitudID.TabIndex = 1;
             this.lblBuscarSolicitudID.Text = "Buscar Solicitud por ID:";
             // 
-            // txtSalaID
+            // txtsolicitudID
             // 
-            this.txtSalaID.Location = new System.Drawing.Point(346, 35);
-            this.txtSalaID.Name = "txtSalaID";
-            this.txtSalaID.Size = new System.Drawing.Size(189, 27);
-            this.txtSalaID.TabIndex = 0;
+            this.txtsolicitudID.Location = new System.Drawing.Point(346, 35);
+            this.txtsolicitudID.Name = "txtsolicitudID";
+            this.txtsolicitudID.Size = new System.Drawing.Size(189, 27);
+            this.txtsolicitudID.TabIndex = 0;
             // 
             // frmVerSolicitudesCopias
             // 
@@ -131,6 +134,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.Controls.Add(this.grpVerSalagrpVerSolicitudes);
             this.Name = "frmVerSolicitudesCopias";
             this.Text = "Ver Solicitudes Copias";
+            this.Load += new System.EventHandler(this.frmVerSolicitudesCopias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerSolicitud)).EndInit();
             this.grpVerSalagrpVerSolicitudes.ResumeLayout(false);
             this.grpVerSalagrpVerSolicitudes.PerformLayout();
@@ -145,8 +149,8 @@ namespace Interfaz.PantallasSolicitudCopias
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblSolicitudBuscarNombre;
-        private System.Windows.Forms.TextBox txtAutorNombre;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblBuscarSolicitudID;
-        private System.Windows.Forms.TextBox txtSalaID;
+        private System.Windows.Forms.TextBox txtsolicitudID;
     }
 }
