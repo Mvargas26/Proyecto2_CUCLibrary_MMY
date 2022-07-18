@@ -30,18 +30,18 @@ namespace Interfaz.PantallasSolicitudCopias
         private void InitializeComponent()
         {
             this.grpModificarSolicitudCopias = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbIDSolicitud = new System.Windows.Forms.ComboBox();
             this.lblIDSolicitud = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.picIlustrativa = new System.Windows.Forms.PictureBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPaginas = new System.Windows.Forms.TextBox();
             this.lblPaginas = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbLibro = new System.Windows.Forms.ComboBox();
             this.lblLibro = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.grpModificarSolicitudCopias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIlustrativa)).BeginInit();
@@ -49,18 +49,18 @@ namespace Interfaz.PantallasSolicitudCopias
             // 
             // grpModificarSolicitudCopias
             // 
-            this.grpModificarSolicitudCopias.Controls.Add(this.comboBox3);
+            this.grpModificarSolicitudCopias.Controls.Add(this.cmbIDSolicitud);
             this.grpModificarSolicitudCopias.Controls.Add(this.lblIDSolicitud);
             this.grpModificarSolicitudCopias.Controls.Add(this.btnCancelar);
             this.grpModificarSolicitudCopias.Controls.Add(this.btnModificar);
             this.grpModificarSolicitudCopias.Controls.Add(this.picIlustrativa);
             this.grpModificarSolicitudCopias.Controls.Add(this.cmbEstado);
             this.grpModificarSolicitudCopias.Controls.Add(this.lblEstado);
-            this.grpModificarSolicitudCopias.Controls.Add(this.textBox1);
+            this.grpModificarSolicitudCopias.Controls.Add(this.txtPaginas);
             this.grpModificarSolicitudCopias.Controls.Add(this.lblPaginas);
-            this.grpModificarSolicitudCopias.Controls.Add(this.comboBox2);
+            this.grpModificarSolicitudCopias.Controls.Add(this.cmbLibro);
             this.grpModificarSolicitudCopias.Controls.Add(this.lblLibro);
-            this.grpModificarSolicitudCopias.Controls.Add(this.comboBox1);
+            this.grpModificarSolicitudCopias.Controls.Add(this.cmbUsuario);
             this.grpModificarSolicitudCopias.Controls.Add(this.lblUsuario);
             this.grpModificarSolicitudCopias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpModificarSolicitudCopias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,14 +71,15 @@ namespace Interfaz.PantallasSolicitudCopias
             this.grpModificarSolicitudCopias.TabStop = false;
             this.grpModificarSolicitudCopias.Text = "Modificar Solicitud";
             // 
-            // comboBox3
+            // cmbIDSolicitud
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(261, 40);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 28);
-            this.comboBox3.TabIndex = 28;
+            this.cmbIDSolicitud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDSolicitud.FormattingEnabled = true;
+            this.cmbIDSolicitud.Location = new System.Drawing.Point(261, 40);
+            this.cmbIDSolicitud.Name = "cmbIDSolicitud";
+            this.cmbIDSolicitud.Size = new System.Drawing.Size(169, 28);
+            this.cmbIDSolicitud.TabIndex = 28;
+            this.cmbIDSolicitud.SelectedIndexChanged += new System.EventHandler(this.cmbIDSolicitud_SelectedIndexChanged);
             // 
             // lblIDSolicitud
             // 
@@ -109,6 +110,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.btnModificar.TabIndex = 25;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // picIlustrativa
             // 
@@ -125,12 +127,13 @@ namespace Interfaz.PantallasSolicitudCopias
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
-            "Pendiente",
-            "Finalizada"});
+            "Finalizada",
+            "Pendiente"});
             this.cmbEstado.Location = new System.Drawing.Point(261, 298);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(169, 28);
             this.cmbEstado.TabIndex = 7;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -141,12 +144,12 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblEstado.TabIndex = 6;
             this.lblEstado.Text = "Estado:";
             // 
-            // textBox1
+            // txtPaginas
             // 
-            this.textBox1.Location = new System.Drawing.Point(358, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 27);
-            this.textBox1.TabIndex = 5;
+            this.txtPaginas.Location = new System.Drawing.Point(358, 229);
+            this.txtPaginas.Name = "txtPaginas";
+            this.txtPaginas.Size = new System.Drawing.Size(71, 27);
+            this.txtPaginas.TabIndex = 5;
             // 
             // lblPaginas
             // 
@@ -157,13 +160,15 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblPaginas.TabIndex = 4;
             this.lblPaginas.Text = "Paginas:";
             // 
-            // comboBox2
+            // cmbLibro
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(261, 160);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 28);
-            this.comboBox2.TabIndex = 3;
+            this.cmbLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLibro.FormattingEnabled = true;
+            this.cmbLibro.Location = new System.Drawing.Point(261, 160);
+            this.cmbLibro.Name = "cmbLibro";
+            this.cmbLibro.Size = new System.Drawing.Size(169, 28);
+            this.cmbLibro.TabIndex = 3;
+            this.cmbLibro.SelectedIndexChanged += new System.EventHandler(this.cmbLibro_SelectedIndexChanged);
             // 
             // lblLibro
             // 
@@ -174,13 +179,15 @@ namespace Interfaz.PantallasSolicitudCopias
             this.lblLibro.TabIndex = 2;
             this.lblLibro.Text = "Libro a Copiar:";
             // 
-            // comboBox1
+            // cmbUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(261, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 28);
-            this.comboBox1.TabIndex = 1;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(261, 91);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(169, 28);
+            this.cmbUsuario.TabIndex = 1;
+            this.cmbUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbUsuario_SelectedIndexChanged);
             // 
             // lblUsuario
             // 
@@ -199,6 +206,7 @@ namespace Interfaz.PantallasSolicitudCopias
             this.Controls.Add(this.grpModificarSolicitudCopias);
             this.Name = "frmModificarSolicitudCopias";
             this.Text = "Modificar Solicitud Copias";
+            this.Load += new System.EventHandler(this.frmModificarSolicitudCopias_Load);
             this.grpModificarSolicitudCopias.ResumeLayout(false);
             this.grpModificarSolicitudCopias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIlustrativa)).EndInit();
@@ -214,13 +222,13 @@ namespace Interfaz.PantallasSolicitudCopias
         private System.Windows.Forms.PictureBox picIlustrativa;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPaginas;
         private System.Windows.Forms.Label lblPaginas;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbLibro;
         private System.Windows.Forms.Label lblLibro;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUsuario;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbIDSolicitud;
         private System.Windows.Forms.Label lblIDSolicitud;
     }
 }
