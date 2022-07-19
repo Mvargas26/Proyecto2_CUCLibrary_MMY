@@ -441,5 +441,19 @@ namespace Interfaz
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void consultasExtraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmConsultasExtra pantalla = new frmConsultasExtra();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }//fin class
 }//fin space

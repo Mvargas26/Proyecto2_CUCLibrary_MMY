@@ -65,6 +65,7 @@ namespace Interfaz
             this.mnModificarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
             this.mnEliminarSolicitud = new System.Windows.Forms.ToolStripMenuItem();
             this.mnVerSolicitudes = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnModuloAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -81,10 +82,11 @@ namespace Interfaz
             this.mnUsuariosBiblioteca,
             this.mnSalasEstudio,
             this.mnSolicitudCopias,
+            this.consultasExtraToolStripMenuItem,
             this.sALIRToolStripMenuItem});
             this.mnModuloAdmin.Location = new System.Drawing.Point(0, 0);
             this.mnModuloAdmin.Name = "mnModuloAdmin";
-            this.mnModuloAdmin.Size = new System.Drawing.Size(1373, 36);
+            this.mnModuloAdmin.Size = new System.Drawing.Size(1470, 36);
             this.mnModuloAdmin.TabIndex = 1;
             this.mnModuloAdmin.Text = "menuStrip1";
             // 
@@ -361,6 +363,13 @@ namespace Interfaz
             this.mnVerSolicitudes.Text = "Ver solicitudes";
             this.mnVerSolicitudes.Click += new System.EventHandler(this.mnVerSolicitudes_Click);
             // 
+            // consultasExtraToolStripMenuItem
+            // 
+            this.consultasExtraToolStripMenuItem.Name = "consultasExtraToolStripMenuItem";
+            this.consultasExtraToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.consultasExtraToolStripMenuItem.Text = "Consultas Extra";
+            this.consultasExtraToolStripMenuItem.Click += new System.EventHandler(this.consultasExtraToolStripMenuItem_Click);
+            // 
             // sALIRToolStripMenuItem
             // 
             this.sALIRToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -373,7 +382,7 @@ namespace Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 854);
+            this.ClientSize = new System.Drawing.Size(1470, 854);
             this.Controls.Add(this.mnModuloAdmin);
             this.IsMdiContainer = true;
             this.Name = "frmModAdmin";
@@ -426,5 +435,6 @@ namespace Interfaz
         private System.Windows.Forms.ToolStripMenuItem mnEliminarSolicitud;
         private System.Windows.Forms.ToolStripMenuItem mnVerSolicitudes;
         private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasExtraToolStripMenuItem;
     }
 }
