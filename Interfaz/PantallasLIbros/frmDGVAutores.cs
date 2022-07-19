@@ -79,16 +79,40 @@ namespace Interfaz.PantallasLIbros
                 string nombre = dgvAutoresRegistrados[1, dgvAutoresRegistrados.CurrentRow.Index].Value.ToString();
                 string lugar = dgvAutoresRegistrados[2, dgvAutoresRegistrados.CurrentRow.Index].Value.ToString();
 
-                dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
-                dgvAutoresYaSelec.Update();
+                if (dgvAutoresYaSelec.Rows.Count > 0)
+                {
 
-                
+                    bool existe = false;
+                    foreach (DataGridViewRow row in dgvAutoresYaSelec.Rows)
+                    {
+                        if (Convert.ToString(row.Cells[0].Value).Equals(id))
+                        {
+                            existe = true;
+                        }
+                    }
+                    if (existe == true)
+                    {
+                        MessageBox.Show("El Autor ya fue ingresado", "GRYPHOS");
+                        return;
+                    }
+                    else
+                    {
+                        dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
+                        dgvAutoresYaSelec.Update();
+                    }
+                }
+                else
+                {
+                    dgvAutoresYaSelec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dgvAutoresYaSelec.Rows.Add(id, nombre, lugar);
+                    dgvAutoresYaSelec.Update();
+                }
 
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 

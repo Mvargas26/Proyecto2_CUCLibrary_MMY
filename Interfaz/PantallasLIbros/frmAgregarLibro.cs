@@ -146,7 +146,7 @@ namespace Interfaz
                 {
                     if (fila["PasilloNombre"].ToString().Equals(strPasilloSelec))
                     {
-                        //guardamos el id de la habitacion que seleciono el usuario
+                        //guardamos el id del pasillo que seleciono el usuario
                         idPasilloSelec = Int32.Parse(fila["PasilloID"].ToString());
                     }
                 }
@@ -155,7 +155,7 @@ namespace Interfaz
 
                 foreach (DataRow fila in dsDatos.Tables[6].Rows)
                 {
-                    if (fila["HabitacionID"].ToString().Equals(idHabitacionSelect.ToString()) && fila["PasilloID"].ToString().Equals(idPasilloSelec.ToString()))
+                    if (fila["HabitacionID"].ToString().Equals(idHabitacionGlobal.ToString()) && fila["PasilloID"].ToString().Equals(idPasilloGlobal.ToString()))
                     {
                         this.cmbEstante.Items.Add(fila["EstanteNombre"]);
                     }
