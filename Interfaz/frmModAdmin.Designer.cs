@@ -379,6 +379,7 @@ namespace Interfaz
             this.Name = "frmModAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo Administrador";
+            this.Load += new System.EventHandler(this.frmModAdmin_Load);
             this.mnModuloAdmin.ResumeLayout(false);
             this.mnModuloAdmin.PerformLayout();
             this.ResumeLayout(false);

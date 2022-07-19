@@ -427,5 +427,19 @@ namespace Interfaz
                 MessageBox.Show(Error.Message);
             }
         }
+
+        private void frmModAdmin_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLoginModAdmin pantalla = new frmLoginModAdmin();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }//fin class
 }//fin space

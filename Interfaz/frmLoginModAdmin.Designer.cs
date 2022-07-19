@@ -64,6 +64,7 @@ namespace Interfaz
             this.chkPassword.TabIndex = 11;
             this.chkPassword.Text = "Mostrar";
             this.chkPassword.UseVisualStyleBackColor = true;
+            this.chkPassword.CheckedChanged += new System.EventHandler(this.chkPassword_CheckedChanged);
             // 
             // btnEntrar
             // 
@@ -73,6 +74,7 @@ namespace Interfaz
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // txtPasswordConsultar
             // 
@@ -115,7 +117,9 @@ namespace Interfaz
             this.ControlBox = false;
             this.Controls.Add(this.grpLogin);
             this.Name = "frmLoginModAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLoginModAdmin_Load);
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.ResumeLayout(false);
