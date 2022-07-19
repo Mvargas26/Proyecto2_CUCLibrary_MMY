@@ -30,7 +30,7 @@ namespace Interfaz.PantallasReservas
         private void InitializeComponent()
         {
             this.grpModificarReserva = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbIDReserva = new System.Windows.Forms.ComboBox();
             this.lblIDReserva = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -45,13 +45,17 @@ namespace Interfaz.PantallasReservas
             this.lblFechaRetiro = new System.Windows.Forms.Label();
             this.lblLibro = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.cmbSalas = new System.Windows.Forms.ComboBox();
+            this.lblSala = new System.Windows.Forms.Label();
             this.grpModificarReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpModificarReserva
             // 
-            this.grpModificarReserva.Controls.Add(this.comboBox1);
+            this.grpModificarReserva.Controls.Add(this.cmbSalas);
+            this.grpModificarReserva.Controls.Add(this.lblSala);
+            this.grpModificarReserva.Controls.Add(this.cmbIDReserva);
             this.grpModificarReserva.Controls.Add(this.lblIDReserva);
             this.grpModificarReserva.Controls.Add(this.button2);
             this.grpModificarReserva.Controls.Add(this.btnModificar);
@@ -70,19 +74,19 @@ namespace Interfaz.PantallasReservas
             this.grpModificarReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpModificarReserva.Location = new System.Drawing.Point(0, 0);
             this.grpModificarReserva.Name = "grpModificarReserva";
-            this.grpModificarReserva.Size = new System.Drawing.Size(797, 506);
+            this.grpModificarReserva.Size = new System.Drawing.Size(797, 553);
             this.grpModificarReserva.TabIndex = 1;
             this.grpModificarReserva.TabStop = false;
             this.grpModificarReserva.Text = "Modificar Reserva";
             // 
-            // comboBox1
+            // cmbIDReserva
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(328, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 28);
-            this.comboBox1.TabIndex = 27;
+            this.cmbIDReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDReserva.FormattingEnabled = true;
+            this.cmbIDReserva.Location = new System.Drawing.Point(328, 42);
+            this.cmbIDReserva.Name = "cmbIDReserva";
+            this.cmbIDReserva.Size = new System.Drawing.Size(203, 28);
+            this.cmbIDReserva.TabIndex = 27;
             // 
             // lblIDReserva
             // 
@@ -96,7 +100,7 @@ namespace Interfaz.PantallasReservas
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(408, 429);
+            this.button2.Location = new System.Drawing.Point(405, 479);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 48);
             this.button2.TabIndex = 25;
@@ -107,12 +111,13 @@ namespace Interfaz.PantallasReservas
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.Navy;
-            this.btnModificar.Location = new System.Drawing.Point(226, 429);
+            this.btnModificar.Location = new System.Drawing.Point(223, 479);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(123, 48);
             this.btnModificar.TabIndex = 24;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // pictureBox1
             // 
@@ -127,7 +132,7 @@ namespace Interfaz.PantallasReservas
             // dtpFechaRegreso
             // 
             this.dtpFechaRegreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegreso.Location = new System.Drawing.Point(347, 263);
+            this.dtpFechaRegreso.Location = new System.Drawing.Point(344, 313);
             this.dtpFechaRegreso.Name = "dtpFechaRegreso";
             this.dtpFechaRegreso.Size = new System.Drawing.Size(184, 27);
             this.dtpFechaRegreso.TabIndex = 9;
@@ -135,7 +140,7 @@ namespace Interfaz.PantallasReservas
             // dtpFechaRetiro
             // 
             this.dtpFechaRetiro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRetiro.Location = new System.Drawing.Point(347, 220);
+            this.dtpFechaRetiro.Location = new System.Drawing.Point(344, 270);
             this.dtpFechaRetiro.Name = "dtpFechaRetiro";
             this.dtpFechaRetiro.Size = new System.Drawing.Size(184, 27);
             this.dtpFechaRetiro.TabIndex = 8;
@@ -147,10 +152,11 @@ namespace Interfaz.PantallasReservas
             this.cmbEstadoReserva.Items.AddRange(new object[] {
             "Activa",
             "Inactiva"});
-            this.cmbEstadoReserva.Location = new System.Drawing.Point(328, 314);
+            this.cmbEstadoReserva.Location = new System.Drawing.Point(325, 364);
             this.cmbEstadoReserva.Name = "cmbEstadoReserva";
             this.cmbEstadoReserva.Size = new System.Drawing.Size(203, 28);
             this.cmbEstadoReserva.TabIndex = 7;
+            this.cmbEstadoReserva.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoReserva_SelectedIndexChanged);
             // 
             // cmbLibroReserva
             // 
@@ -160,6 +166,7 @@ namespace Interfaz.PantallasReservas
             this.cmbLibroReserva.Name = "cmbLibroReserva";
             this.cmbLibroReserva.Size = new System.Drawing.Size(203, 28);
             this.cmbLibroReserva.TabIndex = 6;
+            this.cmbLibroReserva.SelectedIndexChanged += new System.EventHandler(this.cmbLibroReserva_SelectedIndexChanged);
             // 
             // cmbUsuarioReserva
             // 
@@ -169,11 +176,12 @@ namespace Interfaz.PantallasReservas
             this.cmbUsuarioReserva.Name = "cmbUsuarioReserva";
             this.cmbUsuarioReserva.Size = new System.Drawing.Size(203, 28);
             this.cmbUsuarioReserva.TabIndex = 5;
+            this.cmbUsuarioReserva.SelectedIndexChanged += new System.EventHandler(this.cmbUsuarioReserva_SelectedIndexChanged);
             // 
             // lblEstadoReserva
             // 
             this.lblEstadoReserva.AutoSize = true;
-            this.lblEstadoReserva.Location = new System.Drawing.Point(23, 322);
+            this.lblEstadoReserva.Location = new System.Drawing.Point(20, 372);
             this.lblEstadoReserva.Name = "lblEstadoReserva";
             this.lblEstadoReserva.Size = new System.Drawing.Size(216, 20);
             this.lblEstadoReserva.TabIndex = 4;
@@ -182,7 +190,7 @@ namespace Interfaz.PantallasReservas
             // lblfechaRegreso
             // 
             this.lblfechaRegreso.AutoSize = true;
-            this.lblfechaRegreso.Location = new System.Drawing.Point(23, 263);
+            this.lblfechaRegreso.Location = new System.Drawing.Point(20, 313);
             this.lblfechaRegreso.Name = "lblfechaRegreso";
             this.lblfechaRegreso.Size = new System.Drawing.Size(142, 20);
             this.lblfechaRegreso.TabIndex = 3;
@@ -191,7 +199,7 @@ namespace Interfaz.PantallasReservas
             // lblFechaRetiro
             // 
             this.lblFechaRetiro.AutoSize = true;
-            this.lblFechaRetiro.Location = new System.Drawing.Point(23, 208);
+            this.lblFechaRetiro.Location = new System.Drawing.Point(20, 258);
             this.lblFechaRetiro.Name = "lblFechaRetiro";
             this.lblFechaRetiro.Size = new System.Drawing.Size(123, 20);
             this.lblFechaRetiro.TabIndex = 2;
@@ -215,14 +223,34 @@ namespace Interfaz.PantallasReservas
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             // 
+            // cmbSalas
+            // 
+            this.cmbSalas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSalas.FormattingEnabled = true;
+            this.cmbSalas.Location = new System.Drawing.Point(328, 212);
+            this.cmbSalas.Name = "cmbSalas";
+            this.cmbSalas.Size = new System.Drawing.Size(203, 28);
+            this.cmbSalas.TabIndex = 29;
+            this.cmbSalas.SelectedIndexChanged += new System.EventHandler(this.cmbSalas_SelectedIndexChanged);
+            // 
+            // lblSala
+            // 
+            this.lblSala.AutoSize = true;
+            this.lblSala.Location = new System.Drawing.Point(23, 212);
+            this.lblSala.Name = "lblSala";
+            this.lblSala.Size = new System.Drawing.Size(52, 20);
+            this.lblSala.TabIndex = 28;
+            this.lblSala.Text = "Sala:";
+            // 
             // frmModificarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 506);
+            this.ClientSize = new System.Drawing.Size(797, 553);
             this.Controls.Add(this.grpModificarReserva);
             this.Name = "frmModificarReserva";
             this.Text = "Modificar Reserva";
+            this.Load += new System.EventHandler(this.frmModificarReserva_Load);
             this.grpModificarReserva.ResumeLayout(false);
             this.grpModificarReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -233,7 +261,7 @@ namespace Interfaz.PantallasReservas
         #endregion
 
         private System.Windows.Forms.GroupBox grpModificarReserva;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbIDReserva;
         private System.Windows.Forms.Label lblIDReserva;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnModificar;
@@ -248,5 +276,7 @@ namespace Interfaz.PantallasReservas
         private System.Windows.Forms.Label lblFechaRetiro;
         private System.Windows.Forms.Label lblLibro;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.ComboBox cmbSalas;
+        private System.Windows.Forms.Label lblSala;
     }
 }

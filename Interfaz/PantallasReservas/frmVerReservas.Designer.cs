@@ -43,6 +43,7 @@ namespace Interfaz.PantallasReservas
             // 
             // dgvVerReservas
             // 
+            this.dgvVerReservas.AllowUserToAddRows = false;
             this.dgvVerReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerReservas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerReservas.Location = new System.Drawing.Point(0, 163);
@@ -73,12 +74,13 @@ namespace Interfaz.PantallasReservas
             // btnLimpiarCampos
             // 
             this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Navy;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(743, 51);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(765, 51);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(121, 63);
             this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // btnBuscar
             // 
@@ -89,15 +91,16 @@ namespace Interfaz.PantallasReservas
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblBuscarReservaNombre
             // 
             this.lblBuscarReservaNombre.AutoSize = true;
             this.lblBuscarReservaNombre.Location = new System.Drawing.Point(47, 83);
             this.lblBuscarReservaNombre.Name = "lblBuscarReservaNombre";
-            this.lblBuscarReservaNombre.Size = new System.Drawing.Size(228, 20);
+            this.lblBuscarReservaNombre.Size = new System.Drawing.Size(259, 20);
             this.lblBuscarReservaNombre.TabIndex = 3;
-            this.lblBuscarReservaNombre.Text = "Buscar Libro por Nombre:";
+            this.lblBuscarReservaNombre.Text = "Buscar por Nombre del Libro:";
             // 
             // txtReservaNombre
             // 
@@ -132,6 +135,7 @@ namespace Interfaz.PantallasReservas
             this.Name = "frmVerReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver Reservas";
+            this.Load += new System.EventHandler(this.frmVerReservas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerReservas)).EndInit();
             this.grpVerReservas.ResumeLayout(false);
             this.grpVerReservas.PerformLayout();

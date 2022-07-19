@@ -34,7 +34,7 @@ namespace Interfaz.PantallasReservas
             this.button2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbUsuarioReserva = new System.Windows.Forms.ComboBox();
+            this.cmbIDReserva = new System.Windows.Forms.ComboBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblIDReserva = new System.Windows.Forms.Label();
             this.grpEliminarReserva.SuspendLayout();
@@ -47,7 +47,7 @@ namespace Interfaz.PantallasReservas
             this.grpEliminarReserva.Controls.Add(this.button2);
             this.grpEliminarReserva.Controls.Add(this.btnEliminar);
             this.grpEliminarReserva.Controls.Add(this.pictureBox1);
-            this.grpEliminarReserva.Controls.Add(this.cmbUsuarioReserva);
+            this.grpEliminarReserva.Controls.Add(this.cmbIDReserva);
             this.grpEliminarReserva.Controls.Add(this.lblNombreUsuario);
             this.grpEliminarReserva.Controls.Add(this.lblIDReserva);
             this.grpEliminarReserva.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,6 +87,7 @@ namespace Interfaz.PantallasReservas
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // pictureBox1
             // 
@@ -98,14 +99,15 @@ namespace Interfaz.PantallasReservas
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbUsuarioReserva
+            // cmbIDReserva
             // 
-            this.cmbUsuarioReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuarioReserva.FormattingEnabled = true;
-            this.cmbUsuarioReserva.Location = new System.Drawing.Point(203, 55);
-            this.cmbUsuarioReserva.Name = "cmbUsuarioReserva";
-            this.cmbUsuarioReserva.Size = new System.Drawing.Size(203, 28);
-            this.cmbUsuarioReserva.TabIndex = 5;
+            this.cmbIDReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIDReserva.FormattingEnabled = true;
+            this.cmbIDReserva.Location = new System.Drawing.Point(203, 55);
+            this.cmbIDReserva.Name = "cmbIDReserva";
+            this.cmbIDReserva.Size = new System.Drawing.Size(203, 28);
+            this.cmbIDReserva.TabIndex = 5;
+            this.cmbIDReserva.SelectedIndexChanged += new System.EventHandler(this.cmbIDReserva_SelectedIndexChanged);
             // 
             // lblNombreUsuario
             // 
@@ -133,6 +135,7 @@ namespace Interfaz.PantallasReservas
             this.Controls.Add(this.grpEliminarReserva);
             this.Name = "frmEliminarReserva";
             this.Text = "Eliminar Reserva";
+            this.Load += new System.EventHandler(this.frmEliminarReserva_Load);
             this.grpEliminarReserva.ResumeLayout(false);
             this.grpEliminarReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -146,7 +149,7 @@ namespace Interfaz.PantallasReservas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbUsuarioReserva;
+        private System.Windows.Forms.ComboBox cmbIDReserva;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblIDReserva;
         private System.Windows.Forms.TextBox txtNombreUser;
